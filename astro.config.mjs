@@ -9,17 +9,18 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://launchhpc.com',
   integrations: [
-    starlight({
-      title: 'LaunchHPC Docs',
-      description: 'AI/HPC Orchestration Platform Documentation',
-      customCss: ['./src/styles/global.css'],
-      sidebar: [
-        {
-          label: 'Getting Started',
-          autogenerate: { directory: 'docs' },
-        },
-      ],
-    }),
+    // TODO: Re-enable Starlight once Zod validation issue is resolved
+    // starlight({
+    //   title: 'LaunchHPC Docs',
+    //   description: 'AI/HPC Orchestration Platform Documentation',
+    //   customCss: ['./src/styles/global.css'],
+    //   sidebar: [
+    //     {
+    //       label: 'Getting Started',
+    //       autogenerate: { directory: 'docs' },
+    //     },
+    //   ],
+    // }),
     mdx(),
     sitemap(),
     react(),
