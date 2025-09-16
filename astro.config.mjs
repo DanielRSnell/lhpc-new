@@ -9,7 +9,7 @@ import netlify from '@astrojs/netlify';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://launchhpc.com',
-  output: 'server',
+  output: 'static',
 
   integrations: [
     starlight({
