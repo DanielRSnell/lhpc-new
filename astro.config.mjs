@@ -9,6 +9,17 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://plasma-astro-template.vercel.app',
   integrations: [
+    starlight({
+      title: 'LaunchHPC Docs',
+      description: 'AI/HPC Orchestration Platform Documentation',
+      customCss: ['./src/styles/global.css'],
+      sidebar: [
+        {
+          label: 'Getting Started',
+          autogenerate: { directory: 'docs' },
+        },
+      ],
+    }),
     mdx(),
     sitemap(),
     react(),

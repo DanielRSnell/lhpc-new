@@ -14,13 +14,12 @@ const changelog = defineCollection({
   }),
 });
 
-// Temporarily disabled docs collection
-// const docs = defineCollection({
-//   loader: docsLoader(),
-//   schema: docsSchema(),
-// });
+const docs = defineCollection({
+  loader: docsLoader(),
+  schema: docsSchema(),
+});
 
 export const collections = {
   changelog,
-  // docs,
+  docs,
 };
