@@ -1,0 +1,25 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+
+import NeocloudDashboard from '@/components/sections/neocloud-dashboard';
+import NeocloudFeatures from '@/components/sections/neocloud-features';
+import NeocloudHero from '@/components/sections/neocloud-hero';
+import NeocloudLogs from '@/components/sections/neocloud-logs';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout
+  title="LaunchHPC for Neoclouds - AI/HPC Infrastructure Solutions"
+  description="Maximize neocloud infrastructure efficiency and revenue growth with LaunchHPC's AI/HPC orchestration platform. Scale compute resources intelligently across hybrid environments."
+>
+  <NeocloudHero client:load />
+  <NeocloudDashboard client:load />
+  <NeocloudFeatures client:load />
+  <div class="relative">
+    <div
+      class="to-accent/50 bg-chart-1 absolute top-0 left-0 -z-3 hidden size-40 -translate-x-1/4 -translate-y-1/2 rounded-full will-change-transform lg:block"
+    >
+    </div>
+    <NeocloudLogs client:load />
+  </div>
+</DefaultLayout>

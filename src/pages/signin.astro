@@ -1,0 +1,14 @@
+---
+import AuthLayout from '@/components/sections/auth-layout';
+import SignInSection from '@/components/sections/signin-section';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout
+  title="Sign In - LaunchHPC"
+  description="Sign in to your LaunchHPC account"
+>
+  <AuthLayout>
+    <SignInSection client:load />
+  </AuthLayout>
+</DefaultLayout>

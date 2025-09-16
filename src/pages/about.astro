@@ -1,0 +1,18 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import AboutHero from '@/components/sections/about-hero';
+import AboutLogos from '@/components/sections/about-logos';
+import AboutNews from '@/components/sections/about-news';
+import AboutTeam from '@/components/sections/about-team';
+import Features from '@/components/sections/features';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <AboutHero />
+  <AboutLogos />
+  <AboutTeam />
+  <AboutNews />
+  <Features className="section-padding" client:load />
+</DefaultLayout>

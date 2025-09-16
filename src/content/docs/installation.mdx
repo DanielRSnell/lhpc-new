@@ -1,0 +1,277 @@
+---
+title: Installation
+description: Deploy LaunchHPC in your cloud environment with enterprise-grade configurations for AI/HPC orchestration.
+---
+
+## Prerequisites
+
+Before deploying LaunchHPC, ensure your environment meets these requirements:
+
+- **Kubernetes Cluster** - Version 1.26 or later with RBAC enabled
+- **Helm** - Version 3.8+ for package management
+- **kubectl** - Configured with cluster admin privileges
+- **Docker** - For container image management
+- **Cloud Provider CLI** - AWS CLI, Azure CLI, or gcloud SDK
+
+## Supported Cloud Platforms
+
+LaunchHPC supports deployment across major cloud providers:
+
+- **Amazon Web Services (AWS)** - EKS, EC2, S3, IAM integration
+- **Microsoft Azure** - AKS, Virtual Machines, Blob Storage, Active Directory
+- **Google Cloud Platform (GCP)** - GKE, Compute Engine, Cloud Storage, IAM
+
+## Quick Deployment
+
+<div class="docs-card">
+  <div class="docs-card-title">Deploy with Helm</div>
+  <div class="docs-card-description">The recommended production deployment method</div>
+
+```bash
+# Add LaunchHPC Helm repository
+helm repo add launchhpc https://charts.launchhpc.com
+helm repo update
+
+# Deploy with default configuration
+helm install launchhpc launchhpc/launchhpc \
+  --namespace launchhpc-system \
+  --create-namespace
+```
+
+</div>
+
+## Enterprise Installation
+
+For production deployments with high availability and security:
+
+### 1. Prepare Infrastructure
+
+Create the necessary cloud resources using Terraform:
+
+```bash
+# Clone infrastructure templates
+git clone https://github.com/launchhpc/terraform-modules.git
+cd terraform-modules/aws  # or azure/gcp
+
+# Configure variables
+cp terraform.tfvars.example terraform.tfvars
+vim terraform.tfvars
+```
+
+```hcl title="terraform.tfvars"
+# AWS Configuration
+region                = "us-west-2"
+cluster_name         = "launchhpc-prod"
+node_groups = {
+  compute = {
+    instance_types = ["c5.4xlarge", "c5.9xlarge"]
+    min_size      = 3
+    max_size      = 100
+    desired_size  = 5
+  }
+  gpu = {
+    instance_types = ["p3.2xlarge", "p3.8xlarge"]
+    min_size      = 0
+    max_size      = 50
+    desired_size  = 2
+  }
+}
+
+# Security Configuration
+enable_encryption    = true
+enable_network_policy = true
+enable_pod_security  = true
+```
+
+### 2. Deploy Infrastructure
+
+```bash
+terraform init
+terraform plan
+terraform apply
+```
+
+### 3. Install LaunchHPC
+
+Create a production values file:
+
+```yaml title="values-production.yaml"
+# High Availability Configuration
+replicaCount: 3
+resources:
+  limits:
+    cpu: 2000m
+    memory: 4Gi
+  requests:
+    cpu: 1000m
+    memory: 2Gi
+
+# Security Configuration
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  fsGroup: 2000
+
+# Multi-Cloud Configuration
+cloudProviders:
+  aws:
+    enabled: true
+    region: us-west-2
+    credentials: aws-secret
+  azure:
+    enabled: true
+    region: eastus
+    credentials: azure-secret
+  gcp:
+    enabled: true
+    region: us-central1
+    credentials: gcp-secret
+
+# Monitoring Stack
+monitoring:
+  prometheus:
+    enabled: true
+    retention: '30d'
+  grafana:
+    enabled: true
+    persistence: true
+  alertmanager:
+    enabled: true
+
+# Storage Configuration
+persistence:
+  enabled: true
+  storageClass: 'gp3'
+  size: 100Gi
+
+# Network Security
+networkPolicy:
+  enabled: true
+  ingress:
+    - from: []
+      ports:
+        - protocol: TCP
+          port: 8080
+```
+
+Deploy with production configuration:
+
+```bash
+helm install launchhpc launchhpc/launchhpc \
+  --namespace launchhpc-system \
+  --create-namespace \
+  --values values-production.yaml
+```
+
+## Configuration
+
+### Core Configuration
+
+Configure LaunchHPC through the primary config file:
+
+```yaml title="launchhpc-config.yaml"
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: launchhpc-config
+  namespace: launchhpc-system
+data:
+  config.yaml: |
+    # Core Settings
+    api:
+      host: "0.0.0.0"
+      port: 8080
+      tls:
+        enabled: true
+        certFile: "/etc/certs/tls.crt"
+        keyFile: "/etc/certs/tls.key"
+
+    # Multi-Cloud Orchestration
+    orchestration:
+      scheduler: "intelligent"
+      optimization:
+        enabled: true
+        costOptimization: true
+        performanceOptimization: true
+      
+    # Security Settings
+    security:
+      authentication:
+        method: "oidc"
+        oidc:
+          issuerUrl: "https://your-identity-provider.com"
+          clientId: "launchhpc"
+      authorization:
+        rbac: true
+        policies: "/etc/policies"
+      
+    # Monitoring Configuration
+    monitoring:
+      metrics:
+        enabled: true
+        endpoint: "/metrics"
+      logging:
+        level: "info"
+        format: "json"
+      
+    # Workload Management
+    workloads:
+      defaultResources:
+        cpu: "1"
+        memory: "2Gi"
+      limits:
+        maxCpu: "64"
+        maxMemory: "256Gi"
+        maxGpu: "8"
+```
+
+### Cloud Provider Credentials
+
+Set up authentication for each cloud provider:
+
+```bash
+# AWS Credentials
+kubectl create secret generic aws-credentials \
+  --namespace=launchhpc-system \
+  --from-literal=access-key-id=YOUR_ACCESS_KEY \
+  --from-literal=secret-access-key=YOUR_SECRET_KEY
+
+# Azure Credentials
+kubectl create secret generic azure-credentials \
+  --namespace=launchhpc-system \
+  --from-literal=client-id=YOUR_CLIENT_ID \
+  --from-literal=client-secret=YOUR_CLIENT_SECRET \
+  --from-literal=tenant-id=YOUR_TENANT_ID
+
+# GCP Credentials
+kubectl create secret generic gcp-credentials \
+  --namespace=launchhpc-system \
+  --from-file=service-account.json=path/to/service-account.json
+```
+
+## Verification
+
+Verify your installation:
+
+```bash
+# Check pod status
+kubectl get pods -n launchhpc-system
+
+# Verify services
+kubectl get services -n launchhpc-system
+
+# Check logs
+kubectl logs -f deployment/launchhpc-controller -n launchhpc-system
+
+# Test API endpoint
+curl -k https://launchhpc.your-domain.com/health
+```
+
+## Next Steps
+
+- Configure [Core Concepts](/docs/core-concepts) for your orchestration patterns
+- Set up [AI/HPC Features](/docs/ai-prompts) for workload optimization
+- Deploy [Infrastructure Management](/docs/file-systems) for multi-cloud resources
+- Enable [Monitoring & Metrics](/docs/crm-csv) for operational visibility
+
+<span class="docs-badge docs-badge--muted">Deployment Complete</span>

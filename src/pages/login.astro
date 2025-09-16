@@ -1,0 +1,13 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import SignInSection from '@/components/sections/signin-section';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout
+  title="Sign In - LaunchHPC"
+  description="Sign in to your LaunchHPC account"
+>
+  <SignInSection client:load />
+</DefaultLayout>
