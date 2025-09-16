@@ -14,7 +14,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-
 const Hero238 = () => {
   const benefits = [
     {

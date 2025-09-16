@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import type { ChangelogEntryData } from '@/lib/changelog';
 import { cn } from '@/lib/utils';
 
-
 interface ChangelogProps {
   entries: ChangelogEntryData[];
 }
