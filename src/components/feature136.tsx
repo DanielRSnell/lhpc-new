@@ -1,7 +1,7 @@
-import { Shield, Lock, CheckCircle, Trophy } from "lucide-react";
+import { Shield, Lock, CheckCircle, Trophy } from 'lucide-react';
 
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
+import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
 
 const Feature136 = () => {
   return (
@@ -19,11 +19,11 @@ const Feature136 = () => {
             <h2 className="text-center text-3xl font-semibold lg:text-left lg:text-4xl">
               Trusted by Federal Agencies
             </h2>
-            <p className="text-center text-muted-foreground lg:text-left lg:text-lg">
+            <p className="text-muted-foreground text-center lg:text-left lg:text-lg">
               LaunchHPC provides secure, compliant AI/HPC infrastructure for
               mission-critical government workloads. From classified research to
-              defense simulations, our platform meets the highest security standards
-              while delivering unmatched performance.
+              defense simulations, our platform meets the highest security
+              standards while delivering unmatched performance.
             </p>
 
             <div className="mt-9 flex w-full flex-col justify-center gap-6 md:flex-row lg:justify-start">
@@ -71,7 +71,7 @@ const Feature136 = () => {
                   Security First
                 </h3>
               </div>
-              <p className="text-center text-sm text-muted-foreground md:text-base lg:text-left">
+              <p className="text-muted-foreground text-center text-sm md:text-base lg:text-left">
                 End-to-end encryption, zero-trust architecture, and continuous
                 compliance monitoring for government workloads.
               </p>
@@ -85,7 +85,7 @@ const Feature136 = () => {
                   Classified Ready
                 </h3>
               </div>
-              <p className="text-center text-sm text-muted-foreground md:text-base lg:text-left">
+              <p className="text-muted-foreground text-center text-sm md:text-base lg:text-left">
                 Air-gapped deployments, SCIF compatibility, and multi-level
                 security controls for sensitive government operations.
               </p>
@@ -99,7 +99,7 @@ const Feature136 = () => {
                   Audit Ready
                 </h3>
               </div>
-              <p className="text-center text-sm text-muted-foreground md:text-base lg:text-left">
+              <p className="text-muted-foreground text-center text-sm md:text-base lg:text-left">
                 Comprehensive logging, automated compliance reports, and
                 third-party security certifications for government audits.
               </p>

@@ -1,9 +1,9 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'LaunchHPC - AI/HPC Orchestration Platform';
+export const SITE_TITLE = 'LaunchHPC - Unified AI/HPC Orchestration Platform';
 export const SITE_DESCRIPTION =
-  'Enterprise-grade AI/HPC orchestration platform for multi-cloud compute workloads. Intelligent scheduling, zero-trust security, and real-time monitoring for mission-critical applications.';
+  'Unified AI/HPC orchestration for every environment. LaunchHPC delivers secure, scalable compute orchestration across on-premises, cloud, and hybrid infrastructures. One platform for all your AI and HPC workloads.';
 
 export const SITE_METADATA = {
   title: {
@@ -49,10 +49,10 @@ export const SITE_METADATA = {
     siteName: 'LaunchHPC',
     images: [
       {
-        url: '/images/og-image.jpeg',
+        url: '/open-graph.png',
         width: 1200,
         height: 630,
-        alt: 'LaunchHPC - AI/HPC Orchestration Platform',
+        alt: 'LaunchHPC - Unified AI/HPC Orchestration Platform',
       },
     ],
   },
@@ -60,7 +60,7 @@ export const SITE_METADATA = {
     card: 'summary_large_image',
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ['/images/og-image.jpeg'],
+    images: ['/open-graph.png'],
     creator: '@LaunchHPC',
   },
 };

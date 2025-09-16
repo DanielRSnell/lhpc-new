@@ -200,14 +200,14 @@ const Navbar = ({ currentPage }: NavbarProps) => {
                                 href={subitem.href}
                                 className="flex-row items-start gap-3 p-3"
                               >
-                                <subitem.icon className="text-foreground size-5.5 mt-0.5" />
+                                <subitem.icon className="text-foreground mt-0.5 size-5.5" />
                                 <div className="flex flex-col gap-1">
                                   <div className="flex items-center gap-2">
                                     <div className="text-sm font-medium tracking-normal">
                                       {subitem.label}
                                     </div>
                                     {subitem.featured && (
-                                      <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide">
+                                      <span className="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-2 py-0.5 text-[10px] font-bold tracking-wide text-white uppercase">
                                         NEW
                                       </span>
                                     )}

@@ -64,6 +64,7 @@ The website includes comprehensive documentation built with [Starlight](https://
 ### Changelog (`src/content/changelog/`)
 
 Structured changelog system using MDX files with:
+
 - Version history and release notes
 - Feature announcements and updates
 - Clean formatting and organization

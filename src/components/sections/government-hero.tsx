@@ -23,9 +23,10 @@ export default function GovernmentHero() {
             </h1>
 
             <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
-              LaunchHPC delivers mission-critical AI and high-performance computing 
-              orchestration for federal agencies, defense contractors, and government 
-              organizations. Built to meet the most stringent security requirements.
+              LaunchHPC delivers mission-critical AI and high-performance
+              computing orchestration for federal agencies, defense contractors,
+              and government organizations. Built to meet the most stringent
+              security requirements.
             </p>
           </div>
 

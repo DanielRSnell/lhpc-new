@@ -8,7 +8,10 @@ import ProductLogs from '@/components/sections/product-logs';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 ---
 
-<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<DefaultLayout
+  title="Product - LaunchHPC AI/HPC Orchestration Platform"
+  description="Discover LaunchHPC's unified AI/HPC orchestration platform. Explore features like intelligent workload scheduling, real-time monitoring, and enterprise-grade security."
+>
   <ProductHero client:load />
   <ProductDashboard client:load />
   <ProductFeatures client:load />

@@ -1,6 +1,13 @@
 'use client';
 
-import { Activity, ArrowRight, Shield, Lock, Eye, AlertTriangle } from 'lucide-react';
+import {
+  Activity,
+  ArrowRight,
+  Shield,
+  Lock,
+  Eye,
+  AlertTriangle,
+} from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import {

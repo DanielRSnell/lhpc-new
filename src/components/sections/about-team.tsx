@@ -11,13 +11,13 @@ const teamMembers = [
     image: '/images/team-members/angela.jpeg',
   },
   {
-    name: 'Justin Hood', 
+    name: 'Justin Hood',
     role: 'Chief Operating Officer',
     image: '/images/team-members/justin.jpeg',
   },
   {
     name: 'Christian Kennedy',
-    role: 'Chief Technology Officer', 
+    role: 'Chief Technology Officer',
     image: '/images/team-members/chris.jpeg',
   },
   {

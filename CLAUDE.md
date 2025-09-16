@@ -9,8 +9,9 @@ This is a LaunchHPC marketing website built using the LaunchHPC Astro Template (
 ## ⚠️ CRITICAL: Team Data Protection
 
 **NEVER modify `src/config/team.json` unless explicitly requested.** This file contains accurate, real team member information including:
+
 - Names, roles, and departments
-- Email addresses and LinkedIn profiles  
+- Email addresses and LinkedIn profiles
 - Biographical information and professional backgrounds
 - Profile image paths
 

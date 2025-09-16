@@ -3,9 +3,9 @@
 import { Bell } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
+import type { ChangelogEntryData } from '@/lib/changelog';
 import { cn } from '@/lib/utils';
 
-import type { ChangelogEntryData } from '@/lib/changelog';
 
 interface ChangelogProps {
   entries: ChangelogEntryData[];

@@ -81,7 +81,6 @@ const Footer = ({ currentPage }: FooterProps) => {
   return (
     <footer className="section-padding relative overflow-hidden">
       <div className="container text-center">
-
         <Logo
           className="mt-20 justify-center gap-3 text-3xl lg:mt-30"
           iconClassName="w-10"

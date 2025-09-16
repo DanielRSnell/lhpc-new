@@ -1,6 +1,6 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from 'lucide-react';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 
 interface Hero47Props {
   heading?: string;
@@ -23,33 +23,33 @@ interface Hero47Props {
 }
 
 const Hero47 = ({
-  heading = "LaunchHPC for Government",
-  subheading = " Secure AI/HPC Infrastructure",
-  description = "Mission-critical AI and high-performance computing orchestration platform designed for federal agencies, defense contractors, and government organizations. FISMA compliant with FedRAMP authorization pathway.",
+  heading = 'LaunchHPC for Government',
+  subheading = ' Secure AI/HPC Infrastructure',
+  description = 'Mission-critical AI and high-performance computing orchestration platform designed for federal agencies, defense contractors, and government organizations. FISMA compliant with FedRAMP authorization pathway.',
   buttons = {
     primary: {
-      text: "Request Security Briefing",
-      url: "/demo",
+      text: 'Request Security Briefing',
+      url: '/demo',
     },
     secondary: {
-      text: "View Compliance Docs",
-      url: "/docs",
+      text: 'View Compliance Docs',
+      url: '/docs',
     },
   },
   image = {
-    src: "/dashboard.png",
-    alt: "LaunchHPC Government Dashboard",
+    src: '/dashboard.png',
+    alt: 'LaunchHPC Government Dashboard',
   },
 }: Hero47Props) => {
   return (
     <section className="bg-background py-20 lg:py-32">
       <div className="container flex flex-col items-center gap-10 lg:my-0 lg:flex-row">
         <div className="flex flex-col gap-7 lg:w-2/3">
-          <h2 className="text-5xl font-semibold text-foreground md:text-5xl lg:text-8xl">
+          <h2 className="text-foreground text-5xl font-semibold md:text-5xl lg:text-8xl">
             <span>{heading}</span>
             <span className="text-muted-foreground">{subheading}</span>
           </h2>
-          <p className="text-base text-muted-foreground md:text-lg lg:text-xl">
+          <p className="text-muted-foreground text-base md:text-lg lg:text-xl">
             {description}
           </p>
           <div className="flex flex-wrap items-start gap-5 lg:gap-7">

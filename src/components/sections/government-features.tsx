@@ -93,8 +93,9 @@ const GovernmentFeatures = ({ className }: { className?: string }) => {
               Secure by design for government missions
             </h2>
             <p className="text-muted-foreground max-w-xl text-lg leading-snug">
-              Enterprise-grade security, compliance, and performance. Purpose-built 
-              for federal agencies, defense contractors, and classified environments.
+              Enterprise-grade security, compliance, and performance.
+              Purpose-built for federal agencies, defense contractors, and
+              classified environments.
             </p>
           </div>
           <div className="hidden gap-3 md:flex">
