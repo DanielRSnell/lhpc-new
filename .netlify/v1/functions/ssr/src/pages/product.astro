@@ -1,0 +1,25 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import ProductDashboard from '@/components/sections/product-dashboard';
+import ProductFeatures from '@/components/sections/product-features';
+import ProductHero from '@/components/sections/product-hero';
+import ProductLogs from '@/components/sections/product-logs';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout
+  title="Product - LaunchHPC AI/HPC Orchestration Platform"
+  description="Discover LaunchHPC's unified AI/HPC orchestration platform. Explore features like intelligent workload scheduling, real-time monitoring, and enterprise-grade security."
+>
+  <ProductHero client:load />
+  <ProductDashboard client:load />
+  <ProductFeatures client:load />
+  <div class="relative">
+    <div
+      class="to-accent/50 bg-chart-1 absolute top-0 left-0 -z-3 hidden size-40 -translate-x-1/4 -translate-y-1/2 rounded-full will-change-transform lg:block"
+    >
+    </div>
+    <ProductLogs client:load />
+  </div>
+</DefaultLayout>

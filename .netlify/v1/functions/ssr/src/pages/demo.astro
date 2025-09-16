@@ -1,0 +1,13 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import DemoSection from '@/components/sections/demo-request';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout
+  title="Request a Demo - LaunchHPC"
+  description="Request a personalized demo of LaunchHPC's AI/HPC orchestration platform. See how we can streamline your compute infrastructure across hybrid cloud environments."
+>
+  <DemoSection client:load />
+</DefaultLayout>
