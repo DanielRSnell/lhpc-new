@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://plasma-astro-template.vercel.app',
+  site: 'https://launchhpc.com',
   integrations: [
     starlight({
       title: 'LaunchHPC Docs',

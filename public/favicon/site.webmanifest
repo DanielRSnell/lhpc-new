@@ -1,6 +1,6 @@
 {
-  "name": "Plasma",
-  "short_name": "Plasma",
+  "name": "LaunchHPC",
+  "short_name": "LaunchHPC",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

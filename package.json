@@ -1,8 +1,9 @@
 {
-  "name": "plasma-astro-template",
+  "name": "launchhpc-website",
   "type": "module",
-  "version": "1.1.0",
-  "author": "Shadcnblocks.com",
+  "version": "1.0.0",
+  "author": "LaunchHPC",
+  "description": "Enterprise-grade AI/HPC orchestration platform - LaunchHPC marketing website",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

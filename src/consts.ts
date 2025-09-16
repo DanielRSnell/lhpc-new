@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = 'LaunchHPC - AI/HPC Orchestration Platform';
 export const SITE_DESCRIPTION =
-  'A modern, fully featured Astro template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.';
+  'Enterprise-grade AI/HPC orchestration platform for multi-cloud compute workloads. Intelligent scheduling, zero-trust security, and real-time monitoring for mission-critical applications.';
 
 export const SITE_METADATA = {
   title: {
@@ -12,14 +12,18 @@ export const SITE_METADATA = {
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    'Astro',
-    'React',
-    'JavaScript',
-    'TypeScript',
-    'TailwindCSS',
-    'Template',
-    'Shadcn/UI',
-    'Web Development',
+    'AI',
+    'HPC',
+    'High Performance Computing',
+    'Cloud Orchestration',
+    'Multi-Cloud',
+    'Kubernetes',
+    'Machine Learning',
+    'Enterprise Computing',
+    'GPU Computing',
+    'Workload Management',
+    'Infrastructure Management',
+    'DevOps',
   ],
   authors: [{ name: 'LaunchHPC Team' }],
   creator: 'LaunchHPC Team',
