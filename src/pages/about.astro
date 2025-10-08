@@ -3,8 +3,8 @@ export const prerender = true;
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import AboutHero from '@/components/sections/about-hero';
-import AboutLogos from '@/components/sections/about-logos';
-import AboutNews from '@/components/sections/about-news';
+// import AboutLogos from '@/components/sections/about-logos'; // Commented out - mock logos
+// import AboutNews from '@/components/sections/about-news'; // Commented out
 import AboutTeam from '@/components/sections/about-team';
 import Features from '@/components/sections/features';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
@@ -14,9 +14,9 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
   title="About LaunchHPC - AI/HPC Orchestration Platform"
   description="Learn about LaunchHPC's mission to unify AI and HPC orchestration across every environment. Meet our team and discover how we're revolutionizing enterprise compute."
 >
-  <AboutHero />
-  <AboutLogos />
-  <AboutTeam />
-  <AboutNews />
+  <AboutHero client:load />
+  {/* <AboutLogos /> */} {/* Commented out - mock logos */}
+  <AboutTeam client:load />
+  {/* <AboutNews /> */}
   <Features className="section-padding" client:load />
 </DefaultLayout>

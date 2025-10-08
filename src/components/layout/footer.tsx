@@ -1,65 +1,8 @@
 'use client';
 
-import {
-  FaAngular,
-  FaGithub,
-  FaInstagram,
-  FaJs,
-  FaNodeJs,
-  FaReact,
-  FaVuejs,
-  FaWhatsapp,
-  FaXTwitter,
-} from 'react-icons/fa6';
-
 import Logo from '@/components/layout/logo';
 import { NAV_LINKS } from '@/components/layout/navbar';
 import { Button } from '@/components/ui/button';
-
-const SOCIAL_LINKS = [
-  {
-    name: 'Instagram',
-    href: 'https://instagram.com',
-    icon: <FaInstagram className="size-4" />,
-  },
-  {
-    name: 'WhatsApp',
-    href: 'https://wa.me',
-    icon: <FaWhatsapp className="size-4" />,
-  },
-  {
-    name: 'X',
-    href: 'https://x.com',
-    icon: <FaXTwitter className="size-4" />,
-  },
-];
-
-const TECH_ICONS = [
-  {
-    name: 'React',
-    icon: <FaReact className="size-7 lg:size-10" />,
-  },
-  {
-    name: 'Vue',
-    icon: <FaVuejs className="size-7 lg:size-10" />,
-  },
-  {
-    name: 'JavaScript',
-    icon: <FaJs className="size-7 lg:size-10" />,
-  },
-  {
-    name: 'Node.js',
-    icon: <FaNodeJs className="size-7 lg:size-10" />,
-  },
-  {
-    name: 'Angular',
-    icon: <FaAngular className="size-7 lg:size-10" />,
-  },
-  {
-    name: 'GitHub',
-    icon: <FaGithub className="size-7 lg:size-10" />,
-  },
-];
 
 interface FooterProps {
   currentPage: string;
@@ -88,7 +31,7 @@ const Footer = ({ currentPage }: FooterProps) => {
 
         <h2 className="my-8 text-2xl lg:my-6 lg:text-5xl">
           Deploy it. Scale it.{' '}
-          <span className="text-gradient">Orchestrate it. Effortlessly.</span>
+          <span className="text-gradient block">Orchestrate it. Effortlessly.</span>
         </h2>
 
         <div className="mx-auto flex max-w-sm justify-center gap-4.5">
@@ -105,26 +48,12 @@ const Footer = ({ currentPage }: FooterProps) => {
       </div>
 
       <div className="container mt-20 flex flex-col-reverse justify-between gap-8 text-xs lg:mt-30 lg:flex-row">
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center">
           <p className="">
-            © {new Date().getFullYear()} LaunchHPC — Built for builders.
-          </p>{' '}
-          <div className="flex items-center gap-7 lg:hidden">
-            {SOCIAL_LINKS.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                className="transition-opacity hover:opacity-80"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={link.name}
-              >
-                {link.icon}
-              </a>
-            ))}
-          </div>
+            © {new Date().getFullYear()} LaunchHPC by ThisWay Global — Unified AI/HPC Orchestration
+          </p>
         </div>
-        <div className="flex flex-wrap items-center justify-between gap-4 lg:justify-center lg:gap-8">
+        <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end lg:gap-8">
           {NAV_LINKS.map((link, index) => (
             <a
               key={index}
@@ -132,21 +61,6 @@ const Footer = ({ currentPage }: FooterProps) => {
               className="transition-opacity hover:opacity-80"
             >
               {link.label}
-            </a>
-          ))}
-        </div>
-
-        <div className="hidden items-center gap-7 lg:flex">
-          {SOCIAL_LINKS.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              className="transition-opacity hover:opacity-80"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.name}
-            >
-              {link.icon}
             </a>
           ))}
         </div>

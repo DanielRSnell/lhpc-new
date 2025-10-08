@@ -68,7 +68,7 @@ const Features2 = () => {
       <div className="container space-y-8">
         {/* Header */}
         <h2 className="text-4xxl mb-10 max-w-2xl leading-none tracking-tight text-balance md:text-5xl lg:mx-auto lg:mb-15 lg:text-center lg:text-6xl">
-          Complete visibility and control over your compute infrastructure
+          Purpose-built for operators, technical teams, and enterprise leaders
         </h2>
 
         {/* Main Grid */}
@@ -85,11 +85,10 @@ const Features2 = () => {
                   <ChartPie className="h-4.5 w-4.5" />
                 </div>
                 <h3 className="text-accent-foreground text-lg font-bold lg:text-xl">
-                  Real-Time Resource Monitoring
+                  Maximize GPU Revenue
                 </h3>
                 <p className="text-muted-foreground leading-snug lg:text-lg">
-                  Monitor GPU utilization, job queues, and system performance
-                  across all your infrastructure in real-time.
+                  Bare-metal multi-tenancy enables secure resource sharing without virtualization overhead—onboard tenants in days and achieve 20-30% higher utilization rates.
                 </p>
               </div>
 
@@ -238,11 +237,10 @@ const Features2 = () => {
                   <ChartBar className="h-4.5 w-4.5" />
                 </div>
                 <h3 className="text-accent-foreground text-lg font-bold lg:text-xl">
-                  Intelligent Workload Management
+                  Workflow Portability
                 </h3>
                 <p className="text-muted-foreground leading-snug lg:text-lg">
-                  AI-powered scheduling automatically optimizes job placement
-                  for maximum efficiency and cost savings.
+                  Build workflows once and deploy across any environment—on-premises clusters, neoclouds, sovereign clouds, or edge infrastructure with zero refactoring.
                 </p>
               </div>
 
@@ -389,27 +387,27 @@ const Features2 = () => {
 const featureCards = [
   {
     icon: Activity,
-    title: 'Resource Monitoring',
+    title: 'Operator Revenue Optimization',
     description:
-      'Real-time visibility into GPU utilization, memory usage, and job performance across all systems.',
-  },
-  {
-    icon: Zap,
-    title: 'Multi-Cloud Orchestration',
-    description:
-      'Seamlessly manage workloads across on-premises, AWS, Azure, GCP, and edge infrastructure.',
-  },
-  {
-    icon: Brain,
-    title: 'AI-Powered Optimization',
-    description:
-      'Machine learning algorithms automatically optimize resource allocation and job scheduling.',
+      'Multi-tenant infrastructure management with fair scheduling, instant provisioning, and comprehensive billing—maximize revenue per GPU.',
   },
   {
     icon: GitBranch,
-    title: 'Workload Portability',
+    title: 'Technical Team Efficiency',
     description:
-      'Run the same workloads anywhere with consistent performance and security guarantees.',
+      'Capture workflows once and replay anywhere—eliminate rebuilding for each platform while maintaining consistent performance.',
+  },
+  {
+    icon: Zap,
+    title: 'Enterprise Sovereignty',
+    description:
+      'OEM-agnostic architecture ensures no vendor lock-in—maintain full control with on-premises or sovereign cloud deployment options.',
+  },
+  {
+    icon: Brain,
+    title: 'Future-Proof Infrastructure',
+    description:
+      'Adopt new GPUs and accelerators immediately without workflow refactoring—exploit the latest silicon as soon as it is available.',
   },
 ];
 

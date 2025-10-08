@@ -61,15 +61,17 @@ src/
 
 ### Content System
 
-- **Starlight Integration**: Documentation at `/docs` route with sidebar navigation
-- **MDX Content**: Changelog and documentation using MDX with frontmatter
-- **Dynamic Imports**: React components loaded with `client:load` for interactivity
+- **Starlight Integration**: Documentation at `/docs` route with sidebar navigation (uses .md files in `src/content/docs/`)
+- **MDX Content**: Changelog entries use MDX with frontmatter (`src/content/changelog/`)
+- **Dynamic Imports**: React components loaded with `client:load` directive for interactivity
+- **Static Prerendering**: Pages use `export const prerender = true` for static generation
 
 ### Key Configuration Files
 
-- `astro.config.mjs`: Astro configuration with Starlight, React, and Tailwind
+- `astro.config.mjs`: Astro configuration with Starlight, React, Tailwind, and Netlify adapter
 - `components.json`: shadcn/ui configuration with @shadcnblocks registry
-- `tailwindcss`: Tailwind 4.x with CSS variable-based theming
+- `tsconfig.json`: TypeScript configuration with path aliases (@/, @components/, @layouts/, @lib/)
+- `tailwind.config`: Tailwind 4.x with CSS variable-based theming
 
 ## LaunchHPC Content Strategy
 
@@ -153,25 +155,36 @@ mcp__shadcn__get_add_command_for_items(items: ["@shadcnblocks/hero-section"])
 - Components requiring interactivity use `client:load` directive in Astro pages
 - TypeScript is used throughout for type safety
 - Custom hooks in `src/hooks/` for React functionality
+- Import paths use TypeScript aliases: `@/components`, `@/lib`, `@/layouts`, etc.
 
 ### Styling Approach
 
 - Tailwind CSS 4.x with custom CSS variables for theming
 - Component-scoped styling using Tailwind classes
 - Dark/light mode support through CSS variables
+- Global styles in `src/styles/global.css`
 
 ### Content Management
 
 - Starlight handles documentation routing and navigation automatically
+- Documentation pages are markdown files (.md) in `src/content/docs/`
+- Changelog entries use MDX (.mdx) in `src/content/changelog/`
 - MDX files support rich formatting, code blocks, and React components
-- Changelog system using structured MDX with frontmatter metadata
+
+### Build and Deployment
+
+- Output mode: `static` (fully static site generation)
+- Adapter: Netlify (`@astrojs/netlify`)
+- All pages use `export const prerender = true` for static generation
+- Build creates static HTML that can be deployed to any static host
 
 ## Environment Setup
 
-Ensure you have:
-
+Required:
 - Node.js 18+
 - npm or pnpm
-- SHADCNBLOCKS_API_KEY environment variable (for premium blocks)
+
+Environment Variables:
+- `SHADCNBLOCKS_API_KEY` - **Required** for installing premium blocks from @shadcnblocks registry (set in components.json)
 
 The site should run immediately after `npm install && npm run dev` with no additional configuration required.

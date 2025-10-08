@@ -1,0 +1,331 @@
+---
+export const prerender = true;
+
+import { Package, Rocket, TrendingUp, Zap, Handshake, Boxes, Globe, Award } from 'lucide-react';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import ProductHero from '@/components/dynmaic/product-hero';
+import ProductDashboard from '@/components/dynmaic/product-dashboard';
+import AIAutomation from '@/components/dynmaic/ai-automation';
+import Features from '@/components/dynmaic/features';
+import Features2 from '@/components/dynmaic/features2';
+import ProductLogs from '@/components/dynmaic/product-logs';
+import CalComWidget from '@/components/sections/calcom-widget';
+
+// Dashboard screenshots and feature cards
+const dashboardScreenshots = [
+  {
+    src: '/lhpc/compute-pools.png',
+    alt: 'Turnkey AI/HPC solutions',
+  },
+  {
+    src: '/lhpc/workflow-configuration.png',
+    alt: 'Pre-integrated orchestration',
+  },
+  {
+    src: '/lhpc/silicone-allocation.png',
+    alt: 'Customer success dashboard',
+  },
+];
+
+const dashboardFeatures = [
+  {
+    title: 'Integrated Software Value-Add',
+    description: 'Bundle LaunchHPC with hardware sales—deliver turnkey AI/HPC appliances that differentiate from commodity competition.',
+    iconName: 'Package',
+    cta: 'Learn More',
+    href: '/contact',
+  },
+  {
+    title: 'Faster Customer Success',
+    description: 'Pre-integrated solutions work out-of-box—reduce customer time-to-value and increase satisfaction.',
+    iconName: 'Rocket',
+    cta: 'View Solutions',
+    href: '/contact',
+  },
+  {
+    title: 'Competitive Cloud Alternative',
+    description: 'Cloud-like experience on-premises with bare-metal performance—offer sovereignty and control hyperscalers cannot match.',
+    iconName: 'TrendingUp',
+    cta: 'See Benefits',
+    href: '/contact',
+  },
+  {
+    title: 'OEM-Agnostic Platform',
+    description: 'Works with all hardware vendors—customers trust neutral orchestration that avoids vendor lock-in.',
+    iconName: 'Handshake',
+    cta: 'Partner With Us',
+    href: '/contact',
+  },
+];
+
+// Hero chart data
+const oemPartnerGrowthData = [
+  { time: 'Q1', utilization: 42 },
+  { time: 'Q2', utilization: 58 },
+  { time: 'Q3', utilization: 72 },
+  { time: 'Q4', utilization: 85 },
+  { time: 'Q1+1', utilization: 92 },
+  { time: 'Q2+1', utilization: 95 },
+];
+
+// AI Automation workflow cards
+const automationCards = [
+  {
+    id: 'appliance',
+    title: 'Turnkey HPC Appliance',
+    subtitle: 'Dell + LaunchHPC solution deployed in 48 hours',
+    iconName: 'Package',
+    iconColor: 'text-purple-500',
+    position: 'absolute top-0 left-0',
+    isGenerating: false,
+  },
+  {
+    id: 'sovereign',
+    title: 'Sovereign Cloud',
+    subtitle: 'HPE + LaunchHPC for national infrastructure',
+    iconName: 'Building2',
+    iconColor: 'text-blue-500',
+    position: 'absolute top-32 left-0',
+    isGenerating: false,
+  },
+  {
+    id: 'generating',
+    title: 'AI Optimizing Integration',
+    subtitle: '',
+    iconName: undefined,
+    iconColor: '',
+    position: 'absolute top-18 right-0',
+    isGenerating: true,
+  },
+  {
+    id: 'edge',
+    title: 'Edge AI Platform',
+    subtitle: 'Supermicro edge computing with orchestration',
+    iconName: 'Folder',
+    iconColor: 'fill-green-500 text-green-500',
+    position: 'absolute right-0 bottom-0',
+    isGenerating: false,
+  },
+];
+
+// Features carousel items
+const platformFeatures = [
+  {
+    title: 'Pre-Integrated Solutions',
+    image: {
+      src: '/lhpc/compute-pools.png',
+      width: 563,
+      height: 400,
+    },
+    desc: 'Turnkey AI/HPC appliances with LaunchHPC pre-installed—customers deploy in hours instead of weeks, accelerating time-to-value.',
+  },
+  {
+    title: 'Reference Architectures',
+    image: {
+      src: '/lhpc/workflow-overview.png',
+      width: 662,
+      height: 400,
+    },
+    desc: 'Validated configurations for common use cases—genomics, climate modeling, AI training, and inference serving with best practices.',
+  },
+  {
+    title: 'White-Label Options',
+    image: {
+      src: '/lhpc/workflow-configuration.png',
+      width: 632,
+      height: 400,
+    },
+    desc: 'Co-branding and white-label deployment options—deliver LaunchHPC as your own platform or maintain joint branding.',
+  },
+  {
+    title: 'Joint Go-to-Market',
+    image: {
+      src: '/lhpc/workflows-list.png',
+      width: 610,
+      height: 400,
+    },
+    desc: 'Collaborative marketing and sales programs—co-branded case studies, joint webinars, and shared sales enablement.',
+  },
+  {
+    title: 'Technical Enablement',
+    image: {
+      src: '/lhpc/silicone-allocation.png',
+      width: 519,
+      height: 400,
+    },
+    desc: 'Training for OEM technical teams—certification programs, integration support, and custom feature development.',
+  },
+  {
+    title: 'Multi-Architecture Support',
+    image: {
+      src: '/lhpc/team-activity-log.png',
+      width: 525,
+      height: 400,
+    },
+    desc: 'Support for NVIDIA, AMD, Intel accelerators—work across all major hardware platforms without vendor lock-in.',
+  },
+];
+
+// Features2 data
+const mainChartData = [
+  { month: 'Jan', views: 85, clicks: 22 },
+  { month: 'Feb', views: 95, clicks: 28 },
+  { month: 'Mar', views: 108, clicks: 35 },
+  { month: 'Apr', views: 122, clicks: 42 },
+  { month: 'May', views: 138, clicks: 52 },
+  { month: 'Jun', views: 155, clicks: 62 },
+  { month: 'Jul', views: 175, clicks: 75 },
+  { month: 'Aug', views: 195, clicks: 88 },
+  { month: 'Sep', views: 218, clicks: 102 },
+  { month: 'Oct', views: 242, clicks: 118 },
+  { month: 'Nov', views: 268, clicks: 135 },
+  { month: 'Dec', views: 295, clicks: 155 },
+];
+
+const smallChartData = [
+  { day: 1, runs: 800 },
+  { day: 2, runs: 1200 },
+  { day: 3, runs: 1600 },
+  { day: 4, runs: 2200 },
+  { day: 5, runs: 2800 },
+  { day: 6, runs: 3400 },
+  { day: 7, runs: 4000 },
+  { day: 9, runs: 4800 },
+  { day: 10, runs: 5600 },
+  { day: 11, runs: 6500 },
+];
+
+const bottomStats = [
+  {
+    label: 'Customer Satisfaction',
+    value: '94%',
+    change: '+12%',
+    changeClass: 'bg-green-800/10 text-green-800',
+  },
+  {
+    label: 'Time-to-Value',
+    value: '48hrs',
+    change: '-75%',
+    changeClass: 'bg-green-800/10 text-green-800',
+  },
+  {
+    label: 'Average ASP Lift',
+    value: '+35%',
+    change: '+35%',
+    changeClass: 'bg-green-800/10 text-green-800',
+  },
+];
+
+const featureCarouselCards = [
+  {
+    icon: Package,
+    title: 'Turnkey Solutions',
+    description:
+      'Pre-integrated AI/HPC appliances work out-of-box—customers deploy in hours instead of weeks, dramatically improving satisfaction.',
+  },
+  {
+    icon: Handshake,
+    title: 'OEM-Agnostic Trust',
+    description:
+      'Platform works with all hardware vendors—customers trust neutral orchestration that avoids vendor lock-in and maximizes flexibility.',
+  },
+  {
+    icon: Globe,
+    title: 'Global Partnership',
+    description:
+      'Joint go-to-market programs, co-branded materials, and shared sales enablement—accelerate market penetration together.',
+  },
+  {
+    icon: Award,
+    title: 'Revenue Growth',
+    description:
+      'Higher ASP with software bundles, services opportunities, and differentiated offerings—grow revenue beyond hardware sales.',
+  },
+];
+---
+
+<DefaultLayout
+  title="LaunchHPC for OEMs - Differentiate Hardware with Orchestration Software"
+  description="Hardware manufacturers deliver turnkey AI/HPC solutions with LaunchHPC's OEM-agnostic orchestration platform. Partner with us to accelerate customer success. Schedule a call."
+>
+  <ProductHero
+    client:load
+    badge="OEM Partners"
+    badgeSubtext="Hardware Manufacturers"
+    headline="Differentiate Hardware with"
+    headlineGradient="World-Class Orchestration"
+    description="LaunchHPC enables OEMs to deliver turnkey AI/HPC solutions, accelerate customer time-to-value, and compete against software-only cloud providers. Integrated software that drives customer success."
+    chartData={oemPartnerGrowthData}
+    chartMetricLabel="Partner Solution Growth"
+    chartChangePercent="+125%"
+    ctaPrimary="Schedule Partnership Call"
+    ctaPrimaryHref="/contact"
+    ctaSecondary="Download Brief"
+    ctaSecondaryHref="/contact"
+    trustLine="Partnering with leading hardware manufacturers worldwide"
+    showTerminal={true}
+  />
+
+  <ProductDashboard
+    client:load
+    title="Complete Platform for OEM-Integrated Solutions"
+    tagline="Four Core Partnership Capabilities"
+    screenshots={dashboardScreenshots}
+    featureCards={dashboardFeatures}
+  />
+
+  <AIAutomation
+    client:load
+    aiPromptText="Optimize deployment for turnkey HPC appliance"
+    headline="Intelligent orchestration that"
+    headlineGradient="accelerates customer success"
+    description="LaunchHPC's pre-integrated solutions deliver working AI/HPC infrastructure in hours—automatically configuring optimal settings for customer workloads and hardware configurations."
+    cards={automationCards}
+  />
+
+  <Features
+    client:load
+    title="The LaunchHPC Platform for OEM Partners"
+    description="Pre-integrated solutions, reference architectures, and joint go-to-market programs—differentiate hardware with world-class orchestration software."
+    items={platformFeatures}
+  />
+
+  <Features2
+    client:load
+    headerTitle="Purpose-built for hardware manufacturers and system integrators"
+    card1Icon={Package}
+    card1Title="Differentiated Solutions"
+    card1Description="Bundle LaunchHPC with hardware sales to deliver turnkey AI/HPC appliances—stand out from commodity competition with integrated software value-add."
+    mainChartData={mainChartData}
+    card2Icon={Rocket}
+    card2Title="Customer Time-to-Value"
+    card2Description="Pre-integrated solutions work out-of-box—reduce deployment from weeks to hours, dramatically improving customer satisfaction and reducing support costs."
+    totalJobsValue={6500}
+    totalJobsStartValue={5600}
+    totalJobsChange="+16.1%"
+    smallChartData={smallChartData}
+    bottomStats={bottomStats}
+    featureCards={featureCarouselCards}
+    ctaText="Schedule Partnership Call"
+    ctaHref="/contact"
+    showCta={true}
+  />
+
+  <ProductLogs
+    client:load
+    title="Trusted by"
+    titleGradient="Leading Hardware Manufacturers"
+    subtitle="OEM-Agnostic Platform for Customer Success"
+    description="LaunchHPC partners with Dell, HPE, Supermicro, Lenovo, and other OEMs to deliver turnkey AI/HPC solutions that accelerate customer success."
+    ctaText="Schedule Partnership Call"
+    ctaHref="/contact"
+    showTerminal={true}
+  />
+
+  <CalComWidget
+    client:load
+    title="Explore Partnership Opportunities"
+    subhead="Schedule a call with our partnerships team to discuss how LaunchHPC can differentiate your hardware solutions"
+    calLink="team/thisway/launch-hpc"
+  />
+</DefaultLayout>

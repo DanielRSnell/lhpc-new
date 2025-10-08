@@ -35,14 +35,13 @@ export default function ProductHero() {
         </div>
 
         <h1 className="text-foreground text-5xl leading-none tracking-tight text-balance md:text-6xl lg:text-7xl">
-          Monitor your entire fleet in real time with{' '}
+          Bare-metal orchestration that{' '}
           <br className="hidden sm:block" />
-          <span className="text-gradient">comprehensive observability</span>
+          <span className="text-gradient">maximizes GPU revenue and ensures sovereignty</span>
         </h1>
 
         <p className="text-muted-foreground max-w-2xl leading-snug md:text-lg lg:text-xl">
-          LaunchHPC provides complete visibility into GPU utilization, job
-          queues, and system health across all your AI/HPC infrastructure.
+          LaunchHPC delivers workflow portability, multi-tenant infrastructure management, and OEM-agnostic orchestration—achieve 20-30% utilization gains across Dell, Supermicro, NVIDIA, AMD, Intel, and HPE hardware without vendor lock-in.
         </p>
       </div>
 
@@ -167,14 +166,14 @@ export default function ProductHero() {
       <div className="mx-auto mt-10 max-w-md space-y-3 md:mt-20">
         <div className="flex gap-4.5">
           <Button className="flex-1 md:min-w-45" asChild>
-            <a href="/demo">Get Started</a>
+            <a href="/contact">Schedule a Demo</a>
           </Button>
           <Button className="flex-1 md:min-w-45" variant="outline" asChild>
-            <a href="/demo">Request Demo</a>
+            <a href="/contact">Contact Sales</a>
           </Button>
         </div>
         <div className="text-center text-sm">
-          Trusted by 150+ enterprises worldwide
+          Partnered with Dell, Supermicro, NVIDIA, AMD, Intel, and HPE
         </div>
       </div>
     </section>

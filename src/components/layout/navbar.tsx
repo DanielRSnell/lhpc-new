@@ -38,101 +38,105 @@ import { cn } from '@/lib/utils';
 
 export const NAV_LINKS = [
   {
-    label: 'Products',
+    label: 'Product',
     href: '/product',
-    subitems: [
-      {
-        label: 'Multi-Tenant Orchestration',
-        href: '/product',
-        description: 'Secure workload isolation across teams and organizations',
-        icon: Users,
-      },
-      {
-        label: 'AI/HPC Optimization',
-        href: '/product',
-        description: 'Intelligent resource allocation and performance tuning',
-        icon: Cpu,
-      },
-      {
-        label: 'Hybrid Cloud Management',
-        href: '/product',
-        description:
-          'Seamless orchestration across on-prem and cloud infrastructure',
-        icon: Cloud,
-      },
-      {
-        label: 'Enterprise Configuration',
-        href: '/product',
-        description: 'Centralized policy management and compliance controls',
-        icon: Settings,
-      },
-    ],
+    // subitems: [
+    //   {
+    //     label: 'Multi-Tenant Orchestration',
+    //     href: '/product',
+    //     description: 'Secure workload isolation across teams and organizations',
+    //     icon: Users,
+    //   },
+    //   {
+    //     label: 'AI/HPC Optimization',
+    //     href: '/product',
+    //     description: 'Intelligent resource allocation and performance tuning',
+    //     icon: Cpu,
+    //   },
+    //   {
+    //     label: 'Hybrid Cloud Management',
+    //     href: '/product',
+    //     description:
+    //       'Seamless orchestration across on-prem and cloud infrastructure',
+    //     icon: Cloud,
+    //   },
+    //   {
+    //     label: 'Enterprise Configuration',
+    //     href: '/product',
+    //     description: 'Centralized policy management and compliance controls',
+    //     icon: Settings,
+    //   },
+    // ],
   },
   {
     label: 'Industries',
-    href: '/industry',
+    href: '/industries',
     megaMenu: true,
     subitems: [
       {
         label: 'Neoclouds',
-        href: '/industry/neocloud',
-        description: 'GPU cloud providers like CoreWeave and Lambda Labs',
+        href: '/industries/neoclouds',
+        description: 'Independent GPU cloud providers',
         details:
-          'Maximize infrastructure efficiency, optimize multi-tenant workloads, and drive revenue growth with intelligent resource allocation.',
+          'Maximize infrastructure efficiency, optimize multi-tenant workloads, and drive revenue growth with 20-30% utilization gains.',
         icon: Zap,
         featured: true,
       },
       {
-        label: 'Sovereign Clouds',
-        href: '/industry/sovereign-cloud',
-        description: 'National and regional cloud infrastructure',
+        label: 'Public Sector',
+        href: '/industries/public-sector',
+        description: 'Federal, defense, and state/local government',
         details:
-          'Ensure data sovereignty while delivering world-class HPC performance for government and enterprise workloads.',
+          'Ensure data sovereignty with StateRAMP compliance roadmap while delivering world-class HPC performance for mission-critical workloads.',
         icon: Shield,
+        comingSoon: false,
       },
       {
         label: 'Research Institutions',
-        href: '/industry/research',
+        href: '/industries/research',
         description: 'Universities and national laboratories',
         details:
-          'Accelerate scientific discovery with scalable compute resources for genomics, climate modeling, and advanced research.',
+          'Accelerate scientific discovery with fair-share scheduling, self-service access, and scalable compute for genomics, climate modeling, and AI research.',
         icon: Microscope,
+        comingSoon: false,
+      },
+      {
+        label: 'OEM Partners',
+        href: '/industries/oem-partners',
+        description: 'Dell, HPE, Supermicro, and hardware manufacturers',
+        details:
+          'Differentiate hardware with integrated orchestration software. Deliver turnkey AI/HPC solutions that accelerate customer time-to-value.',
+        icon: Building2,
+        comingSoon: false,
       },
       {
         label: 'Financial Services',
-        href: '/industry/financial',
+        href: '/industries/financial-services',
         description: 'Banks, trading firms, and fintech',
         details:
-          'Power algorithmic trading, risk modeling, and fraud detection with low-latency HPC infrastructure.',
+          'Power algorithmic trading, risk modeling, and fraud detection with bare-metal performance and compliance-ready infrastructure.',
         icon: Landmark,
+        comingSoon: true,
       },
       {
         label: 'Manufacturing',
-        href: '/industry/manufacturing',
+        href: '/industries/manufacturing',
         description: 'Automotive, aerospace, and industrial',
         details:
-          'Optimize CAD/CAE simulations, digital twins, and supply chain modeling for next-generation products.',
+          'Optimize CAD/CAE simulations, digital twins, and supply chain modeling across global facilities.',
         icon: Factory,
-      },
-      {
-        label: 'Global Enterprises',
-        href: '/industry/enterprise',
-        description: 'Fortune 500 and multinational corporations',
-        details:
-          'Deploy hybrid HPC infrastructure across global operations with enterprise-grade security and compliance.',
-        icon: Building2,
+        comingSoon: true,
       },
     ],
   },
   { label: 'Company', href: '/about' },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'Docs', href: '/docs' },
-  { label: 'Changelog', href: '/changelog' },
+  // { label: 'Pricing', href: '/pricing' },
+  // { label: 'Docs', href: '/docs' },
+  // { label: 'Changelog', href: '/changelog' },
 ];
 
 const ACTION_BUTTONS = [
-  { label: 'Log in', href: '/signin', variant: 'ghost' as const },
-  { label: 'Sign up', href: '/signup', variant: 'default' as const },
+  { label: 'Contact', href: '/contact', variant: 'default' as const },
 ];
 
 interface NavbarProps {

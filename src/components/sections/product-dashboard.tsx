@@ -1,6 +1,6 @@
 'use client';
 
-import { Activity, ArrowRight, Bug, Clock, Settings } from 'lucide-react';
+import { Activity, ArrowRight, ChartPie, GitBranch, Shield } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -13,36 +13,36 @@ import {
 
 const FEATURE_CARDS = [
   {
-    title: 'Job Execution Logs',
+    title: 'Bare-Metal Multi-Tenancy',
     description:
-      'Track how long each job takes across different GPU clusters, with detailed timestamps and retry data.',
-    icon: Clock,
+      'Secure tenant isolation without virtualization overhead—onboard new tenants in days and maximize revenue per GPU with 20-30% higher utilization.',
+    icon: Shield,
     cta: 'Learn more',
-    href: '#',
+    href: '/contact',
   },
   {
-    title: 'Real-Time Infrastructure Feed',
+    title: 'Workflow Portability',
     description:
-      'Monitor your entire fleet in real time — resource utilization, job status, alerts — no refresh needed.',
+      'Write workflows once, deploy anywhere—on-premises clusters, neoclouds, sovereign clouds, or edge environments with consistent performance.',
+    icon: GitBranch,
+    cta: 'Learn more',
+    href: '/contact',
+  },
+  {
+    title: 'OEM-Agnostic Architecture',
+    description:
+      'Works seamlessly across Dell, HPE, Supermicro, NVIDIA, AMD, and Intel—future-proof your infrastructure without vendor lock-in.',
     icon: Activity,
     cta: 'Learn more',
-    href: '#',
+    href: '/contact',
   },
   {
-    title: 'System-Level Debugging',
+    title: 'Deep Observability',
     description:
-      'Drill down into any system to inspect resource usage, job queues, and performance metrics at each level.',
-    icon: Bug,
+      'Real-time visibility into GPU utilization, job performance, and resource allocation with data-driven optimization recommendations.',
+    icon: ChartPie,
     cta: 'Learn more',
-    href: '#',
-  },
-  {
-    title: 'Custom Metrics & Alerts',
-    description:
-      'Set up custom monitoring for specific workloads and track their performance across your infrastructure.',
-    icon: Settings,
-    cta: 'Learn more',
-    href: '#',
+    href: '/contact',
   },
 ];
 
@@ -52,22 +52,32 @@ export default function ProductDashboard() {
       {/* Header */}
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
         <h2 className="text-4xl leading-none tracking-tight text-balance md:text-5xl lg:text-6xl">
-          Enterprise-grade monitoring and control for AI/HPC workloads
+          Four core capabilities that maximize revenue and ensure sovereignty
         </h2>
       </div>
 
-      {/* Main Dashboard Image */}
-      <img
-        src="/dashboard.png"
-        alt="LaunchHPC Dashboard"
-        width={1440}
-        height={905}
-        className="mx-auto mt-10 mask-b-from-50% mask-b-to-95% invert md:mt-16 dark:invert-0"
-      />
+      {/* Feature Screenshots */}
+      <div className="mx-auto mt-10 grid gap-4 md:mt-16 md:grid-cols-3">
+        <img
+          src="/lhpc/compute-pools.png"
+          alt="Compute pools management showing multi-tenant resource allocation"
+          className="rounded-lg border shadow-lg"
+        />
+        <img
+          src="/lhpc/workflow-configuration.png"
+          alt="Workflow configuration interface demonstrating portability"
+          className="rounded-lg border shadow-lg"
+        />
+        <img
+          src="/lhpc/silicone-allocation.png"
+          alt="Silicon allocation and GPU utilization metrics"
+          className="rounded-lg border shadow-lg"
+        />
+      </div>
 
       {/* Tagline */}
-      <h3 className="text-muted-foreground mt-4 text-center uppercase">
-        COMPLETE VISIBILITY ACROSS YOUR ENTIRE INFRASTRUCTURE
+      <h3 className="text-muted-foreground mt-8 text-center uppercase">
+        BARE-METAL PERFORMANCE WITHOUT VENDOR LOCK-IN
       </h3>
 
       {/* Feature Cards */}

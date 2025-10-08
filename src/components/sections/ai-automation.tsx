@@ -128,13 +128,11 @@ export default function AIAutomation() {
             </div>
           </motion.div>
           <h2 className="text-4xxl leading-tight tracking-normal md:text-5xl">
-            Intelligent orchestration with <br className="hidden md:block" />
-            <span className="text-gradient">AI-powered automation</span>
+            Intelligent orchestration that <br className="hidden md:block" />
+            <span className="text-gradient">keeps every GPU productive</span>
           </h2>
           <p className="text-muted-foreground mt-2 max-w-xl text-lg leading-snug">
-            From infrastructure to insights in minutes. LaunchHPC's AI
-            automatically optimizes resource allocation, job scheduling, and
-            system performance across your entire compute environment.
+            LaunchHPC's AI scheduling runs HPC batch jobs and AI containers side-by-side, automatically optimizing resource allocation across your entire compute environment—from edge to cloud to supercomputers.
           </p>
         </div>
 
@@ -256,8 +254,8 @@ export default function AIAutomation() {
         />
       </div>
 
-      {/* Statistics */}
-      <div className="mx-auto max-w-3xl pt-12 text-center">
+      {/* Statistics - Commented out mock stats */}
+      {/* <div className="mx-auto max-w-3xl pt-12 text-center">
         <p className="text-muted-foreground">Our numbers say it all:</p>
         <div className="mt-6 grid grid-cols-3 justify-between gap-6">
           {stats.map((stat, index) => (
@@ -273,7 +271,7 @@ export default function AIAutomation() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

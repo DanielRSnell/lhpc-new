@@ -1,0 +1,18 @@
+---
+export const prerender = true;
+
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import CalComWidget from '@/components/sections/calcom-widget';
+---
+
+<DefaultLayout
+  title="Contact LaunchHPC - Schedule a Demo"
+  description="Book a personalized demo with the LaunchHPC team. See how our AI/HPC orchestration platform can transform your infrastructure."
+>
+  <CalComWidget
+    client:load
+    title="Choose Your Time"
+    subhead="Select a time that works best for you and we'll send you a calendar invite"
+    calLink="team/thisway/launch-hpc"
+  />
+</DefaultLayout>

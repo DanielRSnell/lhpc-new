@@ -10,76 +10,76 @@ import { cn } from '@/lib/utils';
 
 const ITEMS = [
   {
-    title: 'Multi-Architecture Support',
+    title: 'Bare-Metal Multi-Tenancy',
     image: {
       src: '/images/home/features/1.webp',
       width: 198,
       height: 133,
     },
-    desc: 'Support for NVIDIA, AMD, and Intel architectures in unified workflows.',
+    desc: 'Secure tenant isolation without virtualization overhead—maximize revenue with 20-30% higher utilization while maintaining full hardware performance.',
   },
   {
-    title: 'Hybrid Cloud Management',
+    title: 'Workflow Portability',
     image: {
       src: '/images/home/features/2.webp',
       width: 148,
       height: 124,
     },
-    desc: 'Seamlessly orchestrate workloads across on-prem, cloud, and edge.',
+    desc: 'Write workflows once, run anywhere—on-premises, neoclouds, sovereign clouds, or edge environments with consistent performance.',
   },
   {
-    title: 'Real-Time Monitoring',
+    title: 'OEM-Agnostic Architecture',
     image: {
       src: '/images/home/features/3.webp',
       width: 154,
       height: 99,
     },
-    desc: 'Complete visibility into resource utilization and job performance.',
+    desc: 'Works across Dell, HPE, Supermicro, NVIDIA, AMD, and Intel—future-proof your infrastructure without vendor lock-in.',
   },
   {
-    title: 'Intelligent Scheduling',
+    title: 'Hybrid Bursting',
     image: {
       src: '/images/home/features/4.webp',
       width: 171,
       height: 120,
     },
-    desc: 'AI-powered workload placement for optimal resource efficiency.',
+    desc: 'Seamlessly extend on-premises workloads to cloud providers when needed—optimize costs without refactoring workflows.',
   },
   {
-    title: 'Comprehensive Logging',
+    title: 'Intelligent Orchestration',
     image: {
       src: '/images/home/features/5.webp',
       width: 195,
       height: 74.6,
     },
-    desc: 'Detailed audit trails and compliance reporting for all operations.',
+    desc: 'AI-powered scheduling automatically places workloads for optimal resource efficiency—HPC batch jobs and AI containers run side-by-side.',
   },
   {
-    title: 'Enterprise Integrations',
+    title: 'Deep Observability',
     image: {
       src: '/images/home/features/6.webp',
       width: 148,
       height: 124,
     },
-    desc: 'Native integration with existing HPC schedulers and cloud platforms.',
+    desc: 'Real-time visibility into GPU utilization, job performance, and resource allocation—data-driven optimization recommendations.',
   },
   {
-    title: 'Security & Compliance',
+    title: 'Enterprise Security',
     image: {
       src: '/images/home/features/7.webp',
       width: 186,
       height: 103,
     },
-    desc: 'Zero-trust architecture with hardware-level isolation and encryption.',
+    desc: 'Zero-trust architecture with hardware-level isolation and end-to-end encryption—StateRAMP roadmap for public sector compliance.',
   },
   {
-    title: 'Portable Workloads',
+    title: 'Multi-Architecture Support',
     image: {
       src: '/images/home/hero.webp',
       width: 186,
       height: 103,
     },
-    desc: 'Run workloads anywhere with consistent performance guarantees.',
+    desc: 'Native support for NVIDIA, AMD, and Intel accelerators in unified workflows—adopt new silicon immediately without refactoring.',
   },
 ];
 
@@ -90,11 +90,10 @@ const Features = ({ className }: { className?: string }) => {
         <div className="container flex flex-col justify-between gap-10 md:flex-row md:items-center">
           <div className="max-w-3xl space-y-3">
             <h2 className="text-4xxl leading-tight tracking-tight md:text-5xl">
-              Built for enterprise-scale AI/HPC
+              The LaunchHPC platform
             </h2>
             <p className="text-muted-foreground max-w-xl text-lg leading-snug">
-              Comprehensive orchestration with full observability, security, and
-              compliance. From edge to cloud to supercomputers.
+              Bare-metal performance, workflow portability, and OEM-agnostic orchestration—maximize utilization while ensuring sovereignty.
             </p>
           </div>
           <div className="hidden gap-3 md:flex">

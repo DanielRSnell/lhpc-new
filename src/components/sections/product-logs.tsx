@@ -20,19 +20,17 @@ export default function ProductLogs() {
       {/* Left: Text & Description */}
       <div className="flex flex-col justify-between gap-3">
         <div className="space-y-6">
-          <h2 className="text-4xxl leading-none tracking-tight text-balance md:text-6xl lg:max-w-xs">
-            Complete <br className="hidden lg:block" />
+          <h2 className="text-4xxl leading-none tracking-tight md:text-6xl lg:max-w-lg">
+            Trusted by{' '}
             <span className="text-gradient">
-              Infrastructure <br className="hidden lg:block" /> Logs
+              Leading Hardware Partners
             </span>
           </h2>
           <span className="text-accent-foreground text-xl font-bold">
-            Comprehensive System Monitoring
+            OEM-Agnostic Infrastructure
           </span>
           <p className="text-muted-foreground mt-3 max-w-lg text-lg leading-snug">
-            Every job is tracked across your entire infrastructure - from
-            resource allocation to completion with detailed performance metrics
-            and error analysis.
+            LaunchHPC integrates seamlessly with Dell, Supermicro, HPE, NVIDIA, AMD, and Intel—ensuring you are never locked into a single vendor ecosystem.
           </p>
           <div>
             <Button
@@ -40,8 +38,8 @@ export default function ProductLogs() {
               asChild
               className="group mt-6 h-12 gap-3 !px-0 font-normal transition-opacity hover:!bg-transparent hover:opacity-95 md:mt-12"
             >
-              <a href="#">
-                View monitoring dashboard
+              <a href="/contact">
+                Schedule a Demo
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>

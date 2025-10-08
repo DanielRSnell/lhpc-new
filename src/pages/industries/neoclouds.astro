@@ -1,0 +1,378 @@
+---
+export const prerender = true;
+
+import { Zap, Activity, Network, TrendingUp, Brain, GitBranch, ChartPie, ChartBar } from 'lucide-react';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import ProductHero from '@/components/dynmaic/product-hero';
+import ProductDashboard from '@/components/dynmaic/product-dashboard';
+import ProductFeatures from '@/components/dynmaic/product-features';
+import ProductLogs from '@/components/dynmaic/product-logs';
+import AIAutomation from '@/components/dynmaic/ai-automation';
+import Features from '@/components/dynmaic/features';
+import Features2 from '@/components/dynmaic/features2';
+import CalComWidget from '@/components/sections/calcom-widget';
+
+// Dashboard screenshots and feature cards
+const dashboardScreenshots = [
+  {
+    src: '/lhpc/compute-pools.png',
+    alt: 'Multi-tenant compute pool management',
+  },
+  {
+    src: '/lhpc/workflow-configuration.png',
+    alt: 'GPU workload orchestration',
+  },
+  {
+    src: '/lhpc/silicone-allocation.png',
+    alt: 'Real-time GPU utilization tracking',
+  },
+];
+
+const dashboardFeatures = [
+  {
+    title: 'Multi-Tenant Orchestration',
+    description: 'Intelligent workload placement across bare-metal GPU clusters with hardware-level tenant isolation.',
+    iconName: 'Network',
+    cta: 'Learn More',
+    href: '/docs/multi-tenancy',
+  },
+  {
+    title: 'Revenue Optimization',
+    description: 'AI-driven scheduling maximizes GPU utilization to achieve 20-30% utilization gains.',
+    iconName: 'TrendingUp',
+    cta: 'See Pricing',
+    href: '/contact',
+  },
+  {
+    title: 'Real-Time Analytics',
+    description: 'Monitor tenant workloads, utilization metrics, and infrastructure health in real-time.',
+    iconName: 'Activity',
+    cta: 'View Dashboard',
+    href: '/product',
+  },
+  {
+    title: 'Rapid Onboarding',
+    description: 'Self-service provisioning reduces tenant onboarding from weeks to days.',
+    iconName: 'Zap',
+    cta: 'Get Started',
+    href: '/contact',
+  },
+];
+
+// ProductFeatures data
+const featureCards = [
+  {
+    title: 'Tenant Performance Monitoring',
+    description: 'Real-time visibility into each tenant\'s GPU utilization and workload performance',
+    className: 'lg:col-span-2',
+  },
+  {
+    title: 'Revenue Analytics Dashboard',
+    description: 'Track utilization rates, tenant billing, and infrastructure ROI with exportable reports',
+    className: 'lg:col-span-2',
+  },
+  {
+    title: 'GPU Utilization Tracking',
+    description: 'Monitor utilization across your entire fleet with AI-driven optimization insights',
+    className: 'lg:col-span-2',
+  },
+  {
+    title: 'Hardware Partner Ecosystem',
+    description: 'Seamless integration with Dell, Supermicro, HPE, NVIDIA, AMD, and Intel infrastructure',
+    className: '!h-auto flex-col-reverse justify-between gap-6 lg:col-span-3 lg:flex-row-reverse lg:items-center [&_.card-header]:lg:max-w-50',
+  },
+  {
+    title: 'AI-Powered Workload Placement',
+    description: 'Intelligent scheduling automatically routes workloads to optimal GPU resources',
+    className: '!h-auto flex-col-reverse justify-between gap-6 lg:col-span-3 lg:flex-row-reverse lg:items-center [&_.card-header]:lg:max-w-50',
+  },
+];
+
+const partnerLogos = [
+  { name: 'Dell', url: 'https://img.logo.dev/dell.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+  { name: 'Supermicro', url: 'https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+  { name: 'HPE', url: 'https://img.logo.dev/hpe.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+  { name: 'NVIDIA', url: 'https://img.logo.dev/nvidia.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+  { name: 'AMD', url: 'https://img.logo.dev/amd.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+  { name: 'Intel', url: 'https://img.logo.dev/intel.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+  { name: 'Red Hat', url: 'https://img.logo.dev/redhat.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+  { name: 'Kubernetes', url: 'https://img.logo.dev/kubernetes.io?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+  { name: 'Rocky Linux', url: 'https://img.logo.dev/rockylinux.org?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+];
+
+// Hero chart data
+const neocloudUtilizationData = [
+  { time: '00:00', utilization: 65 },
+  { time: '04:00', utilization: 62 },
+  { time: '08:00', utilization: 78 },
+  { time: '10:00', utilization: 88 },
+  { time: '12:00', utilization: 92 },
+  { time: '14:00', utilization: 95 },
+  { time: '16:00', utilization: 93 },
+  { time: '18:00', utilization: 90 },
+  { time: '20:00', utilization: 85 },
+  { time: '22:00', utilization: 75 },
+  { time: '24:00', utilization: 68 },
+];
+
+// AI Automation workflow cards
+const automationCards = [
+  {
+    id: 'scheduler',
+    title: 'Tenant Scheduler',
+    subtitle: 'Analyzing GPU availability across 200+ nodes',
+    iconName: 'Users',
+    iconColor: 'text-purple-500',
+    position: 'absolute top-0 left-0',
+    isGenerating: false,
+  },
+  {
+    id: 'optimizer',
+    title: 'Revenue Optimizer',
+    subtitle: 'Multi-tenant utilization at 92%, recommending scaling',
+    iconName: 'Building2',
+    iconColor: 'text-blue-500',
+    position: 'absolute top-32 left-0',
+    isGenerating: false,
+  },
+  {
+    id: 'generating',
+    title: 'AI Optimizing Revenue',
+    subtitle: '',
+    iconName: undefined,
+    iconColor: '',
+    position: 'absolute top-18 right-0',
+    isGenerating: true,
+  },
+  {
+    id: 'monitor',
+    title: 'Infrastructure Monitor',
+    subtitle: 'All clusters healthy, 850 tenants active',
+    iconName: 'Folder',
+    iconColor: 'fill-destructive text-destructive',
+    position: 'absolute right-0 bottom-0',
+    isGenerating: false,
+  },
+];
+
+// Features carousel items
+const platformFeatures = [
+  {
+    title: 'Bare-Metal Multi-Tenancy',
+    image: {
+      src: '/lhpc/compute-pools.png',
+      width: 563,
+      height: 400,
+    },
+    desc: 'Secure tenant isolation without virtualization overhead—onboard tenants in days and achieve 20-30% higher utilization.',
+  },
+  {
+    title: 'Revenue Analytics',
+    image: {
+      src: '/lhpc/workflow-overview.png',
+      width: 662,
+      height: 400,
+    },
+    desc: 'Real-time visibility into tenant billing, GPU utilization rates, and infrastructure ROI with exportable reports.',
+  },
+  {
+    title: 'Intelligent Scheduling',
+    image: {
+      src: '/lhpc/workflow-configuration.png',
+      width: 632,
+      height: 400,
+    },
+    desc: 'AI-powered workload placement automatically routes tenant jobs to optimal GPU resources for maximum efficiency.',
+  },
+  {
+    title: 'Tenant Self-Service',
+    image: {
+      src: '/lhpc/workflows-list.png',
+      width: 610,
+      height: 400,
+    },
+    desc: 'Self-service portal reduces onboarding time from weeks to days—tenants provision resources instantly.',
+  },
+  {
+    title: 'Deep Observability',
+    image: {
+      src: '/lhpc/silicone-allocation.png',
+      width: 519,
+      height: 400,
+    },
+    desc: 'Monitor every tenant workload, track utilization metrics, and get data-driven optimization recommendations.',
+  },
+  {
+    title: 'Hardware Flexibility',
+    image: {
+      src: '/lhpc/team-activity-log.png',
+      width: 525,
+      height: 400,
+    },
+    desc: 'Works across Dell, HPE, Supermicro, NVIDIA, AMD, and Intel—avoid vendor lock-in and maximize infrastructure ROI.',
+  },
+];
+
+// Features2 data
+const mainChartData = [
+  { month: 'Jan', views: 170, clicks: 30 },
+  { month: 'Feb', views: 135, clicks: 62 },
+  { month: 'Mar', views: 130, clicks: 68 },
+  { month: 'Apr', views: 135, clicks: 75 },
+  { month: 'May', views: 136, clicks: 64 },
+  { month: 'Jun', views: 130, clicks: 78 },
+  { month: 'Jul', views: 140, clicks: 110 },
+  { month: 'Aug', views: 152, clicks: 125 },
+  { month: 'Sep', views: 190, clicks: 145 },
+  { month: 'Oct', views: 225, clicks: 165 },
+  { month: 'Nov', views: 230, clicks: 155 },
+  { month: 'Dec', views: 280, clicks: 200 },
+];
+
+const smallChartData = [
+  { day: 1, runs: 2000 },
+  { day: 2, runs: 3100 },
+  { day: 3, runs: 3600 },
+  { day: 4, runs: 3400 },
+  { day: 5, runs: 5600 },
+  { day: 6, runs: 4800 },
+  { day: 7, runs: 5812 },
+  { day: 9, runs: 6812 },
+  { day: 10, runs: 9812 },
+  { day: 11, runs: 12012 },
+];
+
+const bottomStats = [
+  {
+    label: 'Failed Jobs',
+    value: '12',
+    change: '-15%',
+    changeClass: 'bg-green-800/10 text-green-800',
+  },
+  {
+    label: 'Successful Jobs',
+    value: '15,842',
+    change: '+23%',
+    changeClass: 'bg-green-800/10 text-green-800',
+  },
+  {
+    label: 'Avg Queue Time',
+    value: '1.2m',
+    change: '-64%',
+    changeClass: 'bg-green-800/10 text-green-800',
+  },
+];
+
+const featureCarouselCards = [
+  {
+    icon: Activity,
+    title: 'Operator Revenue Optimization',
+    description:
+      'Multi-tenant infrastructure management with fair scheduling, instant provisioning, and comprehensive billing—maximize revenue per GPU.',
+  },
+  {
+    icon: GitBranch,
+    title: 'Technical Team Efficiency',
+    description:
+      'Tenant workloads run on bare-metal hardware with zero virtualization overhead—deliver premium performance at competitive prices.',
+  },
+  {
+    icon: Zap,
+    title: 'Rapid Tenant Onboarding',
+    description:
+      'Self-service provisioning reduces onboarding from weeks to days—accelerate time-to-revenue and improve customer satisfaction.',
+  },
+  {
+    icon: Brain,
+    title: 'AI-Driven Scheduling',
+    description:
+      'Intelligent workload placement keeps utilization high across your entire fleet—achieve 20-30% gains without manual intervention.',
+  },
+];
+---
+
+<DefaultLayout
+  title="LaunchHPC for Neoclouds - Maximize GPU Revenue with Multi-Tenancy"
+  description="GPU cloud providers achieve 20-30% utilization gains with LaunchHPC's bare-metal multi-tenancy, rapid tenant onboarding, and intelligent orchestration. Schedule a demo."
+>
+  <ProductHero
+    client:load
+    badge="GPU Cloud Providers"
+    badgeSubtext="Independent Infrastructure"
+    headline="Maximize GPU Revenue with"
+    headlineGradient="Bare-Metal Multi-Tenancy"
+    description="LaunchHPC delivers 20-30% utilization gains, rapid tenant onboarding, and secure bare-metal multi-tenancy for GPU cloud providers. No virtualization overhead, no vendor lock-in."
+    chartData={neocloudUtilizationData}
+    chartMetricLabel="Multi-Tenant GPU Utilization"
+    chartChangePercent="+25%"
+    ctaPrimary="Schedule a Demo"
+    ctaPrimaryHref="/contact"
+    ctaSecondary="Download Brief"
+    ctaSecondaryHref="/contact"
+    trustLine="Trusted by leading independent GPU cloud providers"
+    showTerminal={true}
+  />
+
+  <ProductDashboard
+    client:load
+    title="Complete Visibility Into Your Multi-Tenant GPU Infrastructure"
+    tagline="Four Core Capabilities for GPU Cloud Providers"
+    screenshots={dashboardScreenshots}
+    featureCards={dashboardFeatures}
+  />
+
+  <AIAutomation
+    client:load
+    aiPromptText="Optimize GPU allocation for training workloads"
+    headline="Intelligent orchestration that"
+    headlineGradient="keeps every GPU productive"
+    description="LaunchHPC's AI scheduling runs HPC batch jobs and AI containers side-by-side, automatically optimizing resource allocation across your entire compute environment—from edge to cloud to supercomputers."
+    cards={automationCards}
+  />
+
+  <Features
+    client:load
+    title="The LaunchHPC Platform for Neoclouds"
+    description="Bare-metal multi-tenancy, revenue optimization, and intelligent scheduling—maximize GPU utilization while ensuring tenant isolation."
+    items={platformFeatures}
+  />
+
+  <Features2
+    client:load
+    headerTitle="Purpose-built for GPU cloud operators and technical teams"
+    card1Icon={ChartPie}
+    card1Title="Maximize Multi-Tenant Revenue"
+    card1Description="Bare-metal multi-tenancy enables secure tenant isolation without virtualization overhead—onboard tenants in days and achieve 20-30% higher utilization rates."
+    mainChartData={mainChartData}
+    card2Icon={ChartBar}
+    card2Title="Tenant Workflow Management"
+    card2Description="Self-service provisioning and intelligent scheduling reduce operational overhead—tenants deploy workloads instantly with zero manual intervention."
+    totalJobsValue={3812}
+    totalJobsStartValue={3600}
+    totalJobsChange="+10.4%"
+    smallChartData={smallChartData}
+    bottomStats={bottomStats}
+    featureCards={featureCarouselCards}
+    ctaText="Schedule a Demo"
+    ctaHref="/contact"
+    showCta={true}
+  />
+
+  <ProductLogs
+    client:load
+    title="Trusted by"
+    titleGradient="Leading GPU Cloud Providers"
+    subtitle="OEM-Agnostic Multi-Tenant Infrastructure"
+    description="LaunchHPC integrates seamlessly with Dell, Supermicro, HPE, NVIDIA, AMD, and Intel—ensuring you maximize revenue without vendor lock-in."
+    ctaText="Schedule a Demo"
+    ctaHref="/contact"
+    showTerminal={true}
+  />
+
+  <CalComWidget
+    client:load
+    title="See LaunchHPC in Action"
+    subhead="Schedule a personalized demo with our team to see how LaunchHPC can transform your GPU cloud business"
+    calLink="team/thisway/launch-hpc"
+  />
+</DefaultLayout>

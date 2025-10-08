@@ -68,8 +68,8 @@ const FEATURE_CARDS = [
     image: '/images/product/performance.png',
   },
   {
-    title: 'Multi-Cloud Platform Integration',
-    description: 'Unified monitoring across AWS, Azure, GCP, and on-premises',
+    title: 'OEM-Agnostic Hardware Support',
+    description: 'Works seamlessly with Dell, Supermicro, HPE, NVIDIA, AMD, Intel, and leading infrastructure platforms',
     image: '/images/product/integrate.png',
   },
   {
@@ -86,12 +86,10 @@ export default function ProductFeatures() {
       {/* Header */}
       <div className="mx-auto max-w-4xl">
         <h2 className="text-4xxl leading-tight tracking-tight md:text-5xl">
-          Complete Infrastructure Visibility — When You Need It
+          Enterprise Features Built for Operators and Technical Teams
         </h2>
         <p className="text-muted-foreground mt-3 text-lg leading-snug">
-          Most orchestration platforms hide the details. LaunchHPC shows you
-          what matters — resource utilization, job performance, and system
-          health — in real-time.
+          LaunchHPC provides the visibility, control, and flexibility operators need to maximize revenue while giving technical teams the portability and performance they demand.
         </p>
       </div>
 
@@ -462,34 +460,25 @@ function Card3() {
 
 function Card4() {
   const ref = useRef<HTMLDivElement>(null);
-  const integrationLogos = [
-    { icon: FaAws, name: 'AWS', color: '#FF9900' },
-    { icon: FaMicrosoft, name: 'Azure', color: '#00A1F1' },
-    { icon: FaGoogle, name: 'GCP', color: '#4285F4' },
-    { icon: FaGithub, name: 'GitHub', color: '#909090' },
-    { icon: FaSlack, name: 'Slack', color: '#4A154B' },
-    { icon: FaDropbox, name: 'Storage', color: '#0061FF' },
-    { icon: FaTrello, name: 'Kubernetes', color: '#0079BF' },
-    { icon: FaLinkedin, name: 'LinkedIn', color: '#0A66C2' },
-    { icon: FaTwitter, name: 'Twitter', color: '#1DA1F2' },
-    { icon: FaFigma, name: 'Docker', color: '#F24E1E' },
-    { icon: FaSpotify, name: 'Terraform', color: '#1DB954' },
-    { icon: FaApple, name: 'Prometheus', color: '#000000' },
-    { icon: FaStripe, name: 'Grafana', color: '#635BFF' },
-    { icon: FaSalesforce, name: 'Jenkins', color: '#00A1E0' },
-    { icon: FaMailchimp, name: 'Ansible', color: '#FFE01B' },
-    { icon: FaIntercom, name: 'OpenShift', color: '#0049C7' },
-    { icon: FaShopify, name: 'NVIDIA', color: '#7AB55C' },
-    { icon: FaDiscord, name: 'AMD', color: '#5865F2' },
+  const partnerLogos = [
+    { name: 'Dell', url: 'https://img.logo.dev/dell.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'Supermicro', url: 'https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'HPE', url: 'https://img.logo.dev/hpe.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'NVIDIA', url: 'https://img.logo.dev/nvidia.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'AMD', url: 'https://img.logo.dev/amd.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'Intel', url: 'https://img.logo.dev/intel.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'Red Hat', url: 'https://img.logo.dev/redhat.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'Kubernetes', url: 'https://img.logo.dev/kubernetes.io?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'Rocky Linux', url: 'https://img.logo.dev/rockylinux.org?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
   ];
 
   return (
     <div ref={ref} className="relative h-full overflow-hidden">
-      <div className="grid w-fit grid-cols-9 gap-1 sm:gap-x-2 sm:gap-y-3 md:grid-cols-6">
-        {integrationLogos.map((logo, index) => (
+      <div className="grid w-fit grid-cols-3 gap-3 sm:gap-4">
+        {partnerLogos.map((logo, index) => (
           <motion.div
             key={logo.name}
-            className="bg-muted/40 hover:bg-accent/50 flex aspect-square size-6 items-center justify-center rounded-sm border transition-colors sm:size-8.5"
+            className="bg-muted/40 hover:bg-accent/50 flex aspect-square items-center justify-center rounded-lg border p-3 transition-colors"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -499,7 +488,7 @@ function Card4() {
               ease: 'easeOut',
             }}
           >
-            <logo.icon className="size-2.5" fill={logo.color} />
+            <img src={logo.url} alt={logo.name} className="h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
           </motion.div>
         ))}
       </div>

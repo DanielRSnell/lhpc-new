@@ -273,5 +273,27 @@
     "Bio": "Conner Burton is a digital strategist who blends creative content with smart automation to help brands and professionals thrive online. With expertise in LinkedIn content writing, YouTube content creation, audience building, AI development, and workflow automation, he combines storytelling with technical solutions to drive real-world results. On LinkedIn, Conner crafts compelling narratives that engage professional audiences, boost brand visibility, and foster meaningful connections. As a YouTuber, he transforms complex ideas into clear, engaging content, using practical examples and effective audience retention strategies. His ability to educate and entertain has helped him build a loyal following. In the technical space, Conner specializes in developing AI chatbots, virtual agents, and automation workflows that streamline processes and improve productivity. By integrating AI solutions into business operations, he helps organizations reduce manual work, minimize errors, and accelerate growth. Passionate about innovation, Conner is dedicated to making technology more accessible and impactful.",
     "Active": "TRUE",
     "path": "/images/team-members/male.png"
+  },
+  {
+    "Name": "Craig Peters",
+    "order": 6,
+    "Role": "Product Manager",
+    "Department": "Product",
+    "Email": "craig.peters@thiswayglobal.com",
+    "Linked In": "https://www.linkedin.com/in/craiglpeters/",
+    "Bio": "Craig Peters is a passionate Product Manager at ThisWay Global who is energized by finding and building connections in technology. With extensive experience in cloud computing, open source software, and product development, Craig specializes in bringing innovative solutions to market. His expertise in product management and technology strategy helps drive LaunchHPC's product vision and market success. Craig's ability to bridge technical capabilities with customer needs makes him a valuable leader in shaping the future of AI/HPC orchestration.",
+    "Active": "TRUE",
+    "path": "/images/about/team/craig.png"
+  },
+  {
+    "Name": "Joel Mjolsness",
+    "order": 7,
+    "Role": "Senior Business Development",
+    "Department": "Revenue",
+    "Email": "joel.mjolsness@thiswayglobal.com",
+    "Linked In": "https://www.linkedin.com/in/joelmjolsness/",
+    "Bio": "Joel Mjolsness leads the market introduction of LaunchHPC, ThisWay Global's next-generation AI-driven orchestration platform. With a distinguished background that includes military service and numerous accolades including the Bronze Star and Luther College Distinguished Service Award, Joel brings strategic leadership and extensive experience to driving market adoption. His expertise in business development, technology strategy, and go-to-market execution helps position LaunchHPC as the leading AI/HPC orchestration platform. Joel's commitment to excellence and innovation drives business growth and customer success.",
+    "Active": "TRUE",
+    "path": "/images/about/team/joel.png"
   }
 ]

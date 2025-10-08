@@ -1,0 +1,198 @@
+---
+export const prerender = true;
+
+import { Factory, Globe, Workflow, TrendingUp } from 'lucide-react';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import ComingSoonHero from '@/components/sections/coming-soon-hero';
+import CalComWidget from '@/components/sections/calcom-widget';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
+const capabilities = [
+  {
+    icon: Globe,
+    title: 'Global Orchestration',
+    description: 'Unified platform across all manufacturing facilities—manage compute resources globally with centralized control.',
+  },
+  {
+    icon: Workflow,
+    title: 'Workflow Portability',
+    description: 'Seamless movement between on-premises and cloud infrastructure—run simulations wherever capacity is available.',
+  },
+  {
+    icon: Factory,
+    title: 'PLM/ERP Integration',
+    description: 'Works with existing product lifecycle and enterprise systems—leverage current investments without rip-and-replace.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Simulation Optimization',
+    description: 'Faster design iterations with intelligent resource allocation—reduce time-to-market for new products.',
+  },
+];
+
+const useCases = [
+  'Crash test and safety simulations',
+  'Aerodynamic and fluid dynamics modeling',
+  'Supply chain optimization and logistics',
+  'Product design and digital twin modeling',
+];
+
+const relatedIndustries = [
+  {
+    title: 'Research Institutions',
+    href: '/industries/research',
+    description: 'Similar simulation and modeling workloads',
+  },
+  {
+    title: 'OEM Partners',
+    href: '/industries/oem-partners',
+    description: 'Hardware partnership opportunities',
+  },
+];
+---
+
+<DefaultLayout
+  title="LaunchHPC for Manufacturing & Engineering - Coming Soon"
+  description="Orchestrate simulations, digital twins, and supply chain modeling across global facilities. Get early access to LaunchHPC for manufacturing."
+>
+  <ComingSoonHero
+    client:load
+    badge="Coming Soon"
+    industry="Manufacturing & Engineering"
+    headline="Optimize Simulations and Digital Twins"
+    headlineGradient="Across Global Facilities"
+    description="LaunchHPC delivers unified orchestration for manufacturing firms running CAD/CAE simulations, digital twin modeling, and supply chain optimization across global facilities."
+  />
+
+  <section class="section-padding container max-w-5xl">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-4xl leading-tight tracking-tight md:text-5xl">
+        The Challenge
+      </h2>
+      <div class="text-muted-foreground mt-6 space-y-4 text-lg leading-relaxed">
+        <p>
+          Manufacturing and engineering firms require complex CAD/CAE simulations, digital twin modeling, and global collaboration across facilities. Current solutions struggle with integration, performance, and multi-site orchestration.
+        </p>
+        <p>
+          Traditional on-premises HPC is isolated in silos, cloud-only solutions raise sovereignty concerns, and hybrid approaches lack unified orchestration—creating bottlenecks that slow product development and increase costs.
+        </p>
+        <p>
+          LaunchHPC delivers unified orchestration across global manufacturing facilities, workflow portability between on-premises and cloud infrastructure, and integration with existing PLM/ERP systems. Optimize supply chain and production modeling while maintaining performance and security.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding bg-accent/30 container max-w-screen-xl">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-4xl leading-tight tracking-tight md:text-5xl">
+        Key Capabilities
+      </h2>
+      <p class="text-muted-foreground mt-3 text-lg">
+        Built for manufacturing and engineering workloads
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {capabilities.map((capability) => (
+        <Card class="border-none shadow-none bg-card/50">
+          <CardHeader>
+            <div class="bg-muted flex size-12 items-center justify-center rounded-lg">
+              <capability.icon class="size-6" />
+            </div>
+            <CardTitle class="text-xl">{capability.title}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription class="text-muted-foreground leading-relaxed">
+              {capability.description}
+            </CardDescription>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-padding container max-w-5xl">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-4xl leading-tight tracking-tight md:text-5xl">
+        Manufacturing Use Cases
+      </h2>
+      <p class="text-muted-foreground mt-3 text-lg">
+        Real-world applications across the manufacturing sector
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-4 md:grid-cols-2">
+      {useCases.map((useCase) => (
+        <div class="bg-accent/50 flex items-start gap-3 rounded-lg border p-6">
+          <div class="bg-primary/10 text-primary mt-1 flex size-6 shrink-0 items-center justify-center rounded-full">
+            <svg
+              class="size-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
+          <p class="text-lg leading-relaxed">{useCase}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-padding bg-accent/30 container max-w-5xl">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-4xl leading-tight tracking-tight md:text-5xl">
+        Related Industries
+      </h2>
+      <p class="text-muted-foreground mt-3 text-lg">
+        Explore similar LaunchHPC solutions
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-2">
+      {relatedIndustries.map((industry) => (
+        <a
+          href={industry.href}
+          class="bg-card group block rounded-lg border p-8 transition-all hover:border-primary hover:shadow-lg"
+        >
+          <h3 class="text-2xl font-bold group-hover:text-primary transition-colors">
+            {industry.title}
+          </h3>
+          <p class="text-muted-foreground mt-2 leading-relaxed">
+            {industry.description}
+          </p>
+          <div class="text-primary mt-4 flex items-center gap-2 font-medium">
+            Learn more
+            <svg
+              class="size-4 transition-transform group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <CalComWidget
+    client:load
+    title="Get Early Access to LaunchHPC for Manufacturing"
+    subhead="Schedule an exploratory call to discuss your manufacturing and engineering compute requirements"
+    calLink="team/thisway/launch-hpc"
+  />
+</DefaultLayout>

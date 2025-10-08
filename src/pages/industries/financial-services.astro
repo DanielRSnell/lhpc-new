@@ -1,0 +1,195 @@
+---
+export const prerender = true;
+
+import { TrendingUp, Shield, Target, Database, Zap, Lock, BarChart3, Cpu } from 'lucide-react';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import ComingSoonHero from '@/components/sections/coming-soon-hero';
+import SolutionSection from '@/components/sections/solution-section';
+import UseCasesSection from '@/components/sections/use-cases-section';
+import TechnicalCapabilities from '@/components/sections/technical-capabilities';
+import EarlyAccessCTA from '@/components/sections/early-access-cta';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
+const solutions = [
+  {
+    title: 'Bare-Metal Performance',
+    description:
+      'Zero virtualization overhead for trading algorithms that demand microsecond latency. Full GPU and CPU performance for real-time market analysis.',
+    benefit: 'Microsecond-level latency',
+  },
+  {
+    title: 'Secure Multi-Tenant Isolation',
+    description:
+      'Hardware-level isolation ensures regulatory compliance with SOC2, PCI-DSS, and financial services regulations without sacrificing performance.',
+    benefit: 'Compliance-ready architecture',
+  },
+  {
+    title: 'Comprehensive Audit Trails',
+    description:
+      'Complete logging and audit trails for regulatory compliance and forensic analysis. Track every workload execution and resource allocation.',
+    benefit: 'Full regulatory transparency',
+  },
+  {
+    title: 'Hybrid Deployment Options',
+    description:
+      'Risk management across on-premises and cloud infrastructure with consistent orchestration. Maintain sovereignty while leveraging cloud elasticity.',
+    benefit: 'Flexible infrastructure strategy',
+  },
+];
+
+const useCases = [
+  {
+    title: 'Algorithmic Trading Backtesting',
+    description:
+      'High-frequency strategy testing with microsecond precision and massive parallel simulations.',
+    icon: TrendingUp,
+  },
+  {
+    title: 'Risk Modeling & Stress Testing',
+    description:
+      'Monte Carlo simulations and portfolio risk analysis at scale with GPU acceleration.',
+    icon: BarChart3,
+  },
+  {
+    title: 'Fraud Detection ML Models',
+    description:
+      'Real-time transaction analysis with deep learning models for instant fraud detection.',
+    icon: Shield,
+  },
+  {
+    title: 'Portfolio Optimization',
+    description:
+      'Complex optimization algorithms for asset allocation and rebalancing strategies.',
+    icon: Target,
+  },
+  {
+    title: 'Credit Risk Scoring',
+    description:
+      'Machine learning models for credit decisioning and loan portfolio analysis.',
+    icon: Database,
+  },
+  {
+    title: 'Market Microstructure Analysis',
+    description:
+      'High-frequency data analysis for order flow, liquidity, and price discovery research.',
+    icon: Zap,
+  },
+  {
+    title: 'Regulatory Compliance Reporting',
+    description:
+      'Automated stress testing and reporting for CCAR, DFAST, and Basel III requirements.',
+    icon: Lock,
+  },
+  {
+    title: 'Derivatives Pricing',
+    description:
+      'Real-time valuation of complex derivatives using GPU-accelerated numerical methods.',
+    icon: Cpu,
+  },
+];
+
+const capabilities = [
+  'Bare-metal GPU and CPU performance with zero virtualization tax',
+  'Hardware-level multi-tenant isolation for regulatory compliance',
+  'SOC2, PCI-DSS, and financial services regulatory frameworks',
+  'Comprehensive audit trails and forensic logging',
+  'Hybrid deployment across on-premises and cloud',
+  'Low-latency networking optimized for trading applications',
+  'Secure data encryption in transit and at rest',
+  'Integration with existing risk management systems',
+];
+---
+
+<DefaultLayout
+  title="LaunchHPC for Financial Services - Coming Soon"
+  description="Bare-metal orchestration for algorithmic trading, risk modeling, and fraud detection. Get early access to LaunchHPC for financial services."
+>
+  <ComingSoonHero
+    client:load
+    headline="LaunchHPC for Financial Services"
+    subhead="Bare-metal performance for trading algorithms, risk modeling, and fraud detection"
+    industry="Financial Services"
+  />
+
+  <section class="section-padding container max-w-screen-xl">
+    <div class="mx-auto max-w-4xl space-y-6 text-lg leading-relaxed">
+      <p class="text-muted-foreground">
+        Financial services firms require <strong>low-latency, high-performance computing</strong> for algorithmic trading, risk modeling, and fraud detection. Traditional virtualized infrastructure introduces unacceptable latency, while cloud solutions raise sovereignty and compliance concerns.
+      </p>
+
+      <p class="text-muted-foreground">
+        LaunchHPC delivers <strong>bare-metal performance</strong> for latency-sensitive workloads, <strong>secure multi-tenant isolation</strong> for regulatory compliance, and <strong>comprehensive audit trails</strong> for SOC2 and PCI-DSS requirements. Hybrid deployment options enable risk management across on-premises and cloud infrastructure.
+      </p>
+
+      <p class="text-muted-foreground">
+        Whether you're running high-frequency trading algorithms, Monte Carlo simulations for risk analysis, or real-time fraud detection models, LaunchHPC ensures maximum performance without compromising security or compliance.
+      </p>
+    </div>
+  </section>
+
+  <SolutionSection
+    client:load
+    title="How LaunchHPC Serves Financial Services"
+    solutions={solutions}
+  />
+
+  <UseCasesSection
+    client:load
+    title="Financial Services Applications"
+    useCases={useCases}
+  />
+
+  <TechnicalCapabilities
+    client:load
+    title="Built for Financial Services Requirements"
+    capabilities={capabilities}
+  />
+
+  <EarlyAccessCTA
+    client:load
+    title="Get Early Access to LaunchHPC for Financial Services"
+    subhead="Schedule an exploratory call to discuss your requirements or sign up for updates"
+    industry="financial services"
+  />
+
+  <section class="section-padding container max-w-screen-xl">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-4xl leading-tight tracking-tight md:text-5xl">
+        Related Industries
+      </h2>
+      <p class="text-muted-foreground mt-4">
+        Explore how LaunchHPC serves other industries with similar requirements
+      </p>
+    </div>
+
+    <div class="mx-auto mt-10 grid max-w-4xl gap-6 md:grid-cols-2">
+      <Card>
+        <CardHeader>
+          <CardTitle>Research Institutions</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <CardDescription class="mb-4">
+            Similar compliance needs for academic research with sensitive data
+          </CardDescription>
+          <a href="/industries/research" class="text-chart-2 text-sm font-medium hover:underline">
+            Learn more →
+          </a>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Public Sector</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <CardDescription class="mb-4">
+            Sovereign computing requirements for government and defense applications
+          </CardDescription>
+          <a href="/industries/public-sector" class="text-chart-2 text-sm font-medium hover:underline">
+            Learn more →
+          </a>
+        </CardContent>
+      </Card>
+    </div>
+  </section>
+</DefaultLayout>

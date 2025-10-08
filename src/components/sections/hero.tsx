@@ -18,14 +18,12 @@ export default function Hero() {
             </div>
 
             <h1 className="text-5xl leading-none tracking-tight text-balance md:text-6xl lg:text-7xl">
-              Unified AI/HPC orchestration for{' '}
-              <span className="text-gradient">every environment</span>
+              Maximize GPU utilization with{' '}
+              <span className="text-gradient">bare-metal orchestration</span> for every environment
             </h1>
 
             <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
-              LaunchHPC delivers secure, scalable compute orchestration across
-              on-premises, cloud, and hybrid infrastructures. One platform for
-              all your AI and HPC workloads.
+              LaunchHPC delivers workflow portability, bare-metal multi-tenancy, and OEM-agnostic orchestration—achieve 20-30% utilization gains while ensuring sovereignty and avoiding vendor lock-in.
             </p>
           </div>
 
@@ -33,22 +31,22 @@ export default function Hero() {
           <div className="space-y-3">
             <div className="flex gap-4.5">
               <Button className="flex-1 md:min-w-45" asChild>
-                <a href="/demo">Get Started</a>
+                <a href="/contact">Schedule a Demo</a>
               </Button>
               <Button className="flex-1 md:min-w-45" variant="outline" asChild>
-                <a href="/demo">Request Demo</a>
+                <a href="/contact">Contact Sales</a>
               </Button>
             </div>
             <div className="text-center text-sm">
-              Trusted by enterprises · Government ready
+              Partnered with Dell, Supermicro, and NVIDIA · Government ready
             </div>
           </div>
         </div>
 
         {/* Hero Image */}
         <img
-          src="/dashboard.png"
-          alt="App screenshot"
+          src="/lhpc/workflow-overview.png"
+          alt="LaunchHPC workflow orchestration dashboard"
           className="ring-foreground/5 mt-10 w-full rounded-xs shadow-2xl ring-6 invert md:mt-20 md:rounded-sm md:px-[1px] md:ring-16 lg:mt-30 dark:invert-0"
           width={1440}
           height={905}
