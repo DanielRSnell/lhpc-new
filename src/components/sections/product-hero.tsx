@@ -41,7 +41,7 @@ export default function ProductHero() {
         </h1>
 
         <p className="text-muted-foreground max-w-2xl leading-snug md:text-lg lg:text-xl">
-          LaunchHPC delivers workflow portability, multi-tenant infrastructure management, and OEM-agnostic orchestration—achieve 20-30% utilization gains across Dell, Supermicro, NVIDIA, AMD, Intel, and HPE hardware without vendor lock-in.
+          LaunchHPC delivers workflow portability, multi-tenant infrastructure management, and OEM-agnostic orchestration—achieve 57-85% utilization gains across Dell, Supermicro, NVIDIA, AMD, Intel, and HPE hardware without vendor lock-in.
         </p>
       </div>
 

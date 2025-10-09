@@ -78,7 +78,7 @@ export const NAV_LINKS = [
         href: '/industries/neoclouds',
         description: 'Independent GPU cloud providers',
         details:
-          'Maximize infrastructure efficiency, optimize multi-tenant workloads, and drive revenue growth with 20-30% utilization gains.',
+          'Maximize infrastructure efficiency, optimize multi-tenant workloads, and drive revenue growth with 57-85% utilization gains.',
         icon: Zap,
         featured: true,
       },

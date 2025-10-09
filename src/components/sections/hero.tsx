@@ -23,7 +23,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
-              LaunchHPC delivers workflow portability, bare-metal multi-tenancy, and OEM-agnostic orchestration—achieve 20-30% utilization gains while ensuring sovereignty and avoiding vendor lock-in.
+              LaunchHPC delivers workflow portability, bare-metal multi-tenancy, and OEM-agnostic orchestration—achieve 57-85% utilization gains while ensuring sovereignty and avoiding vendor lock-in.
             </p>
           </div>
 

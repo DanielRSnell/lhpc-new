@@ -70,7 +70,7 @@ Extend on-prem workloads into neocloud operators for hybrid flexibility. Scale d
 Onboard tenants and workloads in days, not weeks. Multi-tenant capabilities unlock new revenue streams from existing infrastructure.
 
 ### Maximize Utilization
-Keep GPUs and accelerators hot across AI + HPC workloads. Achieve 20-30% more throughput per cycle through intelligent orchestration.
+Keep GPUs and accelerators hot across AI + HPC workloads. Achieve 57-85% more throughput per cycle through intelligent orchestration.
 
 ### Broaden Adoption
 Empower non-technical users with agentic workflows and interfaces. Democratize access to advanced capabilities across the organization.
@@ -121,7 +121,7 @@ Continuous telemetry and recommendations for fairness, compliance, and efficienc
 ## Proof and ROI
 
 ### Utilization Gains
-Up to 20-30% more throughput per cycle through intelligent orchestration and bare-metal multi-tenancy.
+Up to 57-85% more throughput per cycle through intelligent orchestration and bare-metal multi-tenancy.
 
 ### Rapid Onboarding
 New workloads deployed in days, not weeks. Accelerate time-to-value for new tenants and use cases.

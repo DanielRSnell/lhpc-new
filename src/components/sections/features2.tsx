@@ -88,7 +88,7 @@ const Features2 = () => {
                   Maximize GPU Revenue
                 </h3>
                 <p className="text-muted-foreground leading-snug lg:text-lg">
-                  Bare-metal multi-tenancy enables secure resource sharing without virtualization overhead—onboard tenants in days and achieve 20-30% higher utilization rates.
+                  Bare-metal multi-tenancy enables secure resource sharing without virtualization overhead—onboard tenants in days and achieve 57-85% higher utilization rates.
                 </p>
               </div>
 
@@ -373,10 +373,11 @@ const Features2 = () => {
 
         <div className="flex justify-center">
           <Button
+            asChild
             variant="secondary"
             className="border-input bg-accent max-w-64 flex-1 border"
           >
-            Try LaunchHPC
+            <a href="/contact">Try LaunchHPC</a>
           </Button>
         </div>
       </div>
@@ -428,46 +429,73 @@ const FeatureCarousel = () => {
   }, [api, onSelect]);
 
   return (
-    <Carousel
-      setApi={setApi}
-      opts={{
-        align: 'start',
-        loop: false,
-      }}
-    >
-      <CarouselContent className="cursor-grab snap-x snap-mandatory">
+    <>
+      {/* Grid layout for mobile and tablet */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:hidden">
         {featureCards.map((card, idx) => {
           const IconComponent = card.icon;
           return (
-            <CarouselItem key={idx} className="min-w-xs basis-1/4 snap-start">
-              <Card
-                className={cn(
-                  'bg-card border-0 dark:bg-transparent',
-                  current === idx &&
-                    'dark:from-muted/50 dark:via-muted/10 to-card via-card from-background bg-gradient-to-r dark:to-transparent',
-                )}
-              >
-                <CardContent className="flex flex-col gap-2.5">
-                  <div className="flex items-center gap-2.5">
-                    <IconComponent className={cn('h-4 w-4')} />
-                    <h4 className={cn('text-lg leading-tight')}>
-                      {card.title}
-                    </h4>
-                  </div>
-                  <p
-                    className={cn(
-                      'text-muted-foreground hidden text-sm leading-snug md:block',
-                    )}
-                  >
-                    {card.description}
-                  </p>
-                </CardContent>
-              </Card>
-            </CarouselItem>
+            <Card
+              key={idx}
+              className="dark:from-muted/50 dark:via-muted/10 to-card via-card from-background bg-gradient-to-r border-0 dark:to-transparent"
+            >
+              <CardContent className="flex flex-col gap-2.5">
+                <div className="flex items-center gap-2.5">
+                  <IconComponent className="h-4 w-4" />
+                  <h4 className="text-lg leading-tight">{card.title}</h4>
+                </div>
+                <p className="text-muted-foreground text-sm leading-snug">
+                  {card.description}
+                </p>
+              </CardContent>
+            </Card>
           );
         })}
-      </CarouselContent>
-    </Carousel>
+      </div>
+
+      {/* Carousel for desktop */}
+      <Carousel
+        setApi={setApi}
+        opts={{
+          align: 'start',
+          loop: false,
+        }}
+        className="hidden lg:block"
+      >
+        <CarouselContent className="cursor-grab snap-x snap-mandatory">
+          {featureCards.map((card, idx) => {
+            const IconComponent = card.icon;
+            return (
+              <CarouselItem key={idx} className="min-w-xs basis-1/4 snap-start">
+                <Card
+                  className={cn(
+                    'bg-card border-0 dark:bg-transparent',
+                    current === idx &&
+                      'dark:from-muted/50 dark:via-muted/10 to-card via-card from-background bg-gradient-to-r dark:to-transparent',
+                  )}
+                >
+                  <CardContent className="flex flex-col gap-2.5">
+                    <div className="flex items-center gap-2.5">
+                      <IconComponent className={cn('h-4 w-4')} />
+                      <h4 className={cn('text-lg leading-tight')}>
+                        {card.title}
+                      </h4>
+                    </div>
+                    <p
+                      className={cn(
+                        'text-muted-foreground hidden text-sm leading-snug md:block',
+                      )}
+                    >
+                      {card.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+      </Carousel>
+    </>
   );
 };
 

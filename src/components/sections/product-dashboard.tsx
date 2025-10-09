@@ -15,7 +15,7 @@ const FEATURE_CARDS = [
   {
     title: 'Bare-Metal Multi-Tenancy',
     description:
-      'Secure tenant isolation without virtualization overhead—onboard new tenants in days and maximize revenue per GPU with 20-30% higher utilization.',
+      'Secure tenant isolation without virtualization overhead—onboard new tenants in days and maximize revenue per GPU with 57-85% higher utilization.',
     icon: Shield,
     cta: 'Learn more',
     href: '/contact',

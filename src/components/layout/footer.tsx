@@ -35,12 +35,15 @@ const Footer = ({ currentPage }: FooterProps) => {
         </h2>
 
         <div className="mx-auto flex max-w-sm justify-center gap-4.5">
-          <Button className="flex-1">Get Started</Button>
+          <Button asChild className="flex-1">
+            <a href="/contact">Get Started</a>
+          </Button>
           <Button
+            asChild
             variant="secondary"
             className="border-input bg-accent flex-1 border"
           >
-            Learn More
+            <a href="/product">Learn More</a>
           </Button>
         </div>
 

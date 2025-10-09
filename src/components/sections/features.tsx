@@ -16,7 +16,7 @@ const ITEMS = [
       width: 198,
       height: 133,
     },
-    desc: 'Secure tenant isolation without virtualization overhead—maximize revenue with 20-30% higher utilization while maintaining full hardware performance.',
+    desc: 'Secure tenant isolation without virtualization overhead—maximize revenue with 57-85% higher utilization while maintaining full hardware performance.',
   },
   {
     title: 'Workflow Portability',
