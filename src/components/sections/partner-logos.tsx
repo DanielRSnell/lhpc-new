@@ -27,6 +27,10 @@ const PARTNERS = [
     name: 'TDSynnex',
     url: 'https://img.logo.dev/tdsynnex.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
   },
+  {
+    name: 'Oracle',
+    url: 'https://img.logo.dev/oracle.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
+  },
 ];
 
 export default function PartnerLogos() {
