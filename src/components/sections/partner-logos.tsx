@@ -1,27 +1,31 @@
 const PARTNERS = [
   {
-    name: 'Dell',
-    url: 'https://img.logo.dev/dell.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
+    name: 'NVIDIA',
+    url: 'https://img.logo.dev/nvidia.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
   },
   {
     name: 'Supermicro',
     url: 'https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
   },
   {
-    name: 'NVIDIA',
-    url: 'https://img.logo.dev/nvidia.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
+    name: 'Mirantis',
+    url: 'https://img.logo.dev/mirantis.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
   },
   {
-    name: 'AMD',
-    url: 'https://img.logo.dev/amd.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
+    name: 'IBM',
+    url: 'https://img.logo.dev/ibm.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
   },
   {
-    name: 'Intel',
-    url: 'https://img.logo.dev/intel.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
+    name: 'AWS',
+    url: 'https://img.logo.dev/aws.amazon.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
   },
   {
-    name: 'HPE',
-    url: 'https://img.logo.dev/hpe.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
+    name: 'Microsoft',
+    url: 'https://img.logo.dev/microsoft.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
+  },
+  {
+    name: 'TDSynnex',
+    url: 'https://img.logo.dev/tdsynnex.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
   },
 ];
 
