@@ -1,13 +1,13 @@
 ---
 export const prerender = true;
 
-import { Package, Rocket, TrendingUp, Zap, Handshake, Boxes, Globe, Award } from 'lucide-react';
+import { Package, Rocket, TrendingUp, Handshake } from 'lucide-react';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 import ProductHero from '@/components/dynmaic/product-hero';
 import ProductDashboard from '@/components/dynmaic/product-dashboard';
 import AIAutomation from '@/components/dynmaic/ai-automation';
-import Features from '@/components/dynmaic/features';
-import Features2 from '@/components/dynmaic/features2';
+import Features from '@/components/sections/features';
+import Features2 from '@/components/sections/features2';;
 import ProductLogs from '@/components/dynmaic/product-logs';
 import CalComWidget from '@/components/sections/calcom-widget';
 
@@ -108,140 +108,6 @@ const automationCards = [
   },
 ];
 
-// Features carousel items
-const platformFeatures = [
-  {
-    title: 'Pre-Integrated Solutions',
-    image: {
-      src: '/lhpc/compute-pools.png',
-      width: 563,
-      height: 400,
-    },
-    desc: 'Turnkey AI/HPC appliances with LaunchHPC pre-installed—customers deploy in hours instead of weeks, accelerating time-to-value.',
-  },
-  {
-    title: 'Reference Architectures',
-    image: {
-      src: '/lhpc/workflow-overview.png',
-      width: 662,
-      height: 400,
-    },
-    desc: 'Validated configurations for common use cases—genomics, climate modeling, AI training, and inference serving with best practices.',
-  },
-  {
-    title: 'White-Label Options',
-    image: {
-      src: '/lhpc/workflow-configuration.png',
-      width: 632,
-      height: 400,
-    },
-    desc: 'Co-branding and white-label deployment options—deliver LaunchHPC as your own platform or maintain joint branding.',
-  },
-  {
-    title: 'Joint Go-to-Market',
-    image: {
-      src: '/lhpc/workflows-list.png',
-      width: 610,
-      height: 400,
-    },
-    desc: 'Collaborative marketing and sales programs—co-branded case studies, joint webinars, and shared sales enablement.',
-  },
-  {
-    title: 'Technical Enablement',
-    image: {
-      src: '/lhpc/silicone-allocation.png',
-      width: 519,
-      height: 400,
-    },
-    desc: 'Training for OEM technical teams—certification programs, integration support, and custom feature development.',
-  },
-  {
-    title: 'Multi-Architecture Support',
-    image: {
-      src: '/lhpc/team-activity-log.png',
-      width: 525,
-      height: 400,
-    },
-    desc: 'Support for NVIDIA, AMD, Intel accelerators—work across all major hardware platforms without vendor lock-in.',
-  },
-];
-
-// Features2 data
-const mainChartData = [
-  { month: 'Jan', views: 85, clicks: 22 },
-  { month: 'Feb', views: 95, clicks: 28 },
-  { month: 'Mar', views: 108, clicks: 35 },
-  { month: 'Apr', views: 122, clicks: 42 },
-  { month: 'May', views: 138, clicks: 52 },
-  { month: 'Jun', views: 155, clicks: 62 },
-  { month: 'Jul', views: 175, clicks: 75 },
-  { month: 'Aug', views: 195, clicks: 88 },
-  { month: 'Sep', views: 218, clicks: 102 },
-  { month: 'Oct', views: 242, clicks: 118 },
-  { month: 'Nov', views: 268, clicks: 135 },
-  { month: 'Dec', views: 295, clicks: 155 },
-];
-
-const smallChartData = [
-  { day: 1, runs: 800 },
-  { day: 2, runs: 1200 },
-  { day: 3, runs: 1600 },
-  { day: 4, runs: 2200 },
-  { day: 5, runs: 2800 },
-  { day: 6, runs: 3400 },
-  { day: 7, runs: 4000 },
-  { day: 9, runs: 4800 },
-  { day: 10, runs: 5600 },
-  { day: 11, runs: 6500 },
-];
-
-const bottomStats = [
-  {
-    label: 'Customer Satisfaction',
-    value: '94%',
-    change: '+12%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-  {
-    label: 'Time-to-Value',
-    value: '48hrs',
-    change: '-75%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-  {
-    label: 'Average ASP Lift',
-    value: '+35%',
-    change: '+35%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-];
-
-const featureCarouselCards = [
-  {
-    icon: Package,
-    title: 'Turnkey Solutions',
-    description:
-      'Pre-integrated AI/HPC appliances work out-of-box—customers deploy in hours instead of weeks, dramatically improving satisfaction.',
-  },
-  {
-    icon: Handshake,
-    title: 'OEM-Agnostic Trust',
-    description:
-      'Platform works with all hardware vendors—customers trust neutral orchestration that avoids vendor lock-in and maximizes flexibility.',
-  },
-  {
-    icon: Globe,
-    title: 'Global Partnership',
-    description:
-      'Joint go-to-market programs, co-branded materials, and shared sales enablement—accelerate market penetration together.',
-  },
-  {
-    icon: Award,
-    title: 'Revenue Growth',
-    description:
-      'Higher ASP with software bundles, services opportunities, and differentiated offerings—grow revenue beyond hardware sales.',
-  },
-];
 ---
 
 <DefaultLayout
@@ -283,33 +149,9 @@ const featureCarouselCards = [
     cards={automationCards}
   />
 
-  <Features
-    client:load
-    title="The LaunchHPC Platform for OEM Partners"
-    description="Pre-integrated solutions, reference architectures, and joint go-to-market programs—differentiate hardware with world-class orchestration software."
-    items={platformFeatures}
-  />
+  <Features client:load />
 
-  <Features2
-    client:load
-    headerTitle="Purpose-built for hardware manufacturers and system integrators"
-    card1Icon={Package}
-    card1Title="Differentiated Solutions"
-    card1Description="Bundle LaunchHPC with hardware sales to deliver turnkey AI/HPC appliances—stand out from commodity competition with integrated software value-add."
-    mainChartData={mainChartData}
-    card2Icon={Rocket}
-    card2Title="Customer Time-to-Value"
-    card2Description="Pre-integrated solutions work out-of-box—reduce deployment from weeks to hours, dramatically improving customer satisfaction and reducing support costs."
-    totalJobsValue={6500}
-    totalJobsStartValue={5600}
-    totalJobsChange="+16.1%"
-    smallChartData={smallChartData}
-    bottomStats={bottomStats}
-    featureCards={featureCarouselCards}
-    ctaText="Schedule Partnership Call"
-    ctaHref="/contact"
-    showCta={true}
-  />
+  <Features2 client:load />
 
   <ProductLogs
     client:load

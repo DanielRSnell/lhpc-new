@@ -1,13 +1,13 @@
 ---
 export const prerender = true;
 
-import { Users, GitBranch, TrendingUp, Zap, BookOpen, FlaskConical, Brain, FileText } from 'lucide-react';
+import { Users, GitBranch, TrendingUp, Zap } from 'lucide-react';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 import ProductHero from '@/components/dynmaic/product-hero';
 import ProductDashboard from '@/components/dynmaic/product-dashboard';
 import AIAutomation from '@/components/dynmaic/ai-automation';
-import Features from '@/components/dynmaic/features';
-import Features2 from '@/components/dynmaic/features2';
+import Features from '@/components/sections/features';
+import Features2 from '@/components/sections/features2';;
 import ProductLogs from '@/components/dynmaic/product-logs';
 import CalComWidget from '@/components/sections/calcom-widget';
 
@@ -113,140 +113,6 @@ const automationCards = [
   },
 ];
 
-// Features carousel items
-const platformFeatures = [
-  {
-    title: 'Self-Service Portal',
-    image: {
-      src: '/lhpc/compute-pools.png',
-      width: 563,
-      height: 400,
-    },
-    desc: 'Researchers request resources directly through agentic UX—no IT bottlenecks, manual provisioning, or lengthy approval processes.',
-  },
-  {
-    title: 'Fair-Share Scheduling',
-    image: {
-      src: '/lhpc/workflow-overview.png',
-      width: 662,
-      height: 400,
-    },
-    desc: 'Configure policies by department, project, or grant—ensure equitable access while prioritizing mission-critical research.',
-  },
-  {
-    title: 'Multi-Tenant Isolation',
-    image: {
-      src: '/lhpc/workflow-configuration.png',
-      width: 632,
-      height: 400,
-    },
-    desc: 'Secure separation for competing research groups—protect proprietary data and maintain compliance with data regulations.',
-  },
-  {
-    title: 'Grant Reporting',
-    image: {
-      src: '/lhpc/workflows-list.png',
-      width: 610,
-      height: 400,
-    },
-    desc: 'Automated per-project usage tracking and reporting—justify infrastructure investments and satisfy funding agency requirements.',
-  },
-  {
-    title: 'Framework Integration',
-    image: {
-      src: '/lhpc/silicone-allocation.png',
-      width: 519,
-      height: 400,
-    },
-    desc: 'Support for PyTorch, TensorFlow, Jupyter notebooks, and popular research tools—researchers use familiar workflows.',
-  },
-  {
-    title: 'Collaborative Computing',
-    image: {
-      src: '/lhpc/team-activity-log.png',
-      width: 525,
-      height: 400,
-    },
-    desc: 'Multi-site federation enables collaboration across universities and national labs—share resources while maintaining security.',
-  },
-];
-
-// Features2 data
-const mainChartData = [
-  { month: 'Jan', views: 125, clicks: 35 },
-  { month: 'Feb', views: 132, clicks: 42 },
-  { month: 'Mar', views: 138, clicks: 48 },
-  { month: 'Apr', views: 145, clicks: 52 },
-  { month: 'May', views: 152, clicks: 58 },
-  { month: 'Jun', views: 160, clicks: 65 },
-  { month: 'Jul', views: 168, clicks: 72 },
-  { month: 'Aug', views: 178, clicks: 78 },
-  { month: 'Sep', views: 188, clicks: 85 },
-  { month: 'Oct', views: 198, clicks: 92 },
-  { month: 'Nov', views: 210, clicks: 98 },
-  { month: 'Dec', views: 225, clicks: 108 },
-];
-
-const smallChartData = [
-  { day: 1, runs: 1500 },
-  { day: 2, runs: 2000 },
-  { day: 3, runs: 2400 },
-  { day: 4, runs: 2800 },
-  { day: 5, runs: 3200 },
-  { day: 6, runs: 3800 },
-  { day: 7, runs: 4200 },
-  { day: 9, runs: 4800 },
-  { day: 10, runs: 5400 },
-  { day: 11, runs: 6000 },
-];
-
-const bottomStats = [
-  {
-    label: 'Active Researchers',
-    value: '842',
-    change: '+18%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-  {
-    label: 'Research Projects',
-    value: '156',
-    change: '+24%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-  {
-    label: 'Publications Enabled',
-    value: '89',
-    change: '+32%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-];
-
-const featureCarouselCards = [
-  {
-    icon: BookOpen,
-    title: 'Democratized Access',
-    description:
-      'Every researcher can access HPC resources through self-service portal—eliminate IT bottlenecks and accelerate scientific discovery.',
-  },
-  {
-    icon: GitBranch,
-    title: 'Equitable Allocation',
-    description:
-      'Fair-share scheduling ensures equitable access across departments—configure policies for grant-funded and priority research.',
-  },
-  {
-    icon: FlaskConical,
-    title: 'Framework Support',
-    description:
-      'Native integration with PyTorch, TensorFlow, Jupyter notebooks, and popular research frameworks—researchers use familiar tools.',
-  },
-  {
-    icon: FileText,
-    title: 'Automated Reporting',
-    description:
-      'Detailed per-project usage tracking and grant reporting templates—justify infrastructure investments to funding agencies and stakeholders.',
-  },
-];
 ---
 
 <DefaultLayout
@@ -288,33 +154,9 @@ const featureCarouselCards = [
     cards={automationCards}
   />
 
-  <Features
-    client:load
-    title="The LaunchHPC Platform for Research"
-    description="Self-service access, fair-share scheduling, and automated grant reporting—democratize HPC resources while maximizing research output."
-    items={platformFeatures}
-  />
+  <Features client:load />
 
-  <Features2
-    client:load
-    headerTitle="Purpose-built for academic research and scientific discovery"
-    card1Icon={BookOpen}
-    card1Title="Democratized HPC Access"
-    card1Description="Self-service portal eliminates IT bottlenecks—researchers request resources directly with agentic UX, accelerating time-to-discovery and scientific output."
-    mainChartData={mainChartData}
-    card2Icon={GitBranch}
-    card2Title="Fair-Share Scheduling"
-    card2Description="Configure equitable policies by department, project, or grant—ensure priority for mission-critical research while maximizing infrastructure utilization."
-    totalJobsValue={6000}
-    totalJobsStartValue={5400}
-    totalJobsChange="+11.1%"
-    smallChartData={smallChartData}
-    bottomStats={bottomStats}
-    featureCards={featureCarouselCards}
-    ctaText="Schedule a Demo"
-    ctaHref="/contact"
-    showCta={true}
-  />
+  <Features2 client:load />
 
   <ProductLogs
     client:load

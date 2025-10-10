@@ -53,18 +53,6 @@ export default function ProductDashboard({
         </h2>
       </div>
 
-      {/* Feature Screenshots */}
-      <div className="mx-auto mt-10 grid gap-4 md:mt-16 md:grid-cols-3">
-        {screenshots.map((screenshot, index) => (
-          <img
-            key={index}
-            src={screenshot.src}
-            alt={screenshot.alt}
-            className="rounded-lg border shadow-lg"
-          />
-        ))}
-      </div>
-
       {/* Tagline */}
       <h3 className="text-muted-foreground mt-8 text-center uppercase">
         {tagline}

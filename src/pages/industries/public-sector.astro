@@ -1,13 +1,13 @@
 ---
 export const prerender = true;
 
-import { Shield, Lock, TrendingUp, Zap, CheckCircle2, Server, FileCheck, AlertCircle } from 'lucide-react';
+import { Shield, TrendingUp, CheckCircle2, FileCheck } from 'lucide-react';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 import ProductHero from '@/components/dynmaic/product-hero';
 import ProductDashboard from '@/components/dynmaic/product-dashboard';
 import AIAutomation from '@/components/dynmaic/ai-automation';
-import Features from '@/components/dynmaic/features';
-import Features2 from '@/components/dynmaic/features2';
+import Features from '@/components/sections/features';
+import Features2 from '@/components/sections/features2';;
 import ProductLogs from '@/components/dynmaic/product-logs';
 import CalComWidget from '@/components/sections/calcom-widget';
 
@@ -113,140 +113,6 @@ const automationCards = [
   },
 ];
 
-// Features carousel items
-const platformFeatures = [
-  {
-    title: 'Complete Sovereignty',
-    image: {
-      src: '/lhpc/compute-pools.png',
-      width: 563,
-      height: 400,
-    },
-    desc: 'On-premises deployment with zero data leaving controlled environment—maintain complete control over classified and sensitive workloads.',
-  },
-  {
-    title: 'Compliance-Ready Architecture',
-    image: {
-      src: '/lhpc/workflow-overview.png',
-      width: 662,
-      height: 400,
-    },
-    desc: 'StateRAMP compliance roadmap with built-in audit trails, zero-trust security model, and end-to-end encryption for federal requirements.',
-  },
-  {
-    title: 'Fair-Share Scheduling',
-    image: {
-      src: '/lhpc/workflow-configuration.png',
-      width: 632,
-      height: 400,
-    },
-    desc: 'Equitable resource allocation across agencies and departments—configure policies for grant-funded work and mission-critical priorities.',
-  },
-  {
-    title: 'Multi-Site Federation',
-    image: {
-      src: '/lhpc/workflows-list.png',
-      width: 610,
-      height: 400,
-    },
-    desc: 'Unified orchestration across national labs, research centers, and agency data centers—collaborate while maintaining security boundaries.',
-  },
-  {
-    title: 'Comprehensive Audit Trails',
-    image: {
-      src: '/lhpc/silicone-allocation.png',
-      width: 519,
-      height: 400,
-    },
-    desc: 'Complete logging and audit trails for compliance—track every workload, user action, and resource allocation for regulatory reporting.',
-  },
-  {
-    title: 'Mission-Critical Reliability',
-    image: {
-      src: '/lhpc/team-activity-log.png',
-      width: 525,
-      height: 400,
-    },
-    desc: 'High availability architecture with disaster recovery and failover—ensure mission success with 24/7 support and guaranteed uptime.',
-  },
-];
-
-// Features2 data
-const mainChartData = [
-  { month: 'Jan', views: 145, clicks: 42 },
-  { month: 'Feb', views: 152, clicks: 48 },
-  { month: 'Mar', views: 158, clicks: 52 },
-  { month: 'Apr', views: 165, clicks: 58 },
-  { month: 'May', views: 172, clicks: 62 },
-  { month: 'Jun', views: 180, clicks: 68 },
-  { month: 'Jul', views: 188, clicks: 75 },
-  { month: 'Aug', views: 195, clicks: 82 },
-  { month: 'Sep', views: 205, clicks: 88 },
-  { month: 'Oct', views: 215, clicks: 95 },
-  { month: 'Nov', views: 225, clicks: 102 },
-  { month: 'Dec', views: 238, clicks: 110 },
-];
-
-const smallChartData = [
-  { day: 1, runs: 1800 },
-  { day: 2, runs: 2200 },
-  { day: 3, runs: 2600 },
-  { day: 4, runs: 2800 },
-  { day: 5, runs: 3200 },
-  { day: 6, runs: 3600 },
-  { day: 7, runs: 4200 },
-  { day: 9, runs: 4800 },
-  { day: 10, runs: 5400 },
-  { day: 11, runs: 6200 },
-];
-
-const bottomStats = [
-  {
-    label: 'Security Incidents',
-    value: '0',
-    change: '0%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-  {
-    label: 'Compliance Audits Passed',
-    value: '100%',
-    change: '+100%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-  {
-    label: 'Mission Success Rate',
-    value: '99.9%',
-    change: '+2.4%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-];
-
-const featureCarouselCards = [
-  {
-    icon: Shield,
-    title: 'Zero-Trust Security',
-    description:
-      'Built-in zero-trust architecture with hardware-level isolation, RBAC, and end-to-end encryption—protect classified and sensitive workloads.',
-  },
-  {
-    icon: Lock,
-    title: 'Air-Gapped Deployment',
-    description:
-      'Support for completely air-gapped environments—maintain security for the most sensitive defense and intelligence applications.',
-  },
-  {
-    icon: FileCheck,
-    title: 'Automated Audit Trails',
-    description:
-      'Comprehensive logging for regulatory compliance—automatically generate reports for FedRAMP, CMMC, and StateRAMP requirements.',
-  },
-  {
-    icon: Server,
-    title: 'Multi-Agency Sharing',
-    description:
-      'Secure resource sharing across agencies and departments—maximize infrastructure ROI while maintaining strict security boundaries.',
-  },
-];
 ---
 
 <DefaultLayout
@@ -288,33 +154,9 @@ const featureCarouselCards = [
     cards={automationCards}
   />
 
-  <Features
-    client:load
-    title="The LaunchHPC Platform for Public Sector"
-    description="Complete sovereignty, StateRAMP compliance roadmap, and intelligent scheduling—maximize taxpayer investment while ensuring mission success."
-    items={platformFeatures}
-  />
+  <Features client:load />
 
-  <Features2
-    client:load
-    headerTitle="Purpose-built for federal, defense, and state government missions"
-    card1Icon={Shield}
-    card1Title="100% Data Sovereignty"
-    card1Description="On-premises deployment with zero data leaving controlled environment—maintain complete control over classified and sensitive workloads with air-gapped deployment support."
-    mainChartData={mainChartData}
-    card2Icon={Lock}
-    card2Title="Mission-Critical Security"
-    card2Description="StateRAMP compliance roadmap with zero-trust architecture, hardware-level isolation, and comprehensive audit trails—protect intelligence and defense applications."
-    totalJobsValue={6200}
-    totalJobsStartValue={5400}
-    totalJobsChange="+14.8%"
-    smallChartData={smallChartData}
-    bottomStats={bottomStats}
-    featureCards={featureCarouselCards}
-    ctaText="Schedule a Demo"
-    ctaHref="/contact"
-    showCta={true}
-  />
+  <Features2 client:load />
 
   <ProductLogs
     client:load

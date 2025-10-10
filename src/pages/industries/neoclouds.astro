@@ -1,15 +1,15 @@
 ---
 export const prerender = true;
 
-import { Zap, Activity, Network, TrendingUp, Brain, GitBranch, ChartPie, ChartBar } from 'lucide-react';
+import { Activity, Network, TrendingUp, Zap } from 'lucide-react';
 import DefaultLayout from '@/layouts/DefaultLayout.astro';
 import ProductHero from '@/components/dynmaic/product-hero';
 import ProductDashboard from '@/components/dynmaic/product-dashboard';
 import ProductFeatures from '@/components/dynmaic/product-features';
 import ProductLogs from '@/components/dynmaic/product-logs';
 import AIAutomation from '@/components/dynmaic/ai-automation';
-import Features from '@/components/dynmaic/features';
-import Features2 from '@/components/dynmaic/features2';
+import Features from '@/components/sections/features';
+import Features2 from '@/components/sections/features2';;
 import CalComWidget from '@/components/sections/calcom-widget';
 
 // Dashboard screenshots and feature cards
@@ -155,140 +155,6 @@ const automationCards = [
   },
 ];
 
-// Features carousel items
-const platformFeatures = [
-  {
-    title: 'Bare-Metal Multi-Tenancy',
-    image: {
-      src: '/lhpc/compute-pools.png',
-      width: 563,
-      height: 400,
-    },
-    desc: 'Secure tenant isolation without virtualization overhead—onboard tenants in days and achieve 57-85% higher utilization.',
-  },
-  {
-    title: 'Revenue Analytics',
-    image: {
-      src: '/lhpc/workflow-overview.png',
-      width: 662,
-      height: 400,
-    },
-    desc: 'Real-time visibility into tenant billing, GPU utilization rates, and infrastructure ROI with exportable reports.',
-  },
-  {
-    title: 'Intelligent Scheduling',
-    image: {
-      src: '/lhpc/workflow-configuration.png',
-      width: 632,
-      height: 400,
-    },
-    desc: 'AI-powered workload placement automatically routes tenant jobs to optimal GPU resources for maximum efficiency.',
-  },
-  {
-    title: 'Tenant Self-Service',
-    image: {
-      src: '/lhpc/workflows-list.png',
-      width: 610,
-      height: 400,
-    },
-    desc: 'Self-service portal reduces onboarding time from weeks to days—tenants provision resources instantly.',
-  },
-  {
-    title: 'Deep Observability',
-    image: {
-      src: '/lhpc/silicone-allocation.png',
-      width: 519,
-      height: 400,
-    },
-    desc: 'Monitor every tenant workload, track utilization metrics, and get data-driven optimization recommendations.',
-  },
-  {
-    title: 'Hardware Flexibility',
-    image: {
-      src: '/lhpc/team-activity-log.png',
-      width: 525,
-      height: 400,
-    },
-    desc: 'Works across Dell, HPE, Supermicro, NVIDIA, AMD, and Intel—avoid vendor lock-in and maximize infrastructure ROI.',
-  },
-];
-
-// Features2 data
-const mainChartData = [
-  { month: 'Jan', views: 170, clicks: 30 },
-  { month: 'Feb', views: 135, clicks: 62 },
-  { month: 'Mar', views: 130, clicks: 68 },
-  { month: 'Apr', views: 135, clicks: 75 },
-  { month: 'May', views: 136, clicks: 64 },
-  { month: 'Jun', views: 130, clicks: 78 },
-  { month: 'Jul', views: 140, clicks: 110 },
-  { month: 'Aug', views: 152, clicks: 125 },
-  { month: 'Sep', views: 190, clicks: 145 },
-  { month: 'Oct', views: 225, clicks: 165 },
-  { month: 'Nov', views: 230, clicks: 155 },
-  { month: 'Dec', views: 280, clicks: 200 },
-];
-
-const smallChartData = [
-  { day: 1, runs: 2000 },
-  { day: 2, runs: 3100 },
-  { day: 3, runs: 3600 },
-  { day: 4, runs: 3400 },
-  { day: 5, runs: 5600 },
-  { day: 6, runs: 4800 },
-  { day: 7, runs: 5812 },
-  { day: 9, runs: 6812 },
-  { day: 10, runs: 9812 },
-  { day: 11, runs: 12012 },
-];
-
-const bottomStats = [
-  {
-    label: 'Failed Jobs',
-    value: '12',
-    change: '-15%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-  {
-    label: 'Successful Jobs',
-    value: '15,842',
-    change: '+23%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-  {
-    label: 'Avg Queue Time',
-    value: '1.2m',
-    change: '-64%',
-    changeClass: 'bg-green-800/10 text-green-800',
-  },
-];
-
-const featureCarouselCards = [
-  {
-    icon: Activity,
-    title: 'Operator Revenue Optimization',
-    description:
-      'Multi-tenant infrastructure management with fair scheduling, instant provisioning, and comprehensive billing—maximize revenue per GPU.',
-  },
-  {
-    icon: GitBranch,
-    title: 'Technical Team Efficiency',
-    description:
-      'Tenant workloads run on bare-metal hardware with zero virtualization overhead—deliver premium performance at competitive prices.',
-  },
-  {
-    icon: Zap,
-    title: 'Rapid Tenant Onboarding',
-    description:
-      'Self-service provisioning reduces onboarding from weeks to days—accelerate time-to-revenue and improve customer satisfaction.',
-  },
-  {
-    icon: Brain,
-    title: 'AI-Driven Scheduling',
-    description:
-      'Intelligent workload placement keeps utilization high across your entire fleet—achieve 57-85% gains without manual intervention.',
-  },
-];
 ---
 
 <DefaultLayout
@@ -330,33 +196,9 @@ const featureCarouselCards = [
     cards={automationCards}
   />
 
-  <Features
-    client:load
-    title="The LaunchHPC Platform for Neoclouds"
-    description="Bare-metal multi-tenancy, revenue optimization, and intelligent scheduling—maximize GPU utilization while ensuring tenant isolation."
-    items={platformFeatures}
-  />
+  <Features client:load />
 
-  <Features2
-    client:load
-    headerTitle="Purpose-built for GPU cloud operators and technical teams"
-    card1Icon={ChartPie}
-    card1Title="Maximize Multi-Tenant Revenue"
-    card1Description="Bare-metal multi-tenancy enables secure tenant isolation without virtualization overhead—onboard tenants in days and achieve 57-85% higher utilization rates."
-    mainChartData={mainChartData}
-    card2Icon={ChartBar}
-    card2Title="Tenant Workflow Management"
-    card2Description="Self-service provisioning and intelligent scheduling reduce operational overhead—tenants deploy workloads instantly with zero manual intervention."
-    totalJobsValue={3812}
-    totalJobsStartValue={3600}
-    totalJobsChange="+10.4%"
-    smallChartData={smallChartData}
-    bottomStats={bottomStats}
-    featureCards={featureCarouselCards}
-    ctaText="Schedule a Demo"
-    ctaHref="/contact"
-    showCta={true}
-  />
+  <Features2 client:load />
 
   <ProductLogs
     client:load
