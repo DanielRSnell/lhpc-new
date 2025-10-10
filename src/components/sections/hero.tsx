@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import WorkflowDashboardMockup from '@/components/sections/workflow-dashboard-mockup';
 
 interface SVGProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
@@ -43,14 +44,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Hero Image */}
-        <img
-          src="/lhpc/workflow-overview.png"
-          alt="LaunchHPC workflow orchestration dashboard"
-          className="ring-foreground/5 mt-10 w-full rounded-xs shadow-2xl ring-6 invert md:mt-20 md:rounded-sm md:px-[1px] md:ring-16 lg:mt-30 dark:invert-0"
-          width={1440}
-          height={905}
-        />
+        {/* Workflow Dashboard Mockup */}
+        <WorkflowDashboardMockup />
         <GradientSVG className="absolute top-0 right-0 -z-10 origin-right scale-30 md:scale-50 lg:scale-100" />
       </div>
     </section>

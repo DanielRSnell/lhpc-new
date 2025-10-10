@@ -2,6 +2,9 @@
 
 import { Activity, ArrowRight, ChartPie, GitBranch, Shield } from 'lucide-react';
 
+import ComputePoolsMockup from '@/components/mockups/compute-pools-mockup';
+import SiliconAllocationMockup from '@/components/mockups/silicon-allocation-mockup';
+import WorkflowConfigMockup from '@/components/mockups/workflow-config-mockup';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -57,22 +60,10 @@ export default function ProductDashboard() {
       </div>
 
       {/* Feature Screenshots */}
-      <div className="mx-auto mt-10 grid gap-4 md:mt-16 md:grid-cols-3">
-        <img
-          src="/lhpc/compute-pools.png"
-          alt="Compute pools management showing multi-tenant resource allocation"
-          className="rounded-lg border shadow-lg"
-        />
-        <img
-          src="/lhpc/workflow-configuration.png"
-          alt="Workflow configuration interface demonstrating portability"
-          className="rounded-lg border shadow-lg"
-        />
-        <img
-          src="/lhpc/silicone-allocation.png"
-          alt="Silicon allocation and GPU utilization metrics"
-          className="rounded-lg border shadow-lg"
-        />
+      <div className="mx-auto mt-10 grid grid-rows-1 gap-4 md:mt-16 md:grid-cols-3">
+        <ComputePoolsMockup />
+        <WorkflowConfigMockup />
+        <SiliconAllocationMockup />
       </div>
 
       {/* Tagline */}

@@ -13,7 +13,7 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <Hero />
+  <Hero client:load />
   <PartnerLogos />
   <Features client:load />
   <Features2 client:load />
