@@ -69,7 +69,7 @@ const FEATURE_CARDS = [
   },
   {
     title: 'OEM-Agnostic Hardware Support',
-    description: 'Works seamlessly with Dell, Supermicro, HPE, NVIDIA, AMD, Intel, and leading infrastructure platforms',
+    description: 'Works seamlessly with NVIDIA, Supermicro, IBM, AWS, Microsoft, Oracle, and leading infrastructure platforms',
     image: '/images/product/integrate.png',
   },
   {
@@ -461,15 +461,14 @@ function Card3() {
 function Card4() {
   const ref = useRef<HTMLDivElement>(null);
   const partnerLogos = [
-    { name: 'Dell', url: 'https://img.logo.dev/dell.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
-    { name: 'Supermicro', url: 'https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
-    { name: 'HPE', url: 'https://img.logo.dev/hpe.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
     { name: 'NVIDIA', url: 'https://img.logo.dev/nvidia.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
-    { name: 'AMD', url: 'https://img.logo.dev/amd.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
-    { name: 'Intel', url: 'https://img.logo.dev/intel.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
-    { name: 'Red Hat', url: 'https://img.logo.dev/redhat.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
-    { name: 'Kubernetes', url: 'https://img.logo.dev/kubernetes.io?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
-    { name: 'Rocky Linux', url: 'https://img.logo.dev/rockylinux.org?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'Supermicro', url: 'https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'Mirantis', url: 'https://img.logo.dev/mirantis.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'IBM', url: 'https://img.logo.dev/ibm.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'AWS', url: 'https://img.logo.dev/aws.amazon.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'Microsoft', url: 'https://img.logo.dev/microsoft.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'TDSynnex', url: 'https://img.logo.dev/tdsynnex.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    { name: 'Oracle', url: 'https://img.logo.dev/oracle.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
   ];
 
   return (
