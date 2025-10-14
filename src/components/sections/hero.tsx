@@ -19,8 +19,8 @@ export default function Hero() {
             </div>
 
             <h1 className="text-5xl leading-none tracking-tight text-balance md:text-6xl lg:text-7xl">
-              Make Every Server, Every GPU,{' '}
-              <span className="text-gradient">Every Hour Count</span>
+              Make Every Server, GPU,{' '}
+              <span className="text-gradient">and Hour Count</span>
             </h1>
 
             <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
