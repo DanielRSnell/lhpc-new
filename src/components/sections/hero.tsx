@@ -19,12 +19,12 @@ export default function Hero() {
             </div>
 
             <h1 className="text-5xl leading-none tracking-tight text-balance md:text-6xl lg:text-7xl">
-              Maximize GPU utilization with{' '}
-              <span className="text-gradient">bare-metal orchestration</span> for every environment
+              Make Every Server, Every GPU,{' '}
+              <span className="text-gradient">Every Hour Count</span>
             </h1>
 
             <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
-              LaunchHPC delivers workflow portability, bare-metal multi-tenancy, and OEM-agnostic orchestration—achieve 57-85% utilization gains while ensuring sovereignty and avoiding vendor lock-in.
+              LaunchHPC transforms fragmented compute infrastructure into unified, high-performing assets—delivering 57-85% utilization gains, complete workload portability, and measurable ROI.
             </p>
           </div>
 
