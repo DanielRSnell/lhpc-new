@@ -39,7 +39,7 @@ export default function Hero() {
               </Button>
             </div>
             <div className="text-center text-sm">
-              Partnered with Dell, Supermicro, and NVIDIA · Government ready
+              Partnered with NVIDIA, Supermicro, Oracle, IBM and more · Government ready
             </div>
           </div>
         </div>
