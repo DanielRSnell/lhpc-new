@@ -14,10 +14,25 @@ export default function AboutHero() {
 
       <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
         LaunchHPC is the first agentic workflow orchestration platform that unifies operators, technical experts, and non-technical users around shared, portable workflows—maximizing GPU utilization, accelerating revenue, and ensuring sovereignty without vendor lock-in.
-        <br />
-        <br />
-        Developed by ThisWay Global, an award-winning AI and HPC technology company founded by Angela Hood and backed by partnerships with NVIDIA, Amazon Web Services, Microsoft, and IBM. Our mission is to break down barriers to AI/HPC adoption, enabling organizations of all sizes to harness the power of high-performance computing without complexity or sovereignty concerns.
       </p>
+
+      <div className="mt-8 rounded-lg border border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 p-6 lg:p-8">
+        <p className="text-foreground text-lg font-medium leading-relaxed lg:text-xl">
+          <span className="text-muted-foreground">A product by </span>
+          <a
+            href="https://thiswayglobal.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gradient font-bold underline decoration-primary/30 underline-offset-4 transition-all hover:decoration-primary/60"
+          >
+            ThisWay Global
+          </a>
+          <span className="text-muted-foreground">, an award-winning AI and HPC technology company founded by Angela Hood and backed by partnerships with NVIDIA, Amazon Web Services, Microsoft, and IBM.</span>
+        </p>
+        <p className="text-muted-foreground mt-4 leading-relaxed">
+          Our mission is to break down barriers to AI/HPC adoption, enabling organizations of all sizes to harness the power of high-performance computing without complexity or sovereignty concerns.
+        </p>
+      </div>
 
       <img
         src="/data-center.jpg"
