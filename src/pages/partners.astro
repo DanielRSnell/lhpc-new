@@ -1,0 +1,15 @@
+---
+export const prerender = true;
+
+import PartnersGrid from '@/components/sections/partners-grid';
+import BecomePartner from '@/components/sections/become-partner';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout
+  title="Partners - LaunchHPC"
+  description="LaunchHPC collaborates with industry leaders including NVIDIA, Supermicro, Oracle, and IBM to deliver cutting-edge AI/HPC orchestration solutions."
+>
+  <PartnersGrid client:load />
+  <BecomePartner client:load />
+</DefaultLayout>

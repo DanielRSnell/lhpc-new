@@ -129,6 +129,7 @@ export const NAV_LINKS = [
       },
     ],
   },
+  { label: 'Partners', href: '/partners' },
   { label: 'Company', href: '/about' },
   // { label: 'Pricing', href: '/pricing' },
   // { label: 'Docs', href: '/docs' },
