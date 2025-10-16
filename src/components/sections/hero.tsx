@@ -11,13 +11,6 @@ export default function Hero() {
       <div className="relative container">
         <div className="flex flex-col justify-between gap-10 lg:flex-row lg:items-center">
           <div className="flex max-w-3xl flex-1 flex-col items-start gap-5">
-            <div className="flex items-center rounded-full border p-1 text-xs">
-              <span className="bg-muted rounded-full px-3 py-1">
-                What&apos;s New?
-              </span>
-              <span className="px-3">LaunchHPC Platform Now Available</span>
-            </div>
-
             <h1 className="text-5xl leading-none tracking-tight text-balance md:text-6xl lg:text-7xl">
               Make Every Server, GPU,{' '}
               <span className="text-gradient">and Hour Count</span>

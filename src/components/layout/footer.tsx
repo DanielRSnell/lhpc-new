@@ -64,8 +64,6 @@ const Footer = ({ currentPage }: FooterProps) => {
             <a href="/product">Learn More</a>
           </Button>
         </div>
-
-        <p className="mt-3 text-sm">Trusted by enterprises worldwide</p>
       </div>
 
       <div className="container mt-20 flex flex-col-reverse justify-between gap-8 text-xs lg:mt-30 lg:flex-row">

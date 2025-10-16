@@ -35,7 +35,7 @@ export default function ProductHero() {
         </div>
 
         <h1 className="text-foreground text-5xl leading-none tracking-tight text-balance md:text-6xl lg:text-7xl">
-          Bare-metal orchestration that{' '}
+          High-performance orchestration that{' '}
           <br className="hidden sm:block" />
           <span className="text-gradient">maximizes GPU revenue and ensures sovereignty</span>
         </h1>

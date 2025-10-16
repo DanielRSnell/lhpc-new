@@ -2,10 +2,8 @@
 export const prerender = true;
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
-import AIAutomation from '@/components/sections/ai-automation';
 import Features from '@/components/sections/features';
 // import FeaturesTabsSection from '@/components/sections/features-tabs'; // Commented out - mock images
-import Features2 from '@/components/sections/features2';
 import Hero from '@/components/sections/hero';
 import PartnerLogos from '@/components/sections/partner-logos';
 // import Testimonials from '@/components/sections/testimonials'; // Commented out - mock testimonials
@@ -16,8 +14,6 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
   <Hero client:load />
   <PartnerLogos />
   <Features client:load />
-  <Features2 client:load />
-  <AIAutomation client:load />
   {/* <FeaturesTabsSection client:load /> */} {/* Commented out - mock images */}
   {/* <Testimonials client:load /> */} {/* Commented out - mock testimonials */}
 </DefaultLayout>
