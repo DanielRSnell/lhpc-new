@@ -59,7 +59,7 @@ Enable bare-metal sharing without virtualization overhead. Multiple teams and wo
 HPC batch jobs and AI containers run side by side, with deep visibility and intelligent optimization. Keep every accelerator hot across diverse workload types.
 
 ### OEM-Agnostic Portability
-Works across Dell, HPE, Supermicro, NVIDIA, AMD, Intel — future-proofing hardware investments. Avoid vendor lock-in while exploiting the latest innovations from every manufacturer.
+Works across Supermicro, NVIDIA, AMD, Intel, Oracle, and AWS — future-proofing hardware investments. Avoid vendor lock-in while exploiting the latest innovations from every manufacturer.
 
 ### Seamless Bursting
 Extend on-prem workloads into neocloud operators for hybrid flexibility. Scale dynamically without refactoring workflows or compromising sovereignty.
@@ -143,7 +143,7 @@ Sully + Amalgamy provides flexible deployment models to match your operational r
 Deploy on your own infrastructure with full control and customization capabilities.
 
 ### OEM-Integrated Appliance
-Turnkey solutions integrated with Dell, HPE, or Supermicro hardware for simplified deployment.
+Turnkey solutions integrated with Supermicro, Oracle, or IBM hardware for simplified deployment.
 
 ### SaaS Service
 Managed service delivery for rapid onboarding without infrastructure overhead.
@@ -180,7 +180,7 @@ Receive priority support and comprehensive training for all personas — operato
 GPU cloud providers like CoreWeave and Lambda Labs can maximize infrastructure efficiency, optimize multi-tenant workloads, and drive revenue growth with intelligent resource allocation.
 
 ### OEM/Hardware Partners
-Dell, HPE, Supermicro, and other hardware manufacturers can differentiate their offerings with integrated orchestration software that unlocks the full value of their systems.
+Supermicro, IBM, Oracle, and other hardware manufacturers can differentiate their offerings with integrated orchestration software that unlocks the full value of their systems.
 
 ### Public Sector
 Government agencies, defense organizations, and SLED institutions can ensure data sovereignty while delivering world-class HPC performance for mission-critical workloads.

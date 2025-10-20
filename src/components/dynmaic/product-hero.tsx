@@ -56,7 +56,7 @@ export default function ProductHero({
   ctaPrimaryHref = '/contact',
   ctaSecondary = 'Contact Sales',
   ctaSecondaryHref = '/contact',
-  trustLine = 'Partnered with Dell, Supermicro, NVIDIA, AMD, Intel, and HPE',
+  trustLine = 'Partnered with Supermicro, NVIDIA, IBM, Oracle, AWS, and Microsoft',
   showTerminal = true,
 }: ProductHeroProps) {
   return (

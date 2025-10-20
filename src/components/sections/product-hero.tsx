@@ -41,7 +41,7 @@ export default function ProductHero() {
         </h1>
 
         <p className="text-muted-foreground max-w-2xl leading-snug md:text-lg lg:text-xl">
-          Amalgamy delivers workflow portability, multi-tenant infrastructure management, and OEM-agnostic orchestration—achieve 57-85% utilization gains across Dell, Supermicro, NVIDIA, AMD, Intel, and HPE hardware without vendor lock-in.
+          Amalgamy delivers workflow portability, multi-tenant infrastructure management, and OEM-agnostic orchestration—achieve 57-85% utilization gains across Supermicro, NVIDIA, AMD, Intel, Oracle, and AWS hardware without vendor lock-in.
         </p>
       </div>
 
@@ -173,7 +173,7 @@ export default function ProductHero() {
           </Button>
         </div>
         <div className="text-center text-sm">
-          Partnered with Dell, Supermicro, NVIDIA, AMD, Intel, and HPE
+          Partnered with Supermicro, NVIDIA, IBM, Oracle, AWS, and Microsoft
         </div>
       </div>
     </section>
