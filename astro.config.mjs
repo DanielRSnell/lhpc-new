@@ -12,17 +12,17 @@ export default defineConfig({
   output: 'static',
 
   integrations: [
-    starlight({
-      title: 'Amalgamy Docs',
-      description: 'AI/HPC Orchestration Platform Documentation',
-      customCss: ['./src/styles/global.css'],
-      sidebar: [
-        {
-          label: 'Getting Started',
-          autogenerate: { directory: 'docs' },
-        },
-      ],
-    }),
+    // starlight({
+    //   title: 'Amalgamy Docs',
+    //   description: 'AI/HPC Orchestration Platform Documentation',
+    //   customCss: ['./src/styles/global.css'],
+    //   sidebar: [
+    //     {
+    //       label: 'Getting Started',
+    //       autogenerate: { directory: 'docs' },
+    //     },
+    //   ],
+    // }),
     mdx(),
     sitemap(),
     react(),
