@@ -89,7 +89,7 @@ export default function NeocloudFeatures() {
           Complete Infrastructure Visibility — When You Need It
         </h2>
         <p className="text-muted-foreground mt-3 text-lg leading-snug">
-          Most orchestration platforms hide the details. LaunchHPC shows you
+          Most orchestration platforms hide the details. Amalgamy shows you
           what matters — resource utilization, job performance, and system
           health — in real-time.
         </p>

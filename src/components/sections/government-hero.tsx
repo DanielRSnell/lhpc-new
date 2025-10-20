@@ -23,7 +23,7 @@ export default function GovernmentHero() {
             </h1>
 
             <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
-              LaunchHPC delivers mission-critical AI and high-performance
+              Amalgamy delivers mission-critical AI and high-performance
               computing orchestration for federal agencies, defense contractors,
               and government organizations. Built to meet the most stringent
               security requirements.
@@ -49,7 +49,7 @@ export default function GovernmentHero() {
         {/* Hero Image */}
         <img
           src="/dashboard.png"
-          alt="LaunchHPC Government Security Dashboard"
+          alt="Amalgamy Government Security Dashboard"
           className="ring-foreground/5 mt-10 w-full rounded-xs shadow-2xl ring-6 invert md:mt-20 md:rounded-sm md:px-[1px] md:ring-16 lg:mt-30 dark:invert-0"
           width={1440}
           height={905}

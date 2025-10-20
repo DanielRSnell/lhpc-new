@@ -15,7 +15,7 @@ const PARTNERS: Partner[] = [
     logoUrl: 'https://img.logo.dev/nvidia.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
     website: 'https://nvidia.com',
     type: 'Technology Partner',
-    description: 'As an exclusive DGX Cloud Reseller, LaunchHPC partners with NVIDIA to provide cutting-edge GPU technology and AI solutions. NVIDIA\'s industry-leading GPUs power our high-performance computing platforms and AI implementations.',
+    description: 'As an exclusive DGX Cloud Reseller, Amalgamy partners with NVIDIA to provide cutting-edge GPU technology and AI solutions. NVIDIA\'s industry-leading GPUs power our high-performance computing platforms and AI implementations.',
   },
   {
     name: 'Supermicro',
@@ -57,7 +57,7 @@ const PARTNERS: Partner[] = [
     logoUrl: 'https://img.logo.dev/tdsynnex.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
     website: 'https://tdsynnex.com',
     type: 'Distribution Partner',
-    description: 'TDSynnex is a leading global distributor and aggregator of technology products and services. Our partnership expands market reach and enables efficient distribution of LaunchHPC solutions to enterprises worldwide.',
+    description: 'TDSynnex is a leading global distributor and aggregator of technology products and services. Our partnership expands market reach and enables efficient distribution of Amalgamy solutions to enterprises worldwide.',
   },
   {
     name: 'Oracle',
@@ -78,7 +78,7 @@ export default function PartnersGrid() {
             Our Partners
           </h1>
           <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-snug">
-            LaunchHPC collaborates with industry leaders to deliver cutting-edge AI/HPC orchestration solutions. Together, we&apos;re building the future of enterprise compute.
+            Amalgamy collaborates with industry leaders to deliver cutting-edge AI/HPC orchestration solutions. Together, we&apos;re building the future of enterprise compute.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export default function PartnersGrid() {
           {PARTNERS.map((partner, index) => (
             <Card
               key={index}
-              className="group relative flex flex-col overflow-hidden border-gray-900/10 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 p-8 ring-1 ring-gray-900/10 transition-all duration-200 hover:shadow-lg"
+              className="group relative flex flex-col overflow-hidden border-border/50 bg-gradient-to-br from-muted/30 via-muted/10 to-muted/30 p-8 ring-1 ring-border/50 transition-all duration-200 hover:shadow-lg dark:from-gray-950 dark:via-gray-900 dark:to-gray-950"
             >
               {/* Partner Type Badge */}
               <div className="absolute top-6 right-6">

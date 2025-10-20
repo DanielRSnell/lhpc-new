@@ -66,7 +66,7 @@ export default function GovernmentDashboard() {
       {/* Main Dashboard Image */}
       <img
         src="/dashboard.png"
-        alt="LaunchHPC Government Security Dashboard"
+        alt="Amalgamy Government Security Dashboard"
         width={1440}
         height={905}
         className="mx-auto mt-10 mask-b-from-50% mask-b-to-95% invert md:mt-16 dark:invert-0"

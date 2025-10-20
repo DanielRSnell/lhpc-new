@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a LaunchHPC marketing website built using the LaunchHPC Astro Template (originally from shadcnblocks.com). The site uses Astro 5.x with React components, Tailwind CSS, and shadcn/ui components. The project maintains the original design while focusing entirely on LaunchHPC's AI/HPC orchestration platform.
+This is an Amalgamy marketing website built using the Astro Template (originally from shadcnblocks.com). The site uses Astro 5.x with React components, Tailwind CSS, and shadcn/ui components. The project maintains the original design while focusing entirely on Amalgamy's AI/HPC orchestration platform.
 
 ## ⚠️ CRITICAL: Team Data Protection
 
@@ -73,9 +73,9 @@ src/
 - `tsconfig.json`: TypeScript configuration with path aliases (@/, @components/, @layouts/, @lib/)
 - `tailwind.config`: Tailwind 4.x with CSS variable-based theming
 
-## LaunchHPC Content Strategy
+## Amalgamy Content Strategy
 
-This site has been fully updated from a generic automation tool to LaunchHPC's AI/HPC orchestration platform. All content has been transformed to focus on enterprise-grade compute orchestration.
+This site has been fully updated from a generic automation tool to Amalgamy's AI/HPC orchestration platform. All content has been transformed to focus on enterprise-grade compute orchestration.
 
 ### Primary Content Files
 
@@ -86,9 +86,9 @@ This site has been fully updated from a generic automation tool to LaunchHPC's A
 - `src/components/sections/about-*.tsx` - About page sections
 - `src/content/docs/*.mdx` - Documentation content
 
-### LaunchHPC Context (from ABOUT_LHPC.md)
+### Amalgamy Context
 
-LaunchHPC is an AI/HPC orchestration platform targeting multiple personas:
+Amalgamy is an AI/HPC orchestration platform targeting multiple personas:
 
 - **OEMs** (Supermicro, Dell, HPE): Hardware-to-solution partnerships
 - **Neoclouds** (CoreWeave, Lambda Labs): Infrastructure efficiency and revenue growth
@@ -131,7 +131,7 @@ mcp__shadcn__get_add_command_for_items(items: ["@shadcnblocks/hero-section"])
 2. **NEVER** create custom components without exhausting shadcnblocks options
 3. View component details and examples before installation
 4. Get the CLI add command and run it with proper conflict resolution
-5. Customize ONLY content for LaunchHPC context (keep all structure/design)
+5. Customize ONLY content for Amalgamy context (keep all structure/design)
 6. Integrate into appropriate pages
 
 ### Component Installation Rules
@@ -144,7 +144,7 @@ mcp__shadcn__get_add_command_for_items(items: ["@shadcnblocks/hero-section"])
 ### Content Replacement Guidelines
 
 - **Keep Design**: Maintain visual hierarchy, animations, and UI patterns
-- **Replace Text**: Update all copy to LaunchHPC messaging and use cases
+- **Replace Text**: Update all copy to Amalgamy messaging and use cases
 - **Preserve Media Placeholders**: Leave image sources as-is for later replacement
 - **Maintain Component Structure**: Keep React component patterns and props
 

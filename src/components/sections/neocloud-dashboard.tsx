@@ -59,7 +59,7 @@ export default function NeocloudDashboard() {
       {/* Main Dashboard Image */}
       <img
         src="/dashboard.png"
-        alt="LaunchHPC Dashboard"
+        alt="Amalgamy Dashboard"
         width={1440}
         height={905}
         className="mx-auto mt-10 mask-b-from-50% mask-b-to-95% invert md:mt-16 dark:invert-0"

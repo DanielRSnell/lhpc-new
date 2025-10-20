@@ -94,7 +94,7 @@ export default function Features2({
   smallChartData,
   bottomStats,
   featureCards,
-  ctaText = 'Try LaunchHPC',
+  ctaText = 'Try Amalgamy',
   ctaHref = '/contact',
   showCta = true,
 }: Features2Props) {

@@ -1,15 +1,15 @@
 ---
-title: About Sully + LaunchHPC
+title: About Sully + Amalgamy
 description: Comprehensive platform positioning for agentic workflow orchestration for AI + HPC infrastructure
 ---
 
-# About Sully + LaunchHPC
+# About Sully + Amalgamy
 
-**Sully + LaunchHPC is the first platform that unifies operators, technical experts, and non-technical users around shared workflows — maximizing the impact of every GPU, accelerating revenue and adoption, and ensuring sovereignty without waste.**
+**Sully + Amalgamy is the first platform that unifies operators, technical experts, and non-technical users around shared workflows — maximizing the impact of every GPU, accelerating revenue and adoption, and ensuring sovereignty without waste.**
 
 ## What It Is
 
-Sully + LaunchHPC is an agentic workflow orchestration platform for AI + HPC. It connects operators, technical experts, and non-technical users through shared workflows that run efficiently on bare-metal and cloud infrastructure.
+Sully + Amalgamy is an agentic workflow orchestration platform for AI + HPC. It connects operators, technical experts, and non-technical users through shared workflows that run efficiently on bare-metal and cloud infrastructure.
 
 ### For Operators
 Maximize revenue and utilization of GPU-rich clusters with intelligent multi-tenant orchestration and seamless bursting capabilities.
@@ -44,7 +44,7 @@ Black-box cloud services are easy to consume but erode performance, margins, and
 
 ## Our Solution
 
-Sully + LaunchHPC provides a full-stack orchestration and UX layer that makes advanced infrastructure usable and profitable:
+Sully + Amalgamy provides a full-stack orchestration and UX layer that makes advanced infrastructure usable and profitable:
 
 ### Agentic UX (Sully)
 Users describe outcomes in plain language; workflows and user interfaces are generated automatically. Non-technical users can harness complex HPC and AI capabilities without coding.
@@ -84,7 +84,7 @@ Maintain policy control, fairness, and compliance across all deployments. Meet r
 ### Future-Proof Hardware
 Realize the benefits of new silicon immediately, without refactoring delays. Rapidly adopt the latest GPUs and accelerators as they become available.
 
-## Why Sully + LaunchHPC vs Alternatives
+## Why Sully + Amalgamy vs Alternatives
 
 ### DIY Stacks
 Brittle, costly, and slow to adapt to new hardware. Require extensive in-house expertise to build and maintain.
@@ -98,7 +98,7 @@ Easy to consume but virtualized, expensive, and sovereignty-breaking. Performanc
 ### Traditional Cluster Managers
 Costly licenses with limited AI/HPC convergence capabilities. Built for legacy batch scheduling, not modern agentic workflows.
 
-### Sully + LaunchHPC Advantage
+### Sully + Amalgamy Advantage
 The only solution combining agentic UX, workflow portability, bare-metal multi-tenancy, bursting capabilities, and deep observability in a single unified platform.
 
 ## How It Works
@@ -137,7 +137,7 @@ Workflow-level observability meets compliance and audit needs. Maintain detailed
 
 ## Deployment Options
 
-Sully + LaunchHPC provides flexible deployment models to match your operational requirements:
+Sully + Amalgamy provides flexible deployment models to match your operational requirements:
 
 ### Software License
 Deploy on your own infrastructure with full control and customization capabilities.
@@ -163,7 +163,7 @@ Seamlessly span on-prem clusters, neoclouds, sovereign clouds, and edge deployme
 Join our design partner program to shape the future of AI/HPC orchestration:
 
 ### Early Access
-Get first access to new Sully + LaunchHPC features and capabilities before general availability.
+Get first access to new Sully + Amalgamy features and capabilities before general availability.
 
 ### Joint Roadmap
 Shape the platform roadmap for portability, UX, and optimization based on your real-world requirements.
@@ -193,4 +193,4 @@ Fortune 500 companies and global enterprises can deploy unified AI/HPC infrastru
 
 ## Getting Started
 
-Ready to transform your AI/HPC infrastructure? [Contact us](/contact) to discuss your specific requirements and explore how Sully + LaunchHPC can accelerate your workloads, maximize utilization, and ensure sovereignty across your compute environment.
+Ready to transform your AI/HPC infrastructure? [Contact us](/contact) to discuss your specific requirements and explore how Sully + Amalgamy can accelerate your workloads, maximize utilization, and ensure sovereignty across your compute environment.

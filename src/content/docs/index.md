@@ -3,13 +3,13 @@ title: Overview
 description: Enterprise-grade AI/HPC orchestration platform for multi-cloud compute workloads and infrastructure management
 ---
 
-# LaunchHPC Overview
+# Amalgamy Overview
 
-LaunchHPC is an enterprise-grade AI/HPC orchestration platform designed for managing complex compute workloads across multi-cloud environments. Built for DevOps engineers, infrastructure architects, and HPC administrators, LaunchHPC provides intelligent orchestration, zero-trust security, and real-time monitoring for mission-critical AI and high-performance computing workloads.
+Amalgamy is an enterprise-grade AI/HPC orchestration platform designed for managing complex compute workloads across multi-cloud environments. Built for DevOps engineers, infrastructure architects, and HPC administrators, Amalgamy provides intelligent orchestration, zero-trust security, and real-time monitoring for mission-critical AI and high-performance computing workloads.
 
 ## Platform Architecture
 
-LaunchHPC follows a distributed, cloud-native architecture that ensures scalability, reliability, and security:
+Amalgamy follows a distributed, cloud-native architecture that ensures scalability, reliability, and security:
 
 - **Multi-Cloud Orchestration** - Native support for AWS, Azure, and Google Cloud Platform
 - **AI-Powered Optimization** - Intelligent workload placement and resource optimization
@@ -21,7 +21,7 @@ LaunchHPC follows a distributed, cloud-native architecture that ensures scalabil
 
 Ready to deploy enterprise AI/HPC workloads? Follow this implementation guide:
 
-1. **Installation** - Deploy LaunchHPC in your cloud environment
+1. **Installation** - Deploy Amalgamy in your cloud environment
 2. **Core Concepts** - Understand orchestration patterns and architecture
 3. **AI/HPC Features** - Configure intelligent workload optimization
 4. **Infrastructure Management** - Manage multi-cloud deployments and configurations

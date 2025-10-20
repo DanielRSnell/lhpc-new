@@ -41,7 +41,7 @@ export default function NeocloudHero() {
         </h1>
 
         <p className="text-muted-foreground max-w-2xl leading-snug md:text-lg lg:text-xl">
-          LaunchHPC empowers neoclouds like CoreWeave and Lambda Labs to
+          Amalgamy empowers neoclouds like CoreWeave and Lambda Labs to
           optimize resource utilization, reduce operational costs, and scale
           AI/HPC workloads intelligently.
         </p>

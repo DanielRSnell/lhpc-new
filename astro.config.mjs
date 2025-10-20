@@ -8,12 +8,12 @@ import { defineConfig } from 'astro/config';
 import netlify from '@astrojs/netlify';
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://launchhpc.com',
+  site: 'https://amalgamy.ai',
   output: 'static',
 
   integrations: [
     starlight({
-      title: 'LaunchHPC Docs',
+      title: 'Amalgamy Docs',
       description: 'AI/HPC Orchestration Platform Documentation',
       customCss: ['./src/styles/global.css'],
       sidebar: [

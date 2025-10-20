@@ -1,9 +1,9 @@
 {
-  "name": "launchhpc-website",
+  "name": "amalgamy-website",
   "type": "module",
   "version": "1.0.0",
-  "author": "LaunchHPC",
-  "description": "Enterprise-grade AI/HPC orchestration platform - LaunchHPC marketing website",
+  "author": "Amalgamy",
+  "description": "Enterprise-grade AI/HPC orchestration platform - Amalgamy marketing website",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

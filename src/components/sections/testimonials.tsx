@@ -17,37 +17,37 @@ const REVIEWS = [
   {
     name: 'Dr. Sarah Chen',
     username: '@sarah_hpc',
-    body: '@LaunchHPC reduced our AI training job queue times by 60%. Multi-cloud orchestration that actually works.',
+    body: '@Amalgamy reduced our AI training job queue times by 60%. Multi-cloud orchestration that actually works.',
     img: 'https://avatar.vercel.sh/sarah_hpc',
   },
   {
     name: 'Marcus Rodriguez',
     username: '@cloudarch_marcus',
-    body: 'Finally unified our AWS, Azure, and on-prem GPU clusters with @LaunchHPC. One dashboard, zero vendor lock-in.',
+    body: 'Finally unified our AWS, Azure, and on-prem GPU clusters with @Amalgamy. One dashboard, zero vendor lock-in.',
     img: 'https://avatar.vercel.sh/cloudarch_marcus',
   },
   {
     name: 'Lisa Park',
     username: '@lisapark_ai',
-    body: '@LaunchHPC automatically scaled our workloads during peak research season. Saved us $50k in cloud costs.',
+    body: '@Amalgamy automatically scaled our workloads during peak research season. Saved us $50k in cloud costs.',
     img: 'https://avatar.vercel.sh/lisapark_ai',
   },
   {
     name: 'DevOps_Mike',
     username: '@mike_devops',
-    body: 'Security compliance made easy. @LaunchHPC gives us FedRAMP-ready orchestration with zero-trust architecture.',
+    body: 'Security compliance made easy. @Amalgamy gives us FedRAMP-ready orchestration with zero-trust architecture.',
     img: 'https://avatar.vercel.sh/mike_devops',
   },
   {
     name: 'Prof. James Liu',
     username: '@prof_liu_cs',
-    body: '@LaunchHPC democratized HPC access for our entire computer science department. Students love the intuitive interface.',
+    body: '@Amalgamy democratized HPC access for our entire computer science department. Students love the intuitive interface.',
     img: 'https://avatar.vercel.sh/prof_liu_cs',
   },
   {
     name: 'Taylor Kim',
     username: '@taylor_sysadmin',
-    body: "@LaunchHPC's AI optimization increased our GPU utilization from 70% to 95%. Game-changing resource efficiency.",
+    body: "@Amalgamy's AI optimization increased our GPU utilization from 70% to 95%. Game-changing resource efficiency.",
     img: 'https://avatar.vercel.sh/taylor_sysadmin',
   },
 ];
@@ -64,7 +64,7 @@ const Testimonials = () => {
         <div className="space-y-7.5">
           <p className="text-muted-foreground text-lg leading-snug">
             From Fortune 500 enterprises to cutting-edge research institutions,
-            teams rely on LaunchHPC for mission-critical AI and HPC workloads.
+            teams rely on Amalgamy for mission-critical AI and HPC workloads.
           </p>
 
           <Button
@@ -140,8 +140,8 @@ const ReviewCard = ({
       </CardHeader>
       <CardContent className="p-0">
         <blockquote className="text-sm leading-snug">
-          {body.split(/(@LaunchHPC)/g).map((part, index) =>
-            part === '@LaunchHPC' ? (
+          {body.split(/(@Amalgamy)/g).map((part, index) =>
+            part === '@Amalgamy' ? (
               <span key={index} className="text-chart-1">
                 {part}
               </span>

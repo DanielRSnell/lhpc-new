@@ -2,7 +2,7 @@ export default function AboutHero() {
   return (
     <section className="section-padding container">
       <div className="flex w-fit items-center rounded-full border p-1 text-xs">
-        <span className="bg-muted rounded-full px-3 py-1">About LaunchHPC</span>
+        <span className="bg-muted rounded-full px-3 py-1">About Amalgamy</span>
         <span className="px-3">Unified AI/HPC Orchestration</span>
       </div>
 
@@ -13,7 +13,7 @@ export default function AboutHero() {
       </h1>
 
       <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
-        LaunchHPC is the first agentic workflow orchestration platform that unifies operators, technical experts, and non-technical users around shared, portable workflows—maximizing GPU utilization, accelerating revenue, and ensuring sovereignty without vendor lock-in.
+        Amalgamy is the first agentic workflow orchestration platform that unifies operators, technical experts, and non-technical users around shared, portable workflows—maximizing GPU utilization, accelerating revenue, and ensuring sovereignty without vendor lock-in.
       </p>
 
       <div className="mt-8 rounded-lg border border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 p-6 lg:p-8">

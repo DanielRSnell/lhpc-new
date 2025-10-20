@@ -184,7 +184,7 @@ const PricingSection = () => {
         </h1>
 
         <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
-          LaunchHPC is an open-source desktop app that lets you build and run
+          Amalgamy is an open-source desktop app that lets you build and run
           automations directly on your machine. No fluff just fast, visual
           workflows powered by you.
         </p>

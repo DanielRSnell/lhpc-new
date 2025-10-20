@@ -25,7 +25,7 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
             />
             <GradientSVG className="absolute top-0 right-0 -z-10 scale-250 opacity-80 md:scale-100 md:opacity-100" />
             <div className="flex h-full flex-col justify-between p-8">
-              <Logo iconClassName="[&>path]:fill-foreground" />
+              <Logo />
 
               <div className="space-y-4">
                 <Quote className="fill-foreground text-foreground size-10 rotate-180 opacity-10 md:size-16" />

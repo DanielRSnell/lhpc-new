@@ -17,7 +17,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
-              LaunchHPC transforms fragmented compute infrastructure into unified, high-performing assets—delivering 57-85% utilization gains, complete workload portability, and measurable ROI.
+              Amalgamy transforms fragmented compute infrastructure into unified, high-performing assets—delivering 57-85% utilization gains, complete workload portability, and measurable ROI.
             </p>
           </div>
 

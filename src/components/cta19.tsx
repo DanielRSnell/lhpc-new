@@ -16,7 +16,7 @@ const Cta19 = () => {
                 Ready to Deploy Secure HPC for Your Agency?
               </h2>
               <p className="text-muted-foreground mt-4 md:text-lg">
-                LaunchHPC meets the most stringent government security
+                Amalgamy meets the most stringent government security
                 requirements while delivering unmatched HPC performance. From
                 classified research to defense simulations, we provide the
                 secure foundation your mission-critical workloads demand.

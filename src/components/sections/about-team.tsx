@@ -32,10 +32,10 @@ export default function AboutTeam() {
   return (
     <section className="section-padding container max-w-screen-xl">
       <h2 className="text-4xxl leading-tight tracking-tight md:text-5xl">
-        Meet the LaunchHPC Leadership Team
+        Meet the Amalgamy Leadership Team
       </h2>
       <p className="text-muted-foreground mt-3 max-w-2xl text-lg leading-snug">
-        LaunchHPC is led by experienced executives with deep expertise in
+        Amalgamy is led by experienced executives with deep expertise in
         enterprise technology, high-performance computing, and AI infrastructure
         at scale.
       </p>

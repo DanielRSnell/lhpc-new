@@ -34,12 +34,12 @@ const DemoRequest = () => {
           </div>
 
           <h1 className="text-5xl leading-none tracking-tight text-balance md:text-6xl lg:text-7xl">
-            See LaunchHPC in action with a{' '}
+            See Amalgamy in action with a{' '}
             <span className="text-gradient">personalized demo</span>
           </h1>
 
           <p className="text-muted-foreground max-w-2xl leading-snug md:text-lg lg:text-xl">
-            Experience how LaunchHPC transforms AI/HPC workload orchestration
+            Experience how Amalgamy transforms AI/HPC workload orchestration
             across hybrid cloud environments. Get a tailored demonstration of
             our platform.
           </p>

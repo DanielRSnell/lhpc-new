@@ -30,7 +30,7 @@ export default function ProductLogs() {
             OEM-Agnostic Infrastructure
           </span>
           <p className="text-muted-foreground mt-3 max-w-lg text-lg leading-snug">
-            LaunchHPC integrates seamlessly with Dell, Supermicro, HPE, NVIDIA, AMD, and Intel—ensuring you are never locked into a single vendor ecosystem.
+            Amalgamy integrates seamlessly with Dell, Supermicro, HPE, NVIDIA, AMD, and Intel—ensuring you are never locked into a single vendor ecosystem.
           </p>
           <div>
             <Button

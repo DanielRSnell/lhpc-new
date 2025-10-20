@@ -83,9 +83,13 @@
 }
 
 :root {
+  /* Font families */
+  --font-geist-sans: 'Geist', sans-serif;
+  --font-inter: 'Geist', sans-serif;
+
   /* StyleGlide */
-  --display-family: var(--font-inter);
-  --text-family: var(--font-inter);
+  --display-family: var(--font-geist-sans);
+  --text-family: var(--font-geist-sans);
   --display-weight: 400;
   --text-weight: 400;
 

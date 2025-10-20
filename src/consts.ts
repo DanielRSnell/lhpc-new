@@ -1,14 +1,14 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'LaunchHPC - Unified AI/HPC Orchestration Platform';
+export const SITE_TITLE = 'Amalgamy - Unified AI/HPC Orchestration Platform';
 export const SITE_DESCRIPTION =
-  'Unified AI/HPC orchestration for every environment. LaunchHPC delivers secure, scalable compute orchestration across on-premises, cloud, and hybrid infrastructures. One platform for all your AI and HPC workloads.';
+  'Unified AI/HPC orchestration for every environment. Amalgamy delivers secure, scalable compute orchestration across on-premises, cloud, and hybrid infrastructures. One platform for all your AI and HPC workloads.';
 
 export const SITE_METADATA = {
   title: {
     default: SITE_TITLE,
-    template: '%s | LaunchHPC',
+    template: '%s | Amalgamy',
   },
   description: SITE_DESCRIPTION,
   keywords: [
@@ -25,18 +25,15 @@ export const SITE_METADATA = {
     'Infrastructure Management',
     'DevOps',
   ],
-  authors: [{ name: 'LaunchHPC Team' }],
-  creator: 'LaunchHPC Team',
-  publisher: 'LaunchHPC',
+  authors: [{ name: 'Amalgamy Team' }],
+  creator: 'Amalgamy Team',
+  publisher: 'Amalgamy',
   robots: {
     index: true,
     follow: true,
   },
   icons: {
     icon: [
-      { url: '/favicon/favicon.ico', sizes: '32x32' },
-      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
       { url: '/favicon/favicon.svg', type: 'image/svg+xml' },
     ],
@@ -46,13 +43,13 @@ export const SITE_METADATA = {
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    siteName: 'LaunchHPC',
+    siteName: 'Amalgamy',
     images: [
       {
         url: '/open-graph.png',
         width: 1200,
         height: 630,
-        alt: 'LaunchHPC - Unified AI/HPC Orchestration Platform',
+        alt: 'Amalgamy - Unified AI/HPC Orchestration Platform',
       },
     ],
   },
@@ -61,6 +58,6 @@ export const SITE_METADATA = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: ['/open-graph.png'],
-    creator: '@LaunchHPC',
+    creator: '@Amalgamy',
   },
 };

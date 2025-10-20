@@ -377,7 +377,7 @@ const Features2 = () => {
             variant="secondary"
             className="border-input bg-accent max-w-64 flex-1 border"
           >
-            <a href="/contact">Try LaunchHPC</a>
+            <a href="/contact">Try Amalgamy</a>
           </Button>
         </div>
       </div>

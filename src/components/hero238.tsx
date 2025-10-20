@@ -73,7 +73,7 @@ const Hero238 = () => {
               className="bg-primary text-secondary absolute right-0 bottom-0 w-[210px] rounded-2xl p-4 text-sm"
             >
               <span className="mr-3 inline-block size-2 rounded-full bg-orange-500" />
-              <span className="font-semibold">LaunchHPC SecOps</span>
+              <span className="font-semibold">Amalgamy SecOps</span>
               <span className="text-muted-foreground">
                 — Classified workload detected. Security protocols activated.
               </span>

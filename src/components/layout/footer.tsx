@@ -44,7 +44,6 @@ const Footer = ({ currentPage }: FooterProps) => {
       <div className="container text-center">
         <Logo
           className="mt-20 justify-center gap-3 text-3xl lg:mt-30"
-          iconClassName="w-10"
         />
 
         <h2 className="my-8 text-2xl lg:my-6 lg:text-5xl">
@@ -69,11 +68,11 @@ const Footer = ({ currentPage }: FooterProps) => {
       <div className="container mt-20 flex flex-col-reverse justify-between gap-8 text-xs lg:mt-30 lg:flex-row">
         <div className="flex items-center">
           <p className="">
-            © {new Date().getFullYear()} LaunchHPC by ThisWay Global — Unified AI/HPC Orchestration
+            © {new Date().getFullYear()} Amalgamy by ThisWay Global — Unified AI/HPC Orchestration
           </p>
         </div>
         <div className="flex flex-wrap items-center justify-start gap-4 lg:justify-end lg:gap-8">
-          {NAV_LINKS.map((link, index) => (
+          {NAV_LINKS.filter(link => link.label !== 'Industries').map((link, index) => (
             <a
               key={index}
               href={link.href}

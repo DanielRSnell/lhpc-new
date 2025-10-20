@@ -132,7 +132,7 @@ export default function AIAutomation() {
             <span className="text-gradient">keeps every GPU productive</span>
           </h2>
           <p className="text-muted-foreground mt-2 max-w-xl text-lg leading-snug">
-            LaunchHPC's AI scheduling runs HPC batch jobs and AI containers side-by-side, automatically optimizing resource allocation across your entire compute environment—from edge to cloud to supercomputers.
+            Amalgamy's AI scheduling runs HPC batch jobs and AI containers side-by-side, automatically optimizing resource allocation across your entire compute environment—from edge to cloud to supercomputers.
           </p>
         </div>
 

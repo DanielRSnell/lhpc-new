@@ -45,7 +45,7 @@ const DEFAULT_CHART_DATA: ChartDataPoint[] = [
 
 export default function ProductHero({
   badge = 'What\'s New?',
-  badgeSubtext = 'LaunchHPC Platform',
+  badgeSubtext = 'Amalgamy Platform',
   headline,
   headlineGradient,
   description,

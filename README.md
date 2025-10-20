@@ -1,13 +1,13 @@
-# LaunchHPC Website
+# Amalgamy Website
 
 Enterprise-grade AI/HPC orchestration platform marketing website built with Astro and shadcn/ui components.
 
-- [Live Website](https://launchhpc.com)
-- [Documentation](https://launchhpc.com/docs)
+- [Live Website](https://amalgamy.ai)
+- [Documentation](https://amalgamy.ai/docs)
 
-## About LaunchHPC
+## About Amalgamy
 
-LaunchHPC is an enterprise-grade AI/HPC orchestration platform designed for managing complex compute workloads across multi-cloud environments. Built for DevOps engineers, infrastructure architects, and HPC administrators, LaunchHPC provides intelligent orchestration, zero-trust security, and real-time monitoring for mission-critical AI and high-performance computing workloads.
+Amalgamy is an enterprise-grade AI/HPC orchestration platform designed for managing complex compute workloads across multi-cloud environments. Built for DevOps engineers, infrastructure architects, and HPC administrators, Amalgamy provides intelligent orchestration, zero-trust security, and real-time monitoring for mission-critical AI and high-performance computing workloads.
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ src/
 The website includes comprehensive documentation built with [Starlight](https://starlight.astro.build/), featuring:
 
 - **Installation Guide** - Setup and deployment instructions
-- **Platform Overview** - Understanding LaunchHPC architecture
+- **Platform Overview** - Understanding Amalgamy architecture
 - **Getting Started** - Quick start guide for new users
 - Automatic navigation, search functionality, and responsive design
 - Support for rich markdown formatting and code highlighting
@@ -107,4 +107,4 @@ This website can be deployed to any platform that supports Astro applications:
 
 ## License
 
-© 2024 LaunchHPC - All rights reserved.
+© 2025 Amalgamy by ThisWay Global - All rights reserved.

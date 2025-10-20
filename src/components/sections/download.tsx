@@ -14,18 +14,18 @@ export default function DownloadSection() {
         <div className="relative h-[134px] w-[124px] md:h-[315px] md:w-[341px]">
           <img
             src="/layout/logo-icon.svg"
-            alt="LaunchHPC Logo"
+            alt="Amalgamy Logo"
             className="size-full object-cover"
           />
         </div>
         <div className="mt-10 space-y-4 text-balance md:mt-20">
           <h1 className="md:text-6xxl text-5xl leading-none tracking-tight text-balance">
-            Download LaunchHPC for <br className="hidden sm:block" />
+            Download Amalgamy for <br className="hidden sm:block" />
             <span className="text-gradient">Windows & Mac</span>
           </h1>
 
           <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
-            LaunchHPC is an open-source desktop app that lets you build and run
+            Amalgamy is an open-source desktop app that lets you build and run
             automations directly on your machine. No fluff just fast, visual
             workflows powered by you.
           </p>

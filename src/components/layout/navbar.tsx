@@ -1,18 +1,13 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import {
-  Cloud,
-  Cpu,
-  Settings,
-  Users,
   Building2,
   Shield,
   Zap,
   Microscope,
   Landmark,
   Factory,
-  Globe,
 } from 'lucide-react';
 
 import { ThemeToggle } from '../elements/theme-toggle';
@@ -40,37 +35,10 @@ export const NAV_LINKS = [
   {
     label: 'Product',
     href: '/product',
-    // subitems: [
-    //   {
-    //     label: 'Multi-Tenant Orchestration',
-    //     href: '/product',
-    //     description: 'Secure workload isolation across teams and organizations',
-    //     icon: Users,
-    //   },
-    //   {
-    //     label: 'AI/HPC Optimization',
-    //     href: '/product',
-    //     description: 'Intelligent resource allocation and performance tuning',
-    //     icon: Cpu,
-    //   },
-    //   {
-    //     label: 'Hybrid Cloud Management',
-    //     href: '/product',
-    //     description:
-    //       'Seamless orchestration across on-prem and cloud infrastructure',
-    //     icon: Cloud,
-    //   },
-    //   {
-    //     label: 'Enterprise Configuration',
-    //     href: '/product',
-    //     description: 'Centralized policy management and compliance controls',
-    //     icon: Settings,
-    //   },
-    // ],
   },
   {
     label: 'Industries',
-    href: '/industries',
+    href: '#',
     megaMenu: true,
     subitems: [
       {
@@ -131,9 +99,6 @@ export const NAV_LINKS = [
   },
   { label: 'Partners', href: '/partners' },
   { label: 'Company', href: '/about' },
-  // { label: 'Pricing', href: '/pricing' },
-  // { label: 'Docs', href: '/docs' },
-  // { label: 'Changelog', href: '/changelog' },
 ];
 
 const ACTION_BUTTONS = [

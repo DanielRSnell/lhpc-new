@@ -70,7 +70,7 @@ export function Terminal({
     },
     { time: '14:32:16', message: 'Real-time monitoring: GPU utilization 94.2%' },
     { time: '14:32:17', message: 'Checkpoint saved: Iteration 1000/10000 complete' },
-    { time: '14:32:19', message: 'Performance metrics logged to LaunchHPC dashboard' },
+    { time: '14:32:19', message: 'Performance metrics logged to Amalgamy dashboard' },
     { time: '14:32:20', message: 'Alert: Temperature threshold exceeded on node-07' },
     { time: '14:32:21', message: 'Auto-scaling: Migrating workload from node-07' },
     { time: '14:32:23', message: 'Job execution continuing on remaining nodes' },

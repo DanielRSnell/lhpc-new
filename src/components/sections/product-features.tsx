@@ -89,7 +89,7 @@ export default function ProductFeatures() {
           Enterprise Features Built for Operators and Technical Teams
         </h2>
         <p className="text-muted-foreground mt-3 text-lg leading-snug">
-          LaunchHPC provides the visibility, control, and flexibility operators need to maximize revenue while giving technical teams the portability and performance they demand.
+          Amalgamy provides the visibility, control, and flexibility operators need to maximize revenue while giving technical teams the portability and performance they demand.
         </p>
       </div>
 

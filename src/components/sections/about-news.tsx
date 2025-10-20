@@ -14,7 +14,7 @@ const newsItems = [
       className: 'invert dark:invert-0',
     },
     title:
-      'LaunchHPC is transforming enterprise AI infrastructure with intelligent orchestration that scales from edge to exascale. Zero-trust security meets unparalleled performance.',
+      'Amalgamy is transforming enterprise AI infrastructure with intelligent orchestration that scales from edge to exascale. Zero-trust security meets unparalleled performance.',
     readMoreLink: '#',
   },
   {
@@ -26,7 +26,7 @@ const newsItems = [
       height: 42,
     },
     title:
-      'LaunchHPC delivers true multi-cloud freedom for AI workloads. Enterprise teams can now orchestrate massive compute resources across AWS, Azure, and GCP seamlessly.',
+      'Amalgamy delivers true multi-cloud freedom for AI workloads. Enterprise teams can now orchestrate massive compute resources across AWS, Azure, and GCP seamlessly.',
     readMoreLink: '#',
   },
   {
@@ -39,7 +39,7 @@ const newsItems = [
       className: 'invert dark:invert-0',
     },
     title:
-      'Enterprise-grade, AI-powered, and remarkably intuitive. LaunchHPC makes high-performance computing accessible to organizations of any size. This is the future of compute orchestration.',
+      'Enterprise-grade, AI-powered, and remarkably intuitive. Amalgamy makes high-performance computing accessible to organizations of any size. This is the future of compute orchestration.',
     readMoreLink: '#',
   },
 ];
@@ -49,7 +49,7 @@ export default function AboutNews() {
     <section className="section-padding bg-muted/40">
       <div className="container">
         <h2 className="text-4xxl leading-tight tracking-tight md:text-5xl">
-          LaunchHPC in the news
+          Amalgamy in the news
         </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">

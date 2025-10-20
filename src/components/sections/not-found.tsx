@@ -14,7 +14,7 @@ export default function NotFoundPage() {
         <div className="relative h-[134px] w-[124px] md:h-[315px] md:w-[341px]">
           <img
             src="/layout/logo-icon.svg"
-            alt="LaunchHPC Logo"
+            alt="Amalgamy Logo"
             className="size-full object-cover"
           />
         </div>

@@ -1,13 +1,13 @@
 ---
 title: Installation
-description: Deploy LaunchHPC in your cloud environment with enterprise-grade configurations for AI/HPC orchestration.
+description: Deploy Amalgamy in your cloud environment with enterprise-grade configurations for AI/HPC orchestration.
 ---
 
 # Installation
 
 ## Prerequisites
 
-Before deploying LaunchHPC, ensure your environment meets these requirements:
+Before deploying Amalgamy, ensure your environment meets these requirements:
 
 - **Kubernetes Cluster** - Version 1.26 or later with RBAC enabled
 - **Helm** - Version 3.8+ for package management
@@ -17,7 +17,7 @@ Before deploying LaunchHPC, ensure your environment meets these requirements:
 
 ## Supported Cloud Platforms
 
-LaunchHPC supports deployment across major cloud providers:
+Amalgamy supports deployment across major cloud providers:
 
 - **Amazon Web Services (AWS)** - EKS, EC2, S3, IAM integration
 - **Microsoft Azure** - AKS, Virtual Machines, Blob Storage, Azure AD
@@ -25,14 +25,14 @@ LaunchHPC supports deployment across major cloud providers:
 
 ## Quick Start
 
-### 1. Add LaunchHPC Helm Repository
+### 1. Add Amalgamy Helm Repository
 
 ```bash
 helm repo add launchhpc https://charts.launchhpc.io
 helm repo update
 ```
 
-### 2. Install LaunchHPC
+### 2. Install Amalgamy
 
 ```bash
 helm install launchhpc launchhpc/launchhpc \
@@ -49,4 +49,4 @@ kubectl get pods -n launchhpc-system
 kubectl get services -n launchhpc-system
 ```
 
-Your LaunchHPC deployment is now ready!
+Your Amalgamy deployment is now ready!

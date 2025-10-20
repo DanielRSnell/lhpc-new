@@ -20,7 +20,7 @@ const Feature136 = () => {
               Trusted by Federal Agencies
             </h2>
             <p className="text-muted-foreground text-center lg:text-left lg:text-lg">
-              LaunchHPC provides secure, compliant AI/HPC infrastructure for
+              Amalgamy provides secure, compliant AI/HPC infrastructure for
               mission-critical government workloads. From classified research to
               defense simulations, our platform meets the highest security
               standards while delivering unmatched performance.
@@ -58,7 +58,7 @@ const Feature136 = () => {
           </div>
           <img
             src="/dashboard.png"
-            alt="LaunchHPC Government Security Dashboard"
+            alt="Amalgamy Government Security Dashboard"
             className="ml-auto max-h-[450px] w-full rounded-xl object-cover"
           />
         </div>

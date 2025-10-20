@@ -23,7 +23,7 @@ interface Hero47Props {
 }
 
 const Hero47 = ({
-  heading = 'LaunchHPC for Government',
+  heading = 'Amalgamy for Government',
   subheading = ' Secure AI/HPC Infrastructure',
   description = 'Mission-critical AI and high-performance computing orchestration platform designed for federal agencies, defense contractors, and government organizations. FISMA compliant with FedRAMP authorization pathway.',
   buttons = {
@@ -38,7 +38,7 @@ const Hero47 = ({
   },
   image = {
     src: '/dashboard.png',
-    alt: 'LaunchHPC Government Dashboard',
+    alt: 'Amalgamy Government Dashboard',
   },
 }: Hero47Props) => {
   return (

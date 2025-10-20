@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import TextLogo from '@/components/layout/text-logo';
 
 export default function WorkflowDashboardMockup() {
   const [activeTab, setActiveTab] = useState<
@@ -18,14 +19,7 @@ export default function WorkflowDashboardMockup() {
           {/* Sidebar - Hidden on mobile */}
           <div className="hidden w-48 border-r border-white/10 p-4 lg:block">
             <div className="mb-6 flex items-center gap-2">
-              <img
-                src="/logos/dark-icon.png"
-                alt="LaunchHPC"
-                className="h-7 w-7 object-contain"
-              />
-              <span className="text-sm font-semibold text-white">
-                LaunchHPC
-              </span>
+              <TextLogo textClassName="text-sm" />
             </div>
 
             <div className="space-y-1 text-sm">
