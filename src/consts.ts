@@ -46,7 +46,7 @@ export const SITE_METADATA = {
     siteName: 'Amalgamy',
     images: [
       {
-        url: '/open-graph.png',
+        url: '/amalgamy-open-graph.jpeg',
         width: 1200,
         height: 630,
         alt: 'Amalgamy - Unified AI/HPC Orchestration Platform',
@@ -57,7 +57,7 @@ export const SITE_METADATA = {
     card: 'summary_large_image',
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ['/open-graph.png'],
+    images: ['/amalgamy-open-graph.jpeg'],
     creator: '@Amalgamy',
   },
 };
