@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import Logo from '@/components/layout/logo';
 import { NAV_LINKS } from '@/components/layout/navbar';
 import { Button } from '@/components/ui/button';
@@ -20,22 +19,6 @@ const Footer = ({ currentPage }: FooterProps) => {
     '/(auth)/forgot-password',
     '/docs',
   ].some((route) => currentPage.includes(route));
-
-  useEffect(() => {
-    // Load Lemlist tracking script
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://app.lemlist.com/api/visitors/tracking?k=9qqINh7rIQIuxYyXlLQ8iYeNLrc%2Bo4BWuy%2FGC8kNtaY%3D&t=tea_7wBwdJFyRnNxMkhZ5';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
 
   if (hideFooter) return null;
 
