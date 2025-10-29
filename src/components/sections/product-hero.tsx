@@ -169,7 +169,7 @@ export default function ProductHero() {
             <a href="/contact">Schedule a Demo</a>
           </Button>
           <Button className="flex-1 md:min-w-45" variant="outline" asChild>
-            <a href="/contact">Contact Sales</a>
+            <a href="/product">Explore The Product</a>
           </Button>
         </div>
         <div className="text-center text-sm">

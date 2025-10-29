@@ -54,8 +54,8 @@ export default function ProductHero({
   chartChangePercent = '+12%',
   ctaPrimary = 'Schedule a Demo',
   ctaPrimaryHref = '/contact',
-  ctaSecondary = 'Contact Sales',
-  ctaSecondaryHref = '/contact',
+  ctaSecondary = 'Explore The Product',
+  ctaSecondaryHref = '/product',
   trustLine = 'Partnered with Supermicro, NVIDIA, IBM, Oracle, AWS, and Microsoft',
   showTerminal = true,
 }: ProductHeroProps) {

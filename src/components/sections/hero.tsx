@@ -12,8 +12,8 @@ export default function Hero() {
         <div className="flex flex-col justify-between gap-10 lg:flex-row lg:items-center">
           <div className="flex max-w-3xl flex-1 flex-col items-start gap-5">
             <h1 className="text-5xl leading-none tracking-tight text-balance md:text-6xl lg:text-7xl">
-              Make Every Server, GPU,{' '}
-              <span className="text-gradient">and Hour Count</span>
+              Fuse Data & Metal.{' '}
+              <span className="text-gradient">Scale Intelligence. Maximize ROI.</span>
             </h1>
 
             <p className="text-muted-foreground leading-snug md:text-lg lg:text-xl">
@@ -28,7 +28,7 @@ export default function Hero() {
                 <a href="/contact">Schedule a Demo</a>
               </Button>
               <Button className="flex-1 md:min-w-45" variant="outline" asChild>
-                <a href="/contact">Contact Sales</a>
+                <a href="/product">Explore The Product</a>
               </Button>
             </div>
             <div className="text-center text-sm">

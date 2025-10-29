@@ -67,10 +67,10 @@ const Pricing36 = () => {
                 </ul>
               </div>
               <a
-                href="/demo"
+                href="/product"
                 className="text-background group flex items-center justify-center gap-1.5 py-3 text-center font-medium"
               >
-                Contact Sales
+                Explore The Product
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
