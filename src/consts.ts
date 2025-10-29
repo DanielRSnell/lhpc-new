@@ -34,11 +34,12 @@ export const SITE_METADATA = {
   },
   icons: {
     icon: [
-      { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-      { url: '/favicon/favicon.svg', type: 'image/svg+xml' },
+      { url: '/branding/app-icon-light.png', sizes: '96x96', type: 'image/png', media: '(prefers-color-scheme: light)' },
+      { url: '/branding/app-icon-dark.png', sizes: '96x96', type: 'image/png', media: '(prefers-color-scheme: dark)' },
+      { url: '/branding/app-icon-dark.png', sizes: '96x96', type: 'image/png' }, // Default fallback
     ],
-    apple: [{ url: '/favicon/apple-touch-icon.png', sizes: '180x180' }],
-    shortcut: [{ url: '/favicon/favicon.ico' }],
+    apple: [{ url: '/branding/app-icon-dark.png', sizes: '180x180' }],
+    shortcut: [{ url: '/branding/app-icon-dark.png' }],
   },
   openGraph: {
     title: SITE_TITLE,

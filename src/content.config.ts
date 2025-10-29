@@ -14,6 +14,20 @@ const changelog = defineCollection({
   }),
 });
 
+const pressRelease = defineCollection({
+  // Load Markdown and MDX files in the `src/content/press-release/` directory.
+  loader: glob({ base: './src/content/press-release', pattern: '**/*.{md,mdx}' }),
+  // Type-check frontmatter using a schema
+  schema: z.object({
+    title: z.string(),
+    date: z.string(), // Keep as string since it's formatted like "OCT 29 2025"
+    id: z.string(),
+    source: z.string(), // Original press release URL
+    slug: z.string().optional(), // Optional custom slug (defaults to filename)
+    featured_image: z.string().optional(), // Optional featured image path
+  }),
+});
+
 const docs = defineCollection({
   loader: docsLoader(),
   schema: docsSchema(),
@@ -21,5 +35,6 @@ const docs = defineCollection({
 
 export const collections = {
   changelog,
+  pressRelease,
   docs,
 };

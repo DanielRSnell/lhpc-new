@@ -43,7 +43,7 @@ const Footer = ({ currentPage }: FooterProps) => {
     <footer className="section-padding relative overflow-hidden">
       <div className="container text-center">
         <Logo
-          className="mt-20 justify-center gap-3 text-3xl lg:mt-30"
+          className="mx-auto mt-20 w-47 lg:mt-30"
         />
 
         <h2 className="my-8 text-2xl lg:my-6 lg:text-5xl">

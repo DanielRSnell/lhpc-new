@@ -34,6 +34,16 @@ const imageURL = new URL(finalImage, Astro.url);
 <meta name="creator" content={SITE_METADATA.creator} />
 <meta name="publisher" content={SITE_METADATA.publisher} />
 
+<!-- Google tag (gtag.js) -->
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-58MKCCZFCJ"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-58MKCCZFCJ');
+</script>
+
 <!-- Theme Script -->
 <script is:inline>
   const savedTheme = localStorage.getItem('starlight-theme');
@@ -46,7 +56,13 @@ const imageURL = new URL(finalImage, Astro.url);
 
 {
   SITE_METADATA.icons.icon.map((icon) => (
-    <link rel="icon" type={icon.type} sizes={icon.sizes} href={icon.url} />
+    <link
+      rel="icon"
+      type={icon.type}
+      sizes={icon.sizes}
+      href={icon.url}
+      media={icon.media}
+    />
   ))
 }
 {
@@ -60,6 +76,38 @@ const imageURL = new URL(finalImage, Astro.url);
   ))
 }
 <link rel="manifest" href="/favicon/site.webmanifest" />
+
+<!-- Dynamic Favicon Switching Script -->
+<script is:inline>
+  (function() {
+    function updateFavicon() {
+      const theme = localStorage.getItem('starlight-theme') || 'dark';
+      const isDark = theme === 'dark';
+      const faviconUrl = isDark ? '/branding/app-icon-dark.png' : '/branding/app-icon-light.png';
+
+      // Update all favicon links without media queries
+      const links = document.querySelectorAll('link[rel="icon"]:not([media]), link[rel="shortcut icon"]');
+      links.forEach(link => {
+        if (link.href && !link.getAttribute('media')) {
+          link.href = faviconUrl;
+        }
+      });
+    }
+
+    // Update on page load
+    updateFavicon();
+
+    // Listen for theme changes
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'starlight-theme') {
+        updateFavicon();
+      }
+    });
+
+    // Listen for custom theme change events (if theme toggle dispatches them)
+    window.addEventListener('theme-changed', updateFavicon);
+  })();
+</script>
 
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link

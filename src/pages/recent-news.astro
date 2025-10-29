@@ -1,0 +1,156 @@
+---
+export const prerender = true;
+import { getCollection } from 'astro:content';
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import { Button } from '@/components/ui/button';
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+import { cn } from '@/lib/utils';
+import { extractFirstParagraph, stripMarkdown } from '@/lib/content';
+
+// Get all press release entries, sorted by date (descending for newest first)
+const pressReleaseEntries = await getCollection('pressRelease');
+const sortedEntries = pressReleaseEntries.sort((a, b) => {
+  // Parse dates for proper chronological sorting
+  const dateA = new Date(a.data.date);
+  const dateB = new Date(b.data.date);
+  return dateB.getTime() - dateA.getTime(); // Descending order for newest first
+});
+
+// Prepare entries with excerpts and slugs
+const entriesWithExcerpts = sortedEntries.map((entry) => {
+  // Extract first paragraph and strip markdown for clean preview
+  const firstPara = extractFirstParagraph(entry.body);
+  const excerpt = stripMarkdown(firstPara);
+  const slug = entry.data.slug || entry.id;
+
+  return {
+    ...entry,
+    excerpt,
+    slug,
+  };
+});
+
+// Determine if we should show "Load more" button
+const hasMultipleEntries = entriesWithExcerpts.length > 1;
+---
+
+<DefaultLayout
+  title="Recent News - Amalgamy"
+  description="Latest press releases and company news"
+>
+  <section class="section-padding container max-w-5xl space-y-24">
+    <!-- Header -->
+    <div class="flex flex-wrap items-center justify-between gap-10">
+      <div class="space-y-3">
+        <h1 class="text-4xxl leading-tight font-medium tracking-tight">
+          Recent News
+        </h1>
+        <p class="text-muted-foreground text-lg leading-snug">
+          Latest press releases and company news
+        </p>
+      </div>
+    </div>
+
+    <div class="[--sidebar-width:150px]">
+      <!-- Press release entries with timeline -->
+      <div class="relative">
+        {
+          entriesWithExcerpts.map((entry, index) => (
+            <div class="flex gap-5 md:gap-12">
+              {/* Date column with dot */}
+              <div class="relative mt-0.5 shrink-0 md:mt-1.5 md:w-[var(--sidebar-width)]">
+                <time class="text-muted-foreground hidden md:inline-block">
+                  {entry.data.date}
+                </time>
+                <div class="bg-background border-input absolute top-0 right-0 z-10 grid size-5 translate-x-1/2 place-items-center rounded-full border">
+                  <div class="bg-secondary size-2 rounded-full" />
+                </div>
+                <div class="absolute top-0 right-0 h-full w-0.25 bg-[repeating-linear-gradient(to_bottom,var(--input)_0px,var(--input)_8px,transparent_12px,transparent_20px)]" />
+              </div>
+
+              {/* Content */}
+              <div
+                class={cn(
+                  'mb-16 flex-1',
+                  index === entriesWithExcerpts.length - 1 && 'mb-0',
+                )}
+              >
+                <time class="text-muted-foreground mb-10 inline-block md:hidden">
+                  {entry.data.date}
+                </time>
+                <h2 class="text-2xl leading-tight font-medium">
+                  <a
+                    href={`/recent-news/${entry.slug}`}
+                    class="hover:text-secondary transition-colors"
+                  >
+                    {entry.data.title}
+                  </a>
+                </h2>
+
+                {/* Featured Image */}
+                {entry.data.featured_image && (
+                  <div class="mt-6">
+                    <a href={`/recent-news/${entry.slug}`} class="block">
+                      <div class="aspect-video overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-md">
+                        <img
+                          src={entry.data.featured_image}
+                          alt={entry.data.title}
+                          class="h-full w-full object-cover"
+                        />
+                      </div>
+                    </a>
+                  </div>
+                )}
+
+                {/* Press Release Excerpt */}
+                <p class="text-muted-foreground mt-4 text-base leading-relaxed md:text-lg">
+                  {entry.excerpt}
+                </p>
+
+                {/* Read More Link */}
+                <div class="mt-6">
+                  <a
+                    href={`/recent-news/${entry.slug}`}
+                    class="hover:text-secondary inline-flex items-center gap-2 text-sm font-medium underline transition-colors"
+                  >
+                    Read full press release
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      {hasMultipleEntries && (
+        <div class="flex justify-end">
+          <Button
+            variant="secondary"
+            className="mt-25 h-12 w-full md:w-[calc(100%-var(--sidebar-width))]"
+            client:load
+          >
+            Load more
+          </Button>
+        </div>
+      )}
+
+    </div>
+  </section>
+
+</DefaultLayout>

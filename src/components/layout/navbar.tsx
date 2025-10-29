@@ -99,6 +99,7 @@ export const NAV_LINKS = [
   },
   { label: 'Partners', href: '/partners' },
   { label: 'Company', href: '/about' },
+  { label: 'Recent News', href: '/recent-news' },
 ];
 
 const ACTION_BUTTONS = [

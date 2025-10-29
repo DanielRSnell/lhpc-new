@@ -1,0 +1,174 @@
+---
+export const prerender = true;
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+import DefaultLayout from '@/layouts/DefaultLayout.astro';
+
+// Generate static paths for all press releases
+export async function getStaticPaths() {
+  const pressReleases = await getCollection('pressRelease');
+
+  return pressReleases.map((entry) => ({
+    params: { slug: entry.data.slug || entry.id }, // Use custom slug or filename
+    props: { entry },
+  }));
+}
+
+// Get the entry passed from getStaticPaths
+interface Props {
+  entry: CollectionEntry<'pressRelease'>;
+}
+
+const { entry } = Astro.props;
+
+// Render the full content
+const { Content } = await render(entry);
+---
+
+<DefaultLayout
+  title={`${entry.data.title} - Amalgamy`}
+  description={`Press release: ${entry.data.title}`}
+>
+  <section class="section-padding container max-w-4xl">
+    <!-- Back to news link -->
+    <div class="mb-10">
+      <a
+        href="/recent-news"
+        class="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m15 18-6-6 6-6"></path>
+        </svg>
+        Back to Recent News
+      </a>
+    </div>
+
+    <!-- Article Header -->
+    <header class="mb-12 space-y-6 border-b pb-12">
+      <time class="text-muted-foreground text-sm font-medium uppercase tracking-wider">
+        {entry.data.date}
+      </time>
+      <h1 class="text-4xl leading-tight font-semibold tracking-tight md:text-5xl">
+        {entry.data.title}
+      </h1>
+    </header>
+
+    <!-- Featured Image -->
+    {entry.data.featured_image && (
+      <div class="mb-12">
+        <img
+          src={entry.data.featured_image}
+          alt={entry.data.title}
+          class="w-full rounded-lg border shadow-lg"
+        />
+      </div>
+    )}
+
+    <!-- Article Content -->
+    <article
+      class="prose prose-slate prose-lg dark:prose-invert mx-auto max-w-none"
+    >
+      <Content />
+    </article>
+
+    <!-- Source Footer -->
+    <footer class="border-t mt-16 pt-12">
+      <div class="flex items-center justify-between gap-6 flex-wrap">
+        <div class="space-y-2">
+          <p class="text-muted-foreground text-sm font-medium">
+            Original Source
+          </p>
+          <a
+            href={entry.data.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-secondary inline-flex items-center gap-2 font-medium underline transition-colors"
+          >
+            View on PR Newswire
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </a>
+        </div>
+        <a
+          href="/recent-news"
+          class="text-muted-foreground hover:text-foreground inline-flex items-center gap-2 text-sm transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m15 18-6-6 6-6"></path>
+          </svg>
+          Back to Recent News
+        </a>
+      </div>
+    </footer>
+  </section>
+
+  <style>
+    /* Additional prose styling for press releases */
+    .prose :global(img) {
+      border-radius: 0.5rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .prose :global(a) {
+      color: var(--color-secondary);
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+
+    .prose :global(a:hover) {
+      color: var(--color-accent-foreground);
+    }
+
+    .prose :global(strong),
+    .prose :global(b) {
+      color: var(--color-foreground);
+      font-weight: 600;
+    }
+
+    .prose :global(blockquote) {
+      border-left: 4px solid var(--color-secondary);
+      padding-left: 1.5rem;
+      font-style: italic;
+      color: var(--color-muted-foreground);
+    }
+
+    /* Dark mode adjustments */
+    :global(.dark) .prose :global(img) {
+      opacity: 0.95;
+    }
+  </style>
+</DefaultLayout>
