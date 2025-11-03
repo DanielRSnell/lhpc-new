@@ -59,15 +59,8 @@ export default function ProductDashboard() {
         </h2>
       </div>
 
-      {/* Feature Screenshots */}
-      <div className="mx-auto mt-10 grid grid-rows-1 gap-4 md:mt-16 md:grid-cols-3">
-        <ComputePoolsMockup />
-        <WorkflowConfigMockup />
-        <SiliconAllocationMockup />
-      </div>
-
       {/* Tagline */}
-      <h3 className="text-muted-foreground mt-8 text-center uppercase">
+      <h3 className="text-muted-foreground mt-10 text-center uppercase md:mt-16">
         BARE-METAL PERFORMANCE WITHOUT VENDOR LOCK-IN
       </h3>
 
@@ -106,6 +99,13 @@ export default function ProductDashboard() {
             </Card>
           );
         })}
+      </div>
+
+      {/* Feature Screenshots */}
+      <div className="mx-auto mt-10 grid grid-rows-1 gap-4 md:mt-16 md:grid-cols-3">
+        <ComputePoolsMockup />
+        <WorkflowConfigMockup />
+        <SiliconAllocationMockup />
       </div>
     </section>
   );

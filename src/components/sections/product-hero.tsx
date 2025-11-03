@@ -27,21 +27,14 @@ export default function ProductHero() {
   return (
     <section className="section-padding relative container overflow-hidden">
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-5 text-center">
-        <div className="flex items-center rounded-full border p-1 text-xs">
-          <span className="bg-muted rounded-full px-3 py-1">
-            What&apos;s New?
-          </span>
-          <span className="px-3">Amalgamy Platform</span>
-        </div>
-
         <h1 className="text-foreground text-5xl leading-none tracking-tight text-balance md:text-6xl lg:text-7xl">
-          High-performance orchestration that{' '}
+          Orchestration that{' '}
           <br className="hidden sm:block" />
-          <span className="text-gradient">maximizes GPU revenue and ensures sovereignty</span>
+          <span className="text-gradient">maximizes revenue and ensures sovereignty</span>
         </h1>
 
         <p className="text-muted-foreground max-w-2xl leading-snug md:text-lg lg:text-xl">
-          Amalgamy delivers workflow portability, multi-tenant infrastructure management, and OEM-agnostic orchestration—achieve 57-85% utilization gains across Supermicro, NVIDIA, AMD, Intel, Oracle, and AWS hardware without vendor lock-in.
+          Workflow portability, multi-tenant infrastructure, and OEM-agnostic orchestration—achieve 57-85% utilization gains across Supermicro, NVIDIA, AMD, Intel, Oracle, and AWS hardware without vendor lock-in.
         </p>
       </div>
 
@@ -173,7 +166,7 @@ export default function ProductHero() {
           </Button>
         </div>
         <div className="text-center text-sm">
-          Partnered with Supermicro, NVIDIA, IBM, Oracle, AWS, and Microsoft
+          Partnered with NVIDIA, Supermicro, TD Synnex, IBM, OCI, and Mirantis · Government ready
         </div>
       </div>
     </section>

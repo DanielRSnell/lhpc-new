@@ -267,6 +267,11 @@ html.theme-transition::view-transition-new(root) {
   animation: theme-mask 0.5s ease-in forwards;
 }
 
+/* Page View Transitions */
+@view-transition {
+  navigation: auto;
+}
+
 /* Handle reduced motion preference globally */
 @media (prefers-reduced-motion: reduce) {
   *,

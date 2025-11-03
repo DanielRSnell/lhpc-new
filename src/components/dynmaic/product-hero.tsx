@@ -13,8 +13,6 @@ interface ChartDataPoint {
 }
 
 interface ProductHeroProps {
-  badge?: string;
-  badgeSubtext?: string;
   headline: string;
   headlineGradient: string;
   description: string;
@@ -44,8 +42,6 @@ const DEFAULT_CHART_DATA: ChartDataPoint[] = [
 ];
 
 export default function ProductHero({
-  badge = 'What\'s New?',
-  badgeSubtext = 'Amalgamy Platform',
   headline,
   headlineGradient,
   description,
@@ -56,19 +52,12 @@ export default function ProductHero({
   ctaPrimaryHref = '/contact',
   ctaSecondary = 'Explore The Product',
   ctaSecondaryHref = '/product',
-  trustLine = 'Partnered with Supermicro, NVIDIA, IBM, Oracle, AWS, and Microsoft',
+  trustLine = 'Partnered with NVIDIA, Supermicro, TD Synnex, IBM, OCI, and Mirantis · Government ready',
   showTerminal = true,
 }: ProductHeroProps) {
   return (
     <section className="section-padding relative container overflow-hidden">
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-5 text-center">
-        <div className="flex items-center rounded-full border p-1 text-xs">
-          <span className="bg-muted rounded-full px-3 py-1">
-            {badge}
-          </span>
-          <span className="px-3">{badgeSubtext}</span>
-        </div>
-
         <h1 className="text-foreground text-5xl leading-none tracking-tight text-balance md:text-6xl lg:text-7xl">
           {headline}{' '}
           <br className="hidden sm:block" />
