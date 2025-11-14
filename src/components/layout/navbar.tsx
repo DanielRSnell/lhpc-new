@@ -99,7 +99,7 @@ export const NAV_LINKS = [
   },
   { label: 'Partners', href: '/partners' },
   { label: 'Company', href: '/about' },
-  { label: 'Events', href: '/events' },
+  { label: 'Events', href: '/event' },
   { label: 'Recent News', href: '/recent-news' },
 ];
 
