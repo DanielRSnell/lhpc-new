@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>amalgamy.ai - Protocol Activated: Fuse Data & Metal | SC25</title>
+
+    <link rel="stylesheet" href="/events/sc25/output.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        if (localStorage.getItem('alto_dark') == 'false') {
+            document.documentElement.classList.remove('dark-mode');
+        }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/branding/app-icon-dark.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/branding/app-icon-dark.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/branding/app-icon-dark.png">
+    <link rel="shortcut icon" href="/branding/app-icon-dark.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- Meta Tags -->
+    <meta name="description" content="A new layer of intelligence for AI, HPC, and digital twin workflows. Adaptive orchestration. Portable workflows. Real performance. Activating at SC25 St. Louis.">
+    <link rel="canonical" href="https://amalgamy.ai/events/sc25/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="author" content="Amalgamy by ThisWay Global">
+    <meta name="keywords" content="AI orchestration, HPC, SC25, supercomputing, workflow portability, bare-metal performance, GPU utilization">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="Amalgamy">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="amalgamy.ai - Protocol Activated: Fuse Data & Metal | SC25">
+    <meta property="og:description" content="A new layer of intelligence for AI, HPC, and digital twin workflows. Adaptive orchestration. Portable workflows. Real performance. Activating at SC25 St. Louis, Nov 18-21, 2025.">
+    <meta property="og:url" content="https://amalgamy.ai/events/sc25/">
+    <meta property="og:image" content="https://amalgamy.ai/events/sc25/og-sc25.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Amalgamy SC25 - Protocol Activated: Fuse Data & Metal">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@thiswayglobal">
+    <meta name="twitter:creator" content="@thiswayglobal">
+    <meta name="twitter:title" content="amalgamy.ai - Protocol Activated: Fuse Data & Metal | SC25">
+    <meta name="twitter:description" content="A new layer of intelligence for AI, HPC, and digital twin workflows. Activating at SC25 St. Louis, Nov 18-21, 2025.">
+    <meta name="twitter:image" content="https://amalgamy.ai/events/sc25/og-sc25.jpeg">
+
+    <style>
+        /* Custom component styles that need to stay in CSS */
+        .indicator {
+            animation: color_change 0.6s infinite alternate-reverse;
+        }
+
+        .code-subscribe-mesage {
+            animation: back_n_forth 1s infinite alternate-reverse;
+        }
+
+        #submit-btn::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 5px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(270deg, #ff5770, #e4428d, #c42da8, #9e16c3, #6501de, #9e16c3, #c42da8, #e4428d, #ff5770);
+            background-size: 200% 200%;
+            filter: blur(17px) contrast(110%) brightness(140%);
+            z-index: -1;
+            animation: animateGlow 1.25s linear infinite;
+            transform: scale(0.9) translateZ(0);
+        }
+
+        .lds-ring div {
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        }
+
+        .wrapper {
+            min-height: 100vh;
+            height: 100%;
+        }
+
+        .lds-ring div:nth-child(1) { animation-delay: -0.45s; }
+        .lds-ring div:nth-child(2) { animation-delay: -0.3s; }
+        .lds-ring div:nth-child(3) { animation-delay: -0.15s; }
+
+        /* Logo gradient using SVG filter */
+        .logo-gradient {
+            filter: url(#logo-gradient-filter);
+        }
+    </style>
+</head>
+
+<body class="font-[Fira_Sans,sans-serif] text-[color:var(--color-text-primary)] bg-black">
+<div class="pointer-events-none bg-black fixed top-0 right-0 bottom-0 left-0">
+  <div class="absolute inset-0" data-container-bg="true">
+    <div class="spline-container absolute top-0 left-0 -z-10 h-full w-full opacity-0 transition-opacity duration-1000"><iframe src="https://my.spline.design/retrofuturisticcircuitloop-JngSBMetOQh9Jn4XS5OxTiIc/" frameborder="0" width="100%" height="100%" id="aura-spline"></iframe></div>
+  </div>
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.04)_0%,rgba(0,0,0,0)_60%)]"></div>
+  <div class="absolute inset-0 bg-[linear-gradient(#00000000,rgba(0,0,0,0.6))]"></div>
+</div>
+
+<div class="wrapper relative">
+   
+    <main>
+        <!-- Logo -->
+        <a href="./" class="flex items-center gap-1.75 text-xl font-medium w-56">
+            <img src="/branding/logo.svg" alt="amalgamy.ai" class="h-auto w-full logo-gradient">
+            <svg width="0" height="0" class="absolute">
+                <defs>
+                    <filter id="logo-gradient-filter" x="0%" y="0%" width="100%" height="100%">
+                        <feFlood flood-color="#ffffff" result="white"/>
+                        <feComposite in="white" in2="SourceAlpha" operator="in" result="whitened"/>
+                        <feColorMatrix in="whitened" type="matrix" values="0.85 0 0 0 0
+                                      0.85 0 0 0 0
+                                      0.85 0 0 0 0
+                                      0 0 0 1 0" result="neutral"/>
+                        <feComponentTransfer in="neutral" result="gradient">
+                            <feFuncR type="table" tableValues="0.7 0.95"/>
+                            <feFuncG type="table" tableValues="0.7 0.95"/>
+                            <feFuncB type="table" tableValues="0.7 0.95"/>
+                        </feComponentTransfer>
+                    </filter>
+                </defs>
+            </svg>
+        </a>
+
+        <!-- Badge - 25/25/25 Call to Action -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[rgba(0,0,0,0.2)] border border-[rgba(92,192,64,0.25)] backdrop-blur-sm mt-12">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5cc040] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-[#5cc040]"></span>
+            </span>
+            <span class="text-[#8a8a8a] text-sm font-normal">First 25 to respond get 25 days of access to prove it.</span>
+        </div>
+
+        <!-- Title -->
+        <div class="max-w-4xl mr-auto">
+            <h1 class="gradient-text font-[Fira_Sans,sans-serif] text-[clamp(2rem,4.2rem,4.2rem)] font-medium leading-[1.2] mt-2">
+                Most institutions waste 80% of their compute. We fix that.
+            </h1>
+        </div>
+
+        <!-- Terminal Workflow -->
+        <section class="font-code text-[1.4rem] max-w-[80ch] mb-8">
+            <div id="terminal-output" class="mb-2">
+                <!-- Terminal output will be appended here -->
+            </div>
+
+            <div id="terminal-input-wrapper" class="flex items-center gap-2 mt-2">
+                <span class="text-[color:var(--color-success)]">$</span>
+                <input
+                    type="text"
+                    id="terminal-input"
+                    class="bg-transparent border-none outline-none text-[color:var(--color-text-primary)] font-code flex-1 text-[1.4rem]"
+                    autocomplete="off"
+                    autofocus
+                />
+            </div>
+        </section>
+    </main>
+
+    <!-- Platform Capabilities -->
+    <aside>
+        <h2 class="font-code text-[1.6rem] text-[color:var(--color-comment)] mb-[1.2rem]">// Platform capabilities:</h2>
+
+        <section class="flex flex-wrap gap-4 mb-[2.4rem] max-w-[64rem]">
+            <a href="#" class="post no-underline relative w-fit bg-gradient-to-b from-[#242424] to-[#262626] border border-black rounded-2xl shadow-[0_0_4px_rgba(196,42,180,0.09),inset_0_0_11px_#0b0b0b] text-[#d9d9d9] font-[Fira_Sans,sans-serif] text-[1.2rem] font-normal opacity-[0.59] px-4 hover:shadow-[0_0_68px_1px_#551b4724] hover:saturate-[1.4] active:brightness-75 active:top-[3px]">
+                <section>
+                    <h3 class="font-normal flex items-center gap-2"><i data-lucide="refresh-cw" class="w-4 h-4"></i> Adaptive Orchestration</h3>
+                </section>
+            </a>
+            <a href="#" class="post no-underline relative w-fit bg-gradient-to-b from-[#242424] to-[#262626] border border-black rounded-2xl shadow-[0_0_4px_rgba(196,42,180,0.09),inset_0_0_11px_#0b0b0b] text-[#d9d9d9] font-[Fira_Sans,sans-serif] text-[1.2rem] font-normal opacity-[0.59] px-4 hover:shadow-[0_0_68px_1px_#551b4724] hover:saturate-[1.4] active:brightness-75 active:top-[3px]">
+                <section>
+                    <h3 class="font-normal flex items-center gap-2"><i data-lucide="package" class="w-4 h-4"></i> Portable Workflows</h3>
+                </section>
+            </a>
+            <a href="#" class="post no-underline relative w-fit bg-gradient-to-b from-[#242424] to-[#262626] border border-black rounded-2xl shadow-[0_0_4px_rgba(196,42,180,0.09),inset_0_0_11px_#0b0b0b] text-[#d9d9d9] font-[Fira_Sans,sans-serif] text-[1.2rem] font-normal opacity-[0.59] px-4 hover:shadow-[0_0_68px_1px_#551b4724] hover:saturate-[1.4] active:brightness-75 active:top-[3px]">
+                <section>
+                    <h3 class="font-normal flex items-center gap-2"><i data-lucide="target" class="w-4 h-4"></i> Dynamic Dispatch</h3>
+                </section>
+            </a>
+            <a href="#" class="post no-underline relative w-fit bg-gradient-to-b from-[#242424] to-[#262626] border border-black rounded-2xl shadow-[0_0_4px_rgba(196,42,180,0.09),inset_0_0_11px_#0b0b0b] text-[#d9d9d9] font-[Fira_Sans,sans-serif] text-[1.2rem] font-normal opacity-[0.59] px-4 hover:shadow-[0_0_68px_1px_#551b4724] hover:saturate-[1.4] active:brightness-75 active:top-[3px]">
+                <section>
+                    <h3 class="font-normal flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4"></i> Policy Intelligence</h3>
+                </section>
+            </a>
+            <a href="#" class="post no-underline relative w-fit bg-gradient-to-b from-[#242424] to-[#262626] border border-black rounded-2xl shadow-[0_0_4px_rgba(196,42,180,0.09),inset_0_0_11px_#0b0b0b] text-[#d9d9d9] font-[Fira_Sans,sans-serif] text-[1.2rem] font-normal opacity-[0.59] px-4 hover:shadow-[0_0_68px_1px_#551b4724] hover:saturate-[1.4] active:brightness-75 active:top-[3px]">
+                <section>
+                    <h3 class="font-normal flex items-center gap-2"><i data-lucide="zap" class="w-4 h-4"></i> Bare Metal Performance</h3>
+                </section>
+            </a>
+            <a href="#" class="post no-underline relative w-fit bg-gradient-to-b from-[#242424] to-[#262626] border border-black rounded-2xl shadow-[0_0_4px_rgba(196,42,180,0.09),inset_0_0_11px_#0b0b0b] text-[#d9d9d9] font-[Fira_Sans,sans-serif] text-[1.2rem] font-normal opacity-[0.59] px-4 hover:shadow-[0_0_68px_1px_#551b4724] hover:saturate-[1.4] active:brightness-75 active:top-[3px]">
+                <section>
+                    <h3 class="font-normal flex items-center gap-2"><i data-lucide="cloud" class="w-4 h-4"></i> Cloud Elasticity</h3>
+                </section>
+            </a>
+        </section>
+
+        <section class="font-code text-[calc(1.6rem*0.8)] text-[color:var(--color-comment)] mb-[3.6rem] -mt-4">
+            // Elastic performance without the cloud tax. Change your mind in real time.<br>
+            // 77% resource utilization improvement validated at Texas Tech & Texas A&amp;M.
+        </section>
+
+        <h2 class="font-code text-[1.6rem] text-[color:var(--color-comment)] mb-4">// Partners & collaborators:</h2>
+        <section class="flex flex-wrap gap-8 items-center max-w-[40rem] mb-12">
+            <a href="https://www.supermicro.com" class="flex items-center gap-2 hover:opacity-70 transition-opacity" target="_blank" rel="noopener">
+                <img src="https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA" alt="Supermicro logo" class="h-6 w-auto">
+                <span class="text-[#d4d4d4] font-[Fira_Sans,sans-serif] text-[1.2rem] no-underline">Supermicro</span>
+            </a>
+            <a href="https://www.nvidia.com" class="flex items-center gap-2 hover:opacity-70 transition-opacity" target="_blank" rel="noopener">
+                <img src="https://img.logo.dev/nvidia.com?token=pk_JuRpzKiHQniWr0CmqpMOBA" alt="NVIDIA logo" class="h-6 w-auto">
+                <span class="text-[#d4d4d4] font-[Fira_Sans,sans-serif] text-[1.2rem] no-underline">NVIDIA</span>
+            </a>
+            <a href="https://www.wwt.com" class="flex items-center gap-2 hover:opacity-70 transition-opacity" target="_blank" rel="noopener">
+                <img src="https://img.logo.dev/wwt.com?token=pk_JuRpzKiHQniWr0CmqpMOBA" alt="WWT logo" class="h-6 w-auto">
+                <span class="text-[#d4d4d4] font-[Fira_Sans,sans-serif] text-[1.2rem] no-underline">WWT</span>
+            </a>
+            <a href="https://www.ttu.edu" class="flex items-center gap-2 hover:opacity-70 transition-opacity" target="_blank" rel="noopener">
+                <img src="https://img.logo.dev/ttu.edu?token=pk_JuRpzKiHQniWr0CmqpMOBA" alt="Texas Tech logo" class="h-6 w-auto">
+                <span class="text-[#d4d4d4] font-[Fira_Sans,sans-serif] text-[1.2rem] no-underline">Texas Tech</span>
+            </a>
+            <a href="https://www.tamu.edu" class="flex items-center gap-2 hover:opacity-70 transition-opacity" target="_blank" rel="noopener">
+                <img src="https://img.logo.dev/tamu.edu?token=pk_JuRpzKiHQniWr0CmqpMOBA" alt="Texas A&M logo" class="h-6 w-auto">
+                <span class="text-[#d4d4d4] font-[Fira_Sans,sans-serif] text-[1.2rem] no-underline">Texas A&M</span>
+            </a>
+            <a href="https://www.mirantis.com" class="flex items-center gap-2 hover:opacity-70 transition-opacity" target="_blank" rel="noopener">
+                <img src="https://img.logo.dev/mirantis.com?token=pk_JuRpzKiHQniWr0CmqpMOBA" alt="Mirantis logo" class="h-6 w-auto">
+                <span class="text-[#d4d4d4] font-[Fira_Sans,sans-serif] text-[1.2rem] no-underline">Mirantis</span>
+            </a>
+            <a href="https://www.ibm.com" class="flex items-center gap-2 hover:opacity-70 transition-opacity" target="_blank" rel="noopener">
+                <img src="https://img.logo.dev/ibm.com?token=pk_JuRpzKiHQniWr0CmqpMOBA" alt="IBM logo" class="h-6 w-auto">
+                <span class="text-[#d4d4d4] font-[Fira_Sans,sans-serif] text-[1.2rem] no-underline">IBM</span>
+            </a>
+            <a href="https://aws.amazon.com" class="flex items-center gap-2 hover:opacity-70 transition-opacity" target="_blank" rel="noopener">
+                <img src="https://img.logo.dev/aws.amazon.com?token=pk_JuRpzKiHQniWr0CmqpMOBA" alt="AWS logo" class="h-6 w-auto">
+                <span class="text-[#d4d4d4] font-[Fira_Sans,sans-serif] text-[1.2rem] no-underline">AWS</span>
+            </a>
+            <a href="https://www.microsoft.com" class="flex items-center gap-2 hover:opacity-70 transition-opacity" target="_blank" rel="noopener">
+                <img src="https://img.logo.dev/microsoft.com?token=pk_JuRpzKiHQniWr0CmqpMOBA" alt="Microsoft logo" class="h-6 w-auto">
+                <span class="text-[#d4d4d4] font-[Fira_Sans,sans-serif] text-[1.2rem] no-underline">Microsoft</span>
+            </a>
+            <a href="https://www.tdsynnex.com" class="flex items-center gap-2 hover:opacity-70 transition-opacity" target="_blank" rel="noopener">
+                <img src="https://img.logo.dev/tdsynnex.com?token=pk_JuRpzKiHQniWr0CmqpMOBA" alt="TDSynnex logo" class="h-6 w-auto">
+                <span class="text-[#d4d4d4] font-[Fira_Sans,sans-serif] text-[1.2rem] no-underline">TDSynnex</span>
+            </a>
+            <a href="https://www.oracle.com" class="flex items-center gap-2 hover:opacity-70 transition-opacity" target="_blank" rel="noopener">
+                <img src="https://img.logo.dev/oracle.com?token=pk_JuRpzKiHQniWr0CmqpMOBA" alt="Oracle logo" class="h-6 w-auto">
+                <span class="text-[#d4d4d4] font-[Fira_Sans,sans-serif] text-[1.2rem] no-underline">Oracle</span>
+            </a>
+        </section>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="text-[color:var(--color-comment)] font-[Fira_Sans,sans-serif] text-[1.2rem]">
+        <div class="mt-24">
+            amalgamy.ai by ThisWay Global — Activating at SC25 St. Louis, Nov 18-21, 2025
+        </div>
+
+    </footer>
+
+    <script is:inline src="/events/sc25/terminal.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) window.lucide.createIcons();
+
+            // Fade in Spline iframe when loaded
+            const splineIframe = document.getElementById('aura-spline');
+            const splineContainer = document.querySelector('.spline-container');
+
+            if (splineIframe && splineContainer) {
+                splineIframe.addEventListener('load', () => {
+                    splineContainer.classList.remove('opacity-0');
+                    splineContainer.classList.add('opacity-100');
+                });
+
+                // Fallback: fade in after 3 seconds if load event doesn't fire
+                setTimeout(() => {
+                    if (splineContainer.classList.contains('opacity-0')) {
+                        splineContainer.classList.remove('opacity-0');
+                        splineContainer.classList.add('opacity-100');
+                    }
+                }, 3000);
+            }
+        });
+    </script>
+
+    <script>
+console.log(`
+"amalgamy.ai - Protocol Activated: Fuse Data & Metal"
+
+[ SYSTEM STATUS: ACTIVE ]
+
+>_ Protocol Activated
+>_ Fusing data-driven models with computational models
+>_ Dynamic orchestration across heterogeneous hardware
+>_ Adaptive dispatch | Portable workflows | Real performance
+
+SC25 St. Louis | Nov 18-21, 2025
+Booth TBD | Early Access: amalgamy.ai/event/sc25
+
+A new layer of intelligence for AI, HPC, and digital twin workflows.
+Brought to you by ThisWay Global in partnership with Supermicro, NVIDIA, WWT, TTU & TAMU.
+
+amalgamy.ai — Where data meets metal.
+`)
+    </script>
+    </div>
+</body>
+</html>

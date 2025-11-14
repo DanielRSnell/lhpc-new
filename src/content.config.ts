@@ -28,6 +28,21 @@ const pressRelease = defineCollection({
   }),
 });
 
+const events = defineCollection({
+  // Load Markdown and MDX files in the `src/content/events/` directory.
+  loader: glob({ base: './src/content/events', pattern: '**/*.{md,mdx}' }),
+  // Type-check frontmatter using a schema
+  schema: z.object({
+    title: z.string(),
+    date: z.string(), // Event date range like "NOV 18-21 2025"
+    id: z.string(),
+    location: z.string(), // Event location like "St. Louis, MO"
+    event_url: z.string(), // Link to the custom landing page
+    featured_image: z.string().optional(), // Featured image for archive listing
+    excerpt: z.string().optional(), // Brief description for the archive listing
+  }),
+});
+
 const docs = defineCollection({
   loader: docsLoader(),
   schema: docsSchema(),
@@ -36,5 +51,6 @@ const docs = defineCollection({
 export const collections = {
   changelog,
   pressRelease,
+  events,
   docs,
 };
