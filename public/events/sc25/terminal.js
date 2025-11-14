@@ -177,6 +177,48 @@ const terminal = {
         });
     },
 
+    updateInputAttributes(field) {
+        // Set appropriate input attributes based on field type for better mobile UX and accessibility
+        const inputModeMap = {
+            'email': { type: 'email', inputmode: 'email', autocomplete: 'email' },
+            'tel': { type: 'tel', inputmode: 'tel', autocomplete: 'tel' },
+            'text': { type: 'text', inputmode: 'text', autocomplete: 'off' }
+        };
+
+        // Default attributes
+        let attrs = { type: 'text', inputmode: 'text', autocomplete: 'off' };
+
+        // Set attributes based on field key and type
+        if (field.type === 'email') {
+            attrs = inputModeMap.email;
+        } else if (field.type === 'tel') {
+            attrs = inputModeMap.tel;
+        } else if (field.type === 'select') {
+            // Numeric keyboard for selection fields
+            attrs = { type: 'text', inputmode: 'numeric', autocomplete: 'off' };
+        } else {
+            // Text fields with specific autocomplete hints
+            switch (field.key) {
+                case 'name':
+                    attrs = { type: 'text', inputmode: 'text', autocomplete: 'name' };
+                    break;
+                case 'organization':
+                    attrs = { type: 'text', inputmode: 'text', autocomplete: 'organization' };
+                    break;
+                case 'location':
+                    attrs = { type: 'text', inputmode: 'text', autocomplete: 'address-level2' };
+                    break;
+                default:
+                    attrs = { type: 'text', inputmode: 'text', autocomplete: 'off' };
+            }
+        }
+
+        // Apply attributes to input element
+        this.inputEl.setAttribute('type', attrs.type);
+        this.inputEl.setAttribute('inputmode', attrs.inputmode);
+        this.inputEl.setAttribute('autocomplete', attrs.autocomplete);
+    },
+
     typeText(text, callback, speed = 10) {
         let i = 0;
         const container = document.createElement('div');
@@ -203,6 +245,7 @@ const terminal = {
 
     showPrompt() {
         const field = this.fields[this.currentFieldIndex];
+        this.updateInputAttributes(field);
         this.typeText(field.prompt + '\n', () => {
             this.inputEl.disabled = false;
             this.inputEl.focus();
@@ -373,6 +416,7 @@ const terminal = {
         const calendarLink = `https://cal.com/team/thisway/launch-hpc?${calendarParams.toString()}`;
 
         // Clear terminal before showing final summary
+        this.clearTerminal(() => {
             this.typeText(
                 '\n[ APPLICATION COMPLETE ]\n\n' +
                 '> Qualification complete.\n' +
@@ -419,7 +463,7 @@ const terminal = {
                 },
                 20
             );
-        
+        });
     }
 };
 
