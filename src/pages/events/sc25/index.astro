@@ -90,6 +90,38 @@
         .logo-gradient {
             filter: url(#logo-gradient-filter);
         }
+
+        /* Autocomplete styling to match terminal theme */
+        #terminal-input:-webkit-autofill,
+        #terminal-input:-webkit-autofill:hover,
+        #terminal-input:-webkit-autofill:focus,
+        #terminal-input:-webkit-autofill:active {
+            -webkit-text-fill-color: #d4d4d4 !important;
+            -webkit-box-shadow: 0 0 0 30px #0b0b0b inset !important;
+            box-shadow: 0 0 0 30px #0b0b0b inset !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+        /* Style the autocomplete dropdown suggestions */
+        input::-webkit-contacts-auto-fill-button,
+        input::-webkit-credentials-auto-fill-button {
+            visibility: hidden;
+            pointer-events: none;
+            position: absolute;
+        }
+
+        /* Try to style the dropdown container */
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder,
+        input[type="tel"]::placeholder {
+            color: #515151;
+            opacity: 0.5;
+        }
+
+        /* Additional attempt to style autocomplete dropdown */
+        #terminal-input {
+            color-scheme: dark;
+        }
     </style>
 </head>
 
