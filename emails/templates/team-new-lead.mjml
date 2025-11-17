@@ -1,0 +1,208 @@
+<mjml>
+  <mj-head>
+    <mj-title>New SC25 Lead Started</mj-title>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" />
+      <mj-text font-size="14px" line-height="1.5" color="#0a0a0a" />
+      <mj-section background-color="#fafafa" padding="20px 0" />
+    </mj-attributes>
+    <mj-style>
+      .badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .warning-badge {
+        background-color: #fef3c7;
+        color: #854d0e;
+      }
+      .label {
+        font-size: 12px;
+        font-weight: 600;
+        color: #737373;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 4px;
+      }
+      .value {
+        font-size: 14px;
+        color: #0a0a0a;
+        margin-bottom: 16px;
+      }
+      .progress-bar {
+        width: 100%;
+        height: 8px;
+        background-color: #e5e5e5;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #8b5cf6 0%, #a78bfa 100%);
+        border-radius: 999px;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#fafafa">
+
+    <!-- Header -->
+    <mj-section background-color="#ffffff" padding="24px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="700" color="#0a0a0a" padding="0">
+          SC25 Lead Notification
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Status Badge -->
+    <mj-section background-color="#fafafa" padding="16px 0">
+      <mj-column>
+        <mj-text align="center" padding="0">
+          <span class="badge warning-badge">⚠️ New Lead Started</span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Progress Summary Card -->
+    <mj-section background-color="#ffffff" border-radius="8px" padding="24px">
+      <mj-column>
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 16px 0">
+          Lead Progress
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          LEAD ID
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          #{{ $json.id }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          COMPLETION STATUS
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          Step {{ $json.current_step }} of 3 (In Progress)
+        </mj-text>
+
+        <!-- Progress Bar -->
+        <mj-text padding="0 0 8px 0" css-class="label">
+          PROGRESS
+        </mj-text>
+        <mj-raw>
+          <!-- n8n: Calculate progress percentage based on current_step -->
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: {{ ($json.current_step / 3 * 100).toFixed(0) }}%;"></div>
+          </div>
+        </mj-raw>
+
+        <mj-text padding="16px 0 8px 0" css-class="label">
+          LAST ACTIVITY
+        </mj-text>
+        <mj-text padding="0" css-class="value">
+          {{ new Date($json.last_activity_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#fafafa" padding="8px 0">
+      <mj-column>
+        <mj-divider border-color="#e5e5e5" border-width="1px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Contact Information Card -->
+    <mj-section background-color="#ffffff" border-radius="8px" padding="24px">
+      <mj-column>
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 16px 0">
+          Contact Information
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          NAME
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          {{ $json.name }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          EMAIL
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          <a href="mailto:{{ $json.email }}" style="color: #8b5cf6; text-decoration: none;">{{ $json.email }}</a>
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          PHONE
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          <a href="tel:{{ $json.phone }}" style="color: #8b5cf6; text-decoration: none;">{{ $json.phone || 'Not provided' }}</a>
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          ORGANIZATION
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          {{ $json.organization }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          ORGANIZATION TYPE
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          {{ $json.org_type }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          LOCATION
+        </mj-text>
+        <mj-text padding="0" css-class="value">
+          {{ $json.location }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#fafafa" padding="8px 0">
+      <mj-column>
+        <mj-divider border-color="#e5e5e5" border-width="1px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Call to Action -->
+    <mj-section background-color="#fffbeb" border-radius="8px" padding="24px">
+      <mj-column>
+        <mj-text font-size="14px" font-weight="600" color="#854d0e" align="center" padding="0 0 12px 0">
+          ⚡ Follow-Up Recommended
+        </mj-text>
+        <mj-text font-size="13px" color="#a16207" align="center" padding="0 0 16px 0">
+          This lead has started the registration but hasn't completed all steps. Consider reaching out to assist with completion.
+        </mj-text>
+
+        <mj-button href="mailto:{{ $json.email }}" background-color="#f59e0b" color="#ffffff" inner-padding="12px 32px">
+          Email Lead Now
+        </mj-button>
+
+        <mj-text font-size="12px" color="#92400e" align="center" padding="16px 0 0 0" line-height="1.6">
+          ⏰ <strong>Automated Reminder:</strong> If this lead doesn't complete the form within 24 hours, they will automatically receive a follow-up email encouraging them to finish their registration.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#fafafa" padding="24px 0">
+      <mj-column>
+        <mj-text font-size="12px" color="#737373" align="center" padding="0">
+          Lead created on {{ new Date($json.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }}
+        </mj-text>
+        <mj-text font-size="12px" color="#737373" align="center" padding="8px 0 0 0">
+          SC25 Event Registration System | Amalgamy by ThisWay Global
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

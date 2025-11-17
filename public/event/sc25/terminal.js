@@ -8,7 +8,7 @@ const terminal = {
     groupBoundaries: [4, 7, 12], // Clear after fields 4, 7, and complete at 12
 
     // Webhook endpoint for data submission
-    webhookUrl: 'https://api.umbral.ai/webhook-test/sc25',
+    webhookUrl: 'https://api.umbral.ai/webhook/sc25',
 
     // All fields in sequence - grouped logically but asked one at a time
     fields: [

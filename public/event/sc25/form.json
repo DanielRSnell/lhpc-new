@@ -1,0 +1,15 @@
+{
+  "email": "john.doe@example.com",
+  "phone": "+1-555-123-4567",
+  "name": "John Doe",
+  "organization": "Acme Research Labs",
+  "orgType": "Research Institution",
+  "location": "Austin, TX",
+  "budget": "Yes",
+  "problem": "We need to optimize our GPU cluster utilization for AI/ML workloads across multiple research teams",
+  "currentSolution": "Using basic SLURM scheduler with manual resource allocation and custom scripts for job management",
+  "computeLocation": "Hybrid",
+  "computeAmount": "50x H100 GPUs, 200x A100 GPUs, 1000 CPU cores",
+  "urgency": "Short-term (1-3 months)",
+  "step": 3
+}

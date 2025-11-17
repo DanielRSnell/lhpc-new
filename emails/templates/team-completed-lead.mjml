@@ -1,0 +1,277 @@
+<mjml>
+  <mj-head>
+    <mj-title>SC25 Lead Completed</mj-title>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" />
+      <mj-text font-size="14px" line-height="1.5" color="#0a0a0a" />
+      <mj-section background-color="#fafafa" padding="20px 0" />
+      <mj-button background-color="#8b5cf6" color="#ffffff" border-radius="6px" font-size="14px" font-weight="600" padding="12px 24px" />
+    </mj-attributes>
+    <mj-style>
+      .badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .success-badge {
+        background-color: #dcfce7;
+        color: #166534;
+      }
+      .urgent-immediate {
+        background-color: #fee2e2;
+        color: #991b1b;
+      }
+      .urgent-short {
+        background-color: #fed7aa;
+        color: #9a3412;
+      }
+      .urgent-medium {
+        background-color: #fef3c7;
+        color: #854d0e;
+      }
+      .urgent-long {
+        background-color: #dbeafe;
+        color: #1e40af;
+      }
+      .label {
+        font-size: 12px;
+        font-weight: 600;
+        color: #737373;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 4px;
+      }
+      .value {
+        font-size: 14px;
+        color: #0a0a0a;
+        margin-bottom: 16px;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#fafafa">
+
+    <!-- Header -->
+    <mj-section background-color="#ffffff" padding="24px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="700" color="#0a0a0a" padding="0">
+          SC25 Lead Completed ✓
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Status Badges -->
+    <mj-section background-color="#fafafa" padding="16px 0">
+      <mj-column width="50%">
+        <mj-text align="center" padding="0">
+          <span class="badge success-badge">✓ Completed</span>
+        </mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text align="center" padding="0">
+          <!-- n8n: Conditional urgency badge based on $json.urgency value -->
+          <span class="badge urgent-immediate">{{ $json.urgency }}</span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Lead Summary Card -->
+    <mj-section background-color="#ffffff" border-radius="8px" padding="24px">
+      <mj-column>
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 16px 0">
+          Lead Summary
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          LEAD ID
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          #{{ $json.id }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          TIME TO COMPLETE
+        </mj-text>
+        <mj-text padding="0" css-class="value">
+          {{ Math.round((new Date($json.updated_at) - new Date($json.created_at)) / 60000) }} minutes
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#fafafa" padding="8px 0">
+      <mj-column>
+        <mj-divider border-color="#e5e5e5" border-width="1px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Contact Information Card -->
+    <mj-section background-color="#ffffff" border-radius="8px" padding="24px">
+      <mj-column>
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 16px 0">
+          Contact Information
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          NAME
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          {{ $json.name }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          EMAIL
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          <a href="mailto:{{ $json.email }}" style="color: #8b5cf6; text-decoration: none; font-weight: 500;">{{ $json.email }}</a>
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          PHONE
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          <a href="tel:{{ $json.phone }}" style="color: #8b5cf6; text-decoration: none; font-weight: 500;">{{ $json.phone }}</a>
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          ORGANIZATION
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          {{ $json.organization }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          ORGANIZATION TYPE
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          {{ $json.org_type }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          LOCATION
+        </mj-text>
+        <mj-text padding="0" css-class="value">
+          {{ $json.location }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#fafafa" padding="8px 0">
+      <mj-column>
+        <mj-divider border-color="#e5e5e5" border-width="1px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Business Context Card -->
+    <mj-section background-color="#ffffff" border-radius="8px" padding="24px">
+      <mj-column>
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 16px 0">
+          Business Context
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          BUDGET STATUS
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          {{ $json.budget }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          URGENCY LEVEL
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          {{ $json.urgency }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          PROBLEM / CHALLENGE
+        </mj-text>
+        <mj-text padding="0" css-class="value" line-height="1.6">
+          {{ $json.problem }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#fafafa" padding="8px 0">
+      <mj-column>
+        <mj-divider border-color="#e5e5e5" border-width="1px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Technical Requirements Card -->
+    <mj-section background-color="#ffffff" border-radius="8px" padding="24px">
+      <mj-column>
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 16px 0">
+          Technical Requirements
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          CURRENT SOLUTION
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value" line-height="1.6">
+          {{ $json.current_solution }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          COMPUTE LOCATION
+        </mj-text>
+        <mj-text padding="0 0 16px 0" css-class="value">
+          {{ $json.compute_location }}
+        </mj-text>
+
+        <mj-text padding="0 0 8px 0" css-class="label">
+          COMPUTE AMOUNT / SCALE
+        </mj-text>
+        <mj-text padding="0" css-class="value" line-height="1.6">
+          {{ $json.compute_amount }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#fafafa" padding="8px 0">
+      <mj-column>
+        <mj-divider border-color="#e5e5e5" border-width="1px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Call to Action -->
+    <mj-section background-color="#f0fdf4" border-radius="8px" padding="24px">
+      <mj-column>
+        <mj-text font-size="16px" font-weight="600" color="#166534" align="center" padding="0 0 16px 0">
+          Next Steps
+        </mj-text>
+
+        <mj-button href="mailto:{{ $json.email }}" background-color="#22c55e" inner-padding="12px 32px">
+          Email Lead
+        </mj-button>
+
+        <mj-button href="tel:{{ $json.phone }}" background-color="#8b5cf6" inner-padding="12px 32px">
+          Call Lead
+        </mj-button>
+
+        <mj-text font-size="13px" color="#166534" align="center" padding="16px 0 0 0">
+          Priority: <strong>{{ $json.urgency }}</strong>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#fafafa" padding="24px 0">
+      <mj-column>
+        <mj-text font-size="12px" color="#737373" align="center" padding="0">
+          Lead created: {{ new Date($json.created_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) }}
+        </mj-text>
+        <mj-text font-size="12px" color="#737373" align="center" padding="4px 0 0 0">
+          Lead completed: {{ new Date($json.updated_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) }}
+        </mj-text>
+        <mj-text font-size="12px" color="#737373" align="center" padding="12px 0 0 0">
+          SC25 Event Registration System | Amalgamy by ThisWay Global
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
