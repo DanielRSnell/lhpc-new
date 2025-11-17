@@ -1,0 +1,281 @@
+<mjml>
+  <mj-head>
+    <mj-title>Thank You for Registering - SC25</mj-title>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" />
+      <mj-text font-size="16px" line-height="1.6" color="#171717" />
+      <mj-section background-color="#ffffff" padding="0" />
+    </mj-attributes>
+    <mj-style>
+      .gradient-text {
+        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .card {
+        background: #fafafa;
+        border-radius: 12px;
+        padding: 24px;
+        margin: 16px 0;
+      }
+      .feature-item {
+        padding: 12px 0;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .feature-item:last-child {
+        border-bottom: none;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#ffffff">
+
+    <!-- Header with Logo -->
+    <mj-section background-color="#fafafa" padding="40px 20px">
+      <mj-column>
+        <mj-image src="https://amalgamy.ai/branding/app-icon-dark.png" alt="Amalgamy" width="120px" align="center" padding="0" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Hero Section -->
+    <mj-section background-color="#ffffff" padding="48px 20px 32px 20px">
+      <mj-column>
+        <mj-text font-size="32px" font-weight="700" align="center" line-height="1.2" color="#0a0a0a" padding="0 0 16px 0">
+          Welcome to SC25,<br/>{{ $json.name }}!
+        </mj-text>
+        <mj-text font-size="18px" align="center" color="#525252" padding="0">
+          Thank you for registering. We're excited to connect with you in St. Louis.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="0 20px">
+      <mj-column>
+        <mj-divider border-color="#e5e5e5" border-width="1px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Event Details Card -->
+    <mj-section background-color="#ffffff" padding="32px 20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#0a0a0a" padding="0 0 20px 0">
+          Event Details
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#fafafa" border-radius="12px" padding="24px">
+      <mj-column width="50%">
+        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Date
+        </mj-text>
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 20px 0">
+          November 18-21, 2025
+        </mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Location
+        </mj-text>
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 20px 0">
+          St. Louis, Missouri
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+
+    <!-- Confirmation Section -->
+    <mj-section background-color="#ffffff" padding="48px 20px 24px 20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#0a0a0a" padding="0 0 20px 0">
+          Your Preferred Access is Confirmed
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="0 20px 12px 20px">
+      <mj-column width="8%">
+        <mj-text font-size="24px" padding="0">✅</mj-text>
+      </mj-column>
+      <mj-column width="92%">
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 4px 0">
+          Registration Complete
+        </mj-text>
+        <mj-text font-size="14px" color="#525252" padding="0">
+          You're all set for SC25! We've received your information and will be ready to connect with you in St. Louis.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="0 20px 12px 20px">
+      <mj-column width="8%">
+        <mj-text font-size="24px" padding="0">📅</mj-text>
+      </mj-column>
+      <mj-column width="92%">
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 4px 0">
+          Schedule Your Demo
+        </mj-text>
+        <mj-text font-size="14px" color="#525252" padding="0">
+          Want to guarantee time with our team? Book a personalized demo slot now to discuss your specific {{ $json.problem }}.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="0 20px 12px 20px">
+      <mj-column width="8%">
+        <mj-text font-size="24px" padding="0">🚀</mj-text>
+      </mj-column>
+      <mj-column width="92%">
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 4px 0">
+          Live Platform Demo
+        </mj-text>
+        <mj-text font-size="14px" color="#525252" padding="0">
+          See Amalgamy's AI/HPC orchestration in action with real-world use cases tailored to your infrastructure
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="0 20px 24px 20px">
+      <mj-column width="8%">
+        <mj-text font-size="24px" padding="0">⚡</mj-text>
+      </mj-column>
+      <mj-column width="92%">
+        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 4px 0">
+          Exclusive Early Access
+        </mj-text>
+        <mj-text font-size="14px" color="#525252" padding="0">
+          First 25 attendees who schedule a demo receive 25 days of platform access
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- CTA Section -->
+    <mj-section background-color="#0a0a0a" border-radius="12px" padding="40px 24px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="700" color="#ffffff" align="center" padding="0 0 12px 0">
+          Schedule Your Personal Demo
+        </mj-text>
+        <mj-text font-size="16px" color="#a3a3a3" align="center" padding="0 0 24px 0">
+          Based on your interest in {{ $json.problem }}, we've prepared a personalized demo for SC25
+        </mj-text>
+        <mj-button href="https://cal.com/team/thisway/launch-hpc?name={{ $json.name }}&email={{ $json.email }}&phone={{ $json.phone }}&a1={{ $json.organization }}&a2={{ $json.org_type }}&a3={{ $json.location }}&a4={{ $json.budget }}&a5={{ $json.problem }}&a6={{ $json.current_solution }}&a7={{ $json.compute_location }}&a8={{ $json.compute_amount }}&a9={{ $json.urgency }}" background-color="#8b5cf6" color="#ffffff" border-radius="8px" font-size="16px" font-weight="600" inner-padding="16px 40px">
+          Book Your Demo Slot
+        </mj-button>
+        <mj-text font-size="13px" color="#737373" align="center" padding="24px 0 0 0">
+          Or visit us anytime November 18-21 in St. Louis
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Your Information Section -->
+    <mj-section background-color="#ffffff" padding="48px 20px 24px 20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#0a0a0a" padding="0 0 8px 0">
+          Your Registration Details
+        </mj-text>
+        <mj-text font-size="14px" color="#737373" padding="0 0 20px 0">
+          We've received the following information from you:
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#fafafa" border-radius="12px" padding="24px">
+      <mj-column>
+        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Organization
+        </mj-text>
+        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+          {{ $json.organization }} ({{ $json.org_type }})
+        </mj-text>
+
+        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Current Infrastructure
+        </mj-text>
+        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+          {{ $json.compute_amount }} ({{ $json.compute_location }})
+        </mj-text>
+
+        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Timeline
+        </mj-text>
+        <mj-text font-size="16px" color="#0a0a0a" padding="0">
+          {{ $json.urgency }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Next Steps -->
+    <mj-section background-color="#ffffff" padding="48px 20px 24px 20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#0a0a0a" padding="0 0 20px 0">
+          What Happens Next?
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="0 20px">
+      <mj-column>
+        <mj-text font-size="14px" color="#525252" padding="0 0 12px 0">
+          <strong style="color: #0a0a0a;">1. Confirmation Email</strong><br/>
+          You're reading it! Save this for your records.
+        </mj-text>
+        <mj-text font-size="14px" color="#525252" padding="0 0 12px 0">
+          <strong style="color: #0a0a0a;">2. Schedule Your Demo (Optional)</strong><br/>
+          Book a guaranteed time slot with our team using the link above to discuss your specific infrastructure needs.
+        </mj-text>
+        <mj-text font-size="14px" color="#525252" padding="0 0 12px 0">
+          <strong style="color: #0a0a0a;">3. Pre-Event Updates</strong><br/>
+          We'll send you event details and any special announcements as SC25 approaches.
+        </mj-text>
+        <mj-text font-size="14px" color="#525252" padding="0">
+          <strong style="color: #0a0a0a;">4. See You in St. Louis!</strong><br/>
+          Meet us anytime November 18-21 to see the platform and discuss how Amalgamy can transform your compute infrastructure.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Spacer -->
+    <mj-section background-color="#ffffff" padding="16px 0">
+      <mj-column></mj-column>
+    </mj-section>
+
+    <!-- Questions Section -->
+    <mj-section background-color="#f9fafb" border-radius="12px" padding="32px 24px">
+      <mj-column>
+        <mj-text font-size="18px" font-weight="600" color="#0a0a0a" align="center" padding="0 0 12px 0">
+          Questions Before the Event?
+        </mj-text>
+        <mj-text font-size="14px" color="#525252" align="center" padding="0 0 20px 0">
+          Our team is here to help. Reach out anytime.
+        </mj-text>
+        <mj-button href="mailto:events@amalgamy.ai" background-color="#ffffff" color="#0a0a0a" border="2px solid #e5e5e5" border-radius="8px" font-size="14px" font-weight="600" inner-padding="12px 32px">
+          Contact Event Team
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#ffffff" padding="40px 20px 20px 20px">
+      <mj-column>
+        <mj-image src="https://amalgamy.ai/branding/app-icon-dark.png" alt="Amalgamy" width="80px" align="center" padding="0 0 16px 0" />
+        <mj-text font-size="14px" color="#737373" align="center" padding="0 0 8px 0">
+          Unified AI/HPC Orchestration
+        </mj-text>
+        <mj-text font-size="12px" color="#a3a3a3" align="center" padding="0 0 16px 0">
+          Amalgamy by ThisWay Global
+        </mj-text>
+        <mj-social font-size="15px" icon-size="32px" mode="horizontal" padding="0" align="center">
+          <mj-social-element name="linkedin" href="https://www.linkedin.com/company/amalgamy" background-color="#0a66c2" />
+          <mj-social-element name="twitter" href="https://twitter.com/amalgamy" background-color="#1da1f2" />
+          <mj-social-element name="web" href="https://amalgamy.ai" background-color="#8b5cf6" src="https://amalgamy.ai/branding/app-icon-light.png" />
+        </mj-social>
+        <mj-text font-size="11px" color="#a3a3a3" align="center" padding="24px 0 0 0" line-height="1.6">
+          You're receiving this email because you registered for SC25 on amalgamy.ai<br/>
+          © 2025 Amalgamy by ThisWay Global. All rights reserved.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
