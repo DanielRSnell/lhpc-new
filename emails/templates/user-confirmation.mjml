@@ -1,309 +1,328 @@
 <mjml>
   <mj-head>
-    <mj-title>Thank You for Registering - SC25</mj-title>
-    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <mj-title>SC25 Registration Confirmed - Amalgamy</mj-title>
+    <mj-font name="Fira Code" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" />
+    <mj-font name="Fira Sans" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" />
     <mj-attributes>
-      <mj-all font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" />
-      <mj-text font-size="16px" line-height="1.6" color="#171717" />
-      <mj-section background-color="#ffffff" padding="0" />
+      <mj-all font-family="'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" />
+      <mj-text font-size="16px" line-height="1.6" color="#a3a3a3" />
+      <mj-section background-color="#000000" padding="0" />
     </mj-attributes>
     <mj-style>
-      .gradient-text {
-        background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+      .terminal-text {
+        font-family: 'Fira Code', monospace;
+        color: #5cc040;
       }
-      .card {
-        background: #fafafa;
-        border-radius: 12px;
-        padding: 24px;
-        margin: 16px 0;
+      .comment-text {
+        color: #6b7280;
       }
-      .feature-item {
-        padding: 12px 0;
-        border-bottom: 1px solid #e5e5e5;
+      .muted-text {
+        color: #8a8a8a;
       }
-      .feature-item:last-child {
-        border-bottom: none;
+      .terminal-border {
+        border-left: 2px solid rgba(92, 192, 64, 0.3);
+        padding-left: 16px;
+      }
+      .success-color {
+        color: #5cc040;
       }
     </mj-style>
   </mj-head>
-  <mj-body background-color="#ffffff">
+  <mj-body background-color="#000000">
 
     <!-- Header with Logo -->
-    <mj-section background-color="#fafafa" padding="40px 20px">
+    <mj-section background-color="#000000" padding="40px 20px 20px 20px">
       <mj-column>
-        <mj-image src="https://amalgamy.ai/branding/light.png" alt="Amalgamy" width="120px" align="center" padding="0" />
+        <mj-image src="https://amalgamy.ai/branding/dark.png" alt="Amalgamy" width="140px" align="left" padding="0" />
       </mj-column>
     </mj-section>
 
-    <!-- Hero Section -->
-    <mj-section background-color="#ffffff" padding="48px 20px 32px 20px">
+    <!-- Terminal Header -->
+    <mj-section background-color="#000000" padding="40px 20px 20px 20px">
       <mj-column>
-        <mj-text font-size="32px" font-weight="700" align="center" line-height="1.2" color="#0a0a0a" padding="0 0 16px 0">
-          Welcome to SC25,<br/>{{ $json.name }}!
+        <mj-text font-family="'Fira Code', monospace" font-size="14px" color="#5cc040" padding="0 0 8px 0">
+          $ amalgamy registration --confirm
         </mj-text>
-        <mj-text font-size="18px" align="center" color="#525252" padding="0">
-          Thank you for registering. We're excited to connect with you in St. Louis.
+        <mj-text font-size="28px" font-weight="700" color="#ffffff" padding="0 0 12px 0" line-height="1.3">
+          Registration Confirmed
         </mj-text>
-      </mj-column>
-    </mj-section>
-
-    <mj-section background-color="#ffffff" padding="0 20px">
-      <mj-column>
-        <mj-divider border-color="#e5e5e5" border-width="1px" />
-      </mj-column>
-    </mj-section>
-
-    <!-- Event Details Card -->
-    <mj-section background-color="#ffffff" padding="32px 20px">
-      <mj-column>
-        <mj-text font-size="20px" font-weight="600" color="#0a0a0a" padding="0 0 20px 0">
-          Event Details
+        <mj-text font-size="16px" color="#a3a3a3" padding="0" line-height="1.6">
+          Welcome {{ $json.name }}, you're confirmed for SC25 in St. Louis.
         </mj-text>
       </mj-column>
     </mj-section>
 
-    <mj-section background-color="#fafafa" border-radius="12px" padding="24px">
+    <!-- Divider -->
+    <mj-section background-color="#000000" padding="20px 20px">
+      <mj-column>
+        <mj-divider border-color="rgba(92, 192, 64, 0.2)" border-width="1px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Event Details -->
+    <mj-section background-color="#000000" padding="20px 20px">
+      <mj-column>
+        <mj-text font-family="'Fira Code', monospace" font-size="13px" color="#5cc040" padding="0 0 16px 0" text-transform="uppercase" letter-spacing="1px">
+          // Event Details
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="rgba(15, 15, 15, 0.5)" border-radius="8px" padding="24px" css-class="terminal-border">
       <mj-column width="50%">
-        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+        <mj-text font-size="12px" color="#6b7280" padding="0 0 4px 0" text-transform="uppercase" letter-spacing="0.5px">
           Date
         </mj-text>
-        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 20px 0">
-          November 18-21, 2025
+        <mj-text font-family="'Fira Code', monospace" font-size="15px" color="#ffffff" padding="0 0 20px 0">
+          Nov 18-21, 2025
         </mj-text>
       </mj-column>
       <mj-column width="50%">
-        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+        <mj-text font-size="12px" color="#6b7280" padding="0 0 4px 0" text-transform="uppercase" letter-spacing="0.5px">
           Location
         </mj-text>
-        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 20px 0">
-          St. Louis, Missouri
+        <mj-text font-family="'Fira Code', monospace" font-size="15px" color="#ffffff" padding="0">
+          St. Louis, MO
         </mj-text>
       </mj-column>
     </mj-section>
 
-
-    <!-- Confirmation Section -->
-    <mj-section background-color="#ffffff" padding="48px 20px 24px 20px">
+    <!-- What We'll Do -->
+    <mj-section background-color="#000000" padding="40px 20px 20px 20px">
       <mj-column>
-        <mj-text font-size="20px" font-weight="600" color="#0a0a0a" padding="0 0 20px 0">
-          Your Preferred Access is Confirmed
+        <mj-text font-family="'Fira Code', monospace" font-size="13px" color="#5cc040" padding="0 0 16px 0" text-transform="uppercase" letter-spacing="1px">
+          // Your Session
+        </mj-text>
+        <mj-text font-size="16px" color="#d4d4d4" padding="0 0 24px 0" line-height="1.6">
+          We will baseline the current performance of your workflows, demonstrate Amalgamy.AI topology-informed optimization, and deliver a plan to accelerate your research.
         </mj-text>
       </mj-column>
     </mj-section>
 
-    <mj-section background-color="#ffffff" padding="0 20px 12px 20px">
-      <mj-column width="8%">
-        <mj-text font-size="24px" padding="0">✅</mj-text>
-      </mj-column>
-      <mj-column width="92%">
-        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 4px 0">
-          Registration Complete
+    <!-- Process Steps with Terminal Style -->
+    <mj-section background-color="#000000" padding="0 20px 12px 20px">
+      <mj-column>
+        <mj-text font-family="'Fira Code', monospace" font-size="15px" color="#5cc040" padding="0 0 6px 16px" font-weight="600">
+          1. Assess Elements
         </mj-text>
-        <mj-text font-size="14px" color="#525252" padding="0">
-          You're all set for SC25! We've received your information and will be ready to connect with you in St. Louis.
+        <mj-text font-size="14px" color="#8a8a8a" padding="0 0 20px 32px" line-height="1.5">
+          Intake and Scope Establishment
         </mj-text>
       </mj-column>
     </mj-section>
 
-    <mj-section background-color="#ffffff" padding="0 20px 12px 20px">
-      <mj-column width="8%">
-        <mj-text font-size="24px" padding="0">📅</mj-text>
-      </mj-column>
-      <mj-column width="92%">
-        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 4px 0">
-          Schedule Your Demo
+    <mj-section background-color="#000000" padding="0 20px 12px 20px">
+      <mj-column>
+        <mj-text font-family="'Fira Code', monospace" font-size="15px" color="#5cc040" padding="0 0 6px 16px" font-weight="600">
+          2. Forging Pathways
         </mj-text>
-        <mj-text font-size="14px" color="#525252" padding="0">
-          Want to guarantee time with our team? Book a personalized demo slot now to discuss your specific {{ $json.problem }}.
+        <mj-text font-size="14px" color="#8a8a8a" padding="0 0 20px 32px" line-height="1.5">
+          Data & Workflow Opportunity Discovery
         </mj-text>
       </mj-column>
     </mj-section>
 
-    <mj-section background-color="#ffffff" padding="0 20px 12px 20px">
-      <mj-column width="8%">
-        <mj-text font-size="24px" padding="0">🚀</mj-text>
-      </mj-column>
-      <mj-column width="92%">
-        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 4px 0">
-          Live Platform Demo
+    <mj-section background-color="#000000" padding="0 20px 12px 20px">
+      <mj-column>
+        <mj-text font-family="'Fira Code', monospace" font-size="15px" color="#5cc040" padding="0 0 6px 16px" font-weight="600">
+          3. Tempered Output
         </mj-text>
-        <mj-text font-size="14px" color="#525252" padding="0">
-          See Amalgamy's AI/HPC orchestration in action with real-world use cases tailored to your infrastructure
+        <mj-text font-size="14px" color="#8a8a8a" padding="0 0 20px 32px" line-height="1.5">
+          Deliver refined results that Fuse Data & Metal into measurable acceleration
         </mj-text>
       </mj-column>
     </mj-section>
 
-    <mj-section background-color="#ffffff" padding="0 20px 24px 20px">
-      <mj-column width="8%">
-        <mj-text font-size="24px" padding="0">⚡</mj-text>
-      </mj-column>
-      <mj-column width="92%">
-        <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 4px 0">
-          Limited Availability
-        </mj-text>
-        <mj-text font-size="14px" color="#525252" padding="0">
-          First 10 qualified attendees - schedule a call to see if we're a good fit
+    <!-- Limited Availability Notice -->
+    <mj-section background-color="rgba(92, 192, 64, 0.08)" border="1px solid rgba(92, 192, 64, 0.15)" border-radius="8px" padding="20px">
+      <mj-column>
+        <mj-text font-size="14px" color="#8a8a8a" padding="0" line-height="1.6">
+          <span style="color: #5cc040; font-weight: 600;">Limited Availability:</span> Spots are limited to the first 10 qualified applicants, valid until Friday, Nov 21, 6 pm CT. Does not include access to GPUs.
         </mj-text>
       </mj-column>
     </mj-section>
 
     <!-- CTA Section -->
-    <mj-section background-color="#0a0a0a" border-radius="12px" padding="40px 24px">
+    <mj-section background-color="#000000" padding="40px 20px">
       <mj-column>
-        <mj-text font-size="24px" font-weight="700" color="#ffffff" align="center" padding="0 0 12px 0">
-          Schedule Your Personal Demo
+        <mj-text font-family="'Fira Code', monospace" font-size="13px" color="#5cc040" padding="0 0 16px 0" text-transform="uppercase" letter-spacing="1px">
+          // Schedule Demo
         </mj-text>
-        <mj-text font-size="16px" color="#a3a3a3" align="center" padding="0 0 24px 0">
-          Based on your interest in {{ $json.problem }}, we've prepared a personalized demo for SC25
+        <mj-text font-size="20px" font-weight="700" color="#ffffff" padding="0 0 12px 0" line-height="1.3">
+          Book Your Personal Session
         </mj-text>
-        <mj-button href="https://cal.com/team/thisway/launch-hpc?name={{ $json.name }}&email={{ $json.email }}&phone={{ $json.phone }}&a1={{ $json.organization }}&a2={{ $json.org_type }}&a3={{ $json.location }}&a4={{ $json.budget }}&a5={{ $json.problem }}&a6={{ $json.current_solution }}&a7={{ $json.compute_location }}&a8={{ $json.compute_amount }}&a9={{ $json.urgency }}" background-color="#8b5cf6" color="#ffffff" border-radius="8px" font-size="16px" font-weight="600" inner-padding="16px 40px">
-          Book Your Demo Slot
+        <mj-text font-size="15px" color="#a3a3a3" padding="0 0 24px 0" line-height="1.6">
+          Based on your interest in {{ $json.problem }}, we've prepared a personalized demo for SC25.
+        </mj-text>
+        <mj-button href="https://cal.com/team/thisway/launch-hpc?name={{ $json.name }}&email={{ $json.email }}&phone={{ $json.phone }}&a1={{ $json.organization }}&a2={{ $json.org_type }}&a3={{ $json.location }}&a4={{ $json.budget }}&a5={{ $json.problem }}&a6={{ $json.current_solution }}&a7={{ $json.compute_location }}&a8={{ $json.compute_amount }}&a9={{ $json.urgency }}" background-color="#5cc040" color="#000000" border-radius="6px" font-size="15px" font-weight="600" inner-padding="14px 32px" font-family="'Fira Code', monospace">
+          $ book --demo
         </mj-button>
-        <mj-text font-size="13px" color="#737373" align="center" padding="24px 0 0 0">
+        <mj-text font-size="13px" color="#6b7280" align="center" padding="20px 0 0 0">
           Or visit us anytime November 18-21 in St. Louis
         </mj-text>
       </mj-column>
     </mj-section>
 
-    <!-- Your Information Section -->
-    <mj-section background-color="#ffffff" padding="48px 20px 24px 20px">
+    <!-- Divider -->
+    <mj-section background-color="#000000" padding="20px 20px">
       <mj-column>
-        <mj-text font-size="20px" font-weight="600" color="#0a0a0a" padding="0 0 8px 0">
-          Your Registration Details
+        <mj-divider border-color="rgba(92, 192, 64, 0.2)" border-width="1px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Your Registration Details -->
+    <mj-section background-color="#000000" padding="40px 20px 20px 20px">
+      <mj-column>
+        <mj-text font-family="'Fira Code', monospace" font-size="13px" color="#5cc040" padding="0 0 8px 0" text-transform="uppercase" letter-spacing="1px">
+          // Registration Data
         </mj-text>
-        <mj-text font-size="14px" color="#737373" padding="0 0 20px 0">
+        <mj-text font-size="14px" color="#6b7280" padding="0 0 20px 0">
           We've received the following information from you:
         </mj-text>
       </mj-column>
     </mj-section>
 
-    <mj-section background-color="#fafafa" border-radius="12px" padding="24px">
+    <mj-section background-color="rgba(15, 15, 15, 0.5)" border-radius="8px" padding="24px">
       <mj-column>
-        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
-          Contact Information
+        <mj-text font-size="11px" font-weight="600" color="#6b7280" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Contact
         </mj-text>
-        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 4px 0">
+        <mj-text font-family="'Fira Code', monospace" font-size="14px" color="#d4d4d4" padding="0 0 4px 0">
           {{ $json.email }}
         </mj-text>
-        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+        <mj-text font-family="'Fira Code', monospace" font-size="14px" color="#d4d4d4" padding="0 0 16px 0">
           {{ $json.phone }}
         </mj-text>
 
-        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+        <mj-text font-size="11px" font-weight="600" color="#6b7280" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
           Organization
         </mj-text>
-        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+        <mj-text font-family="'Fira Code', monospace" font-size="14px" color="#d4d4d4" padding="0 0 16px 0">
           {{ $json.organization }} ({{ $json.org_type }})
         </mj-text>
 
-        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+        <mj-text font-size="11px" font-weight="600" color="#6b7280" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
           Location
         </mj-text>
-        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+        <mj-text font-family="'Fira Code', monospace" font-size="14px" color="#d4d4d4" padding="0 0 16px 0">
           {{ $json.location }}
         </mj-text>
 
-        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+        <mj-text font-size="11px" font-weight="600" color="#6b7280" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
           Primary Challenge
         </mj-text>
-        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+        <mj-text font-family="'Fira Code', monospace" font-size="14px" color="#d4d4d4" padding="0 0 16px 0">
           {{ $json.problem }}
         </mj-text>
 
-        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+        <mj-text font-size="11px" font-weight="600" color="#6b7280" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
           Current Solution
         </mj-text>
-        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+        <mj-text font-family="'Fira Code', monospace" font-size="14px" color="#d4d4d4" padding="0 0 16px 0">
           {{ $json.current_solution }}
         </mj-text>
 
-        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
-          Current Infrastructure
+        <mj-text font-size="11px" font-weight="600" color="#6b7280" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Infrastructure
         </mj-text>
-        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+        <mj-text font-family="'Fira Code', monospace" font-size="14px" color="#d4d4d4" padding="0 0 16px 0">
           {{ $json.compute_amount }} ({{ $json.compute_location }})
         </mj-text>
 
-        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
-          Budget Available
+        <mj-text font-size="11px" font-weight="600" color="#6b7280" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Budget
         </mj-text>
-        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+        <mj-text font-family="'Fira Code', monospace" font-size="14px" color="#d4d4d4" padding="0 0 16px 0">
           {{ $json.budget }}
         </mj-text>
 
-        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+        <mj-text font-size="11px" font-weight="600" color="#6b7280" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
           Timeline
         </mj-text>
-        <mj-text font-size="16px" color="#0a0a0a" padding="0">
+        <mj-text font-family="'Fira Code', monospace" font-size="14px" color="#d4d4d4" padding="0">
           {{ $json.urgency }}
         </mj-text>
       </mj-column>
     </mj-section>
 
     <!-- Next Steps -->
-    <mj-section background-color="#ffffff" padding="48px 20px 24px 20px">
+    <mj-section background-color="#000000" padding="40px 20px 20px 20px">
       <mj-column>
-        <mj-text font-size="20px" font-weight="600" color="#0a0a0a" padding="0 0 20px 0">
-          What Happens Next?
+        <mj-text font-family="'Fira Code', monospace" font-size="13px" color="#5cc040" padding="0 0 20px 0" text-transform="uppercase" letter-spacing="1px">
+          // Next Steps
         </mj-text>
       </mj-column>
     </mj-section>
 
-    <mj-section background-color="#ffffff" padding="0 20px">
+    <mj-section background-color="#000000" padding="0 20px 12px 20px">
       <mj-column>
-        <mj-text font-size="14px" color="#525252" padding="0 0 12px 0">
-          <strong style="color: #0a0a0a;">1. Confirmation Email</strong><br/>
+        <mj-text font-size="14px" color="#a3a3a3" padding="0" line-height="1.6">
+          <span style="color: #5cc040; font-family: 'Fira Code', monospace;">1.</span> <strong style="color: #d4d4d4;">Confirmation Email</strong><br/>
           You're reading it! Save this for your records.
         </mj-text>
-        <mj-text font-size="14px" color="#525252" padding="0 0 12px 0">
-          <strong style="color: #0a0a0a;">2. Schedule Your Demo (Optional)</strong><br/>
-          Book a guaranteed time slot with our team using the link above to discuss your specific infrastructure needs.
-        </mj-text>
-        <mj-text font-size="14px" color="#525252" padding="0 0 12px 0">
-          <strong style="color: #0a0a0a;">3. Pre-Event Updates</strong><br/>
-          We'll send you event details and any special announcements as SC25 approaches.
-        </mj-text>
-        <mj-text font-size="14px" color="#525252" padding="0">
-          <strong style="color: #0a0a0a;">4. See You in St. Louis!</strong><br/>
-          Meet us anytime November 18-21 to see the platform and discuss how Amalgamy can transform your compute infrastructure.
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#000000" padding="0 20px 12px 20px">
+      <mj-column>
+        <mj-text font-size="14px" color="#a3a3a3" padding="0" line-height="1.6">
+          <span style="color: #5cc040; font-family: 'Fira Code', monospace;">2.</span> <strong style="color: #d4d4d4;">Schedule Demo (Optional)</strong><br/>
+          Book a guaranteed time slot with our team to discuss your specific infrastructure needs.
         </mj-text>
       </mj-column>
     </mj-section>
 
-    <!-- Spacer -->
-    <mj-section background-color="#ffffff" padding="16px 0">
-      <mj-column></mj-column>
+    <mj-section background-color="#000000" padding="0 20px 12px 20px">
+      <mj-column>
+        <mj-text font-size="14px" color="#a3a3a3" padding="0" line-height="1.6">
+          <span style="color: #5cc040; font-family: 'Fira Code', monospace;">3.</span> <strong style="color: #d4d4d4;">Pre-Event Updates</strong><br/>
+          We'll send event details and announcements as SC25 approaches.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#000000" padding="0 20px 24px 20px">
+      <mj-column>
+        <mj-text font-size="14px" color="#a3a3a3" padding="0" line-height="1.6">
+          <span style="color: #5cc040; font-family: 'Fira Code', monospace;">4.</span> <strong style="color: #d4d4d4;">See You in St. Louis!</strong><br/>
+          Meet us November 18-21 to see the platform and discuss how Amalgamy can transform your compute infrastructure.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Divider -->
+    <mj-section background-color="#000000" padding="20px 20px">
+      <mj-column>
+        <mj-divider border-color="rgba(92, 192, 64, 0.2)" border-width="1px" />
+      </mj-column>
     </mj-section>
 
     <!-- Questions Section -->
-    <mj-section background-color="#f9fafb" border-radius="12px" padding="32px 24px">
+    <mj-section background-color="rgba(15, 15, 15, 0.5)" border-radius="8px" padding="32px 24px">
       <mj-column>
-        <mj-text font-size="18px" font-weight="600" color="#0a0a0a" align="center" padding="0 0 12px 0">
+        <mj-text font-size="17px" font-weight="600" color="#ffffff" align="center" padding="0 0 12px 0">
           Questions Before the Event?
         </mj-text>
-        <mj-text font-size="14px" color="#525252" align="center" padding="0 0 20px 0">
+        <mj-text font-size="14px" color="#8a8a8a" align="center" padding="0 0 20px 0">
           Our team is here to help. Reach out anytime.
         </mj-text>
-        <mj-button href="mailto:events@amalgamy.ai" background-color="#ffffff" color="#0a0a0a" border="2px solid #e5e5e5" border-radius="8px" font-size="14px" font-weight="600" inner-padding="12px 32px">
-          Contact Event Team
+        <mj-button href="mailto:events@amalgamy.ai" background-color="transparent" color="#5cc040" border="1px solid rgba(92, 192, 64, 0.4)" border-radius="6px" font-size="14px" font-weight="600" inner-padding="12px 28px" font-family="'Fira Code', monospace">
+          $ contact --team
         </mj-button>
       </mj-column>
     </mj-section>
 
     <!-- Footer -->
-    <mj-section background-color="#ffffff" padding="40px 20px 20px 20px">
+    <mj-section background-color="#000000" padding="40px 20px 32px 20px">
       <mj-column>
-        <mj-image src="https://amalgamy.ai/branding/light.png" alt="Amalgamy" width="80px" align="center" padding="0 0 16px 0" />
-        <mj-text font-size="14px" color="#737373" align="center" padding="0 0 8px 0">
+        <mj-image src="https://amalgamy.ai/branding/dark.png" alt="Amalgamy" width="100px" align="center" padding="0 0 16px 0" />
+        <mj-text font-size="13px" color="#6b7280" align="center" padding="0 0 6px 0">
           Unified AI/HPC Orchestration
         </mj-text>
-        <mj-text font-size="12px" color="#a3a3a3" align="center" padding="0 0 24px 0">
+        <mj-text font-size="12px" color="#525252" align="center" padding="0 0 24px 0">
           Amalgamy by ThisWay Global
         </mj-text>
-        <mj-text font-size="11px" color="#a3a3a3" align="center" padding="0" line-height="1.6">
+        <mj-text font-size="11px" color="#525252" align="center" padding="0" line-height="1.6">
           You're receiving this email because you registered for SC25 on amalgamy.ai<br/>
           © 2025 Amalgamy by ThisWay Global. All rights reserved.
         </mj-text>

@@ -179,6 +179,103 @@
                 display: inline-flex;
             }
         }
+
+        /* Intro Section Styling */
+        #intro-section {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        #intro-section.hidden {
+            display: none;
+        }
+
+        /* Process Steps Container */
+        #process-steps {
+            margin-bottom: 2rem;
+        }
+
+        .process-step {
+            padding-left: 1rem;
+            border-left: 2px solid rgba(92, 192, 64, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .process-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .process-step-title {
+            color: var(--color-success);
+            font-family: 'Fira Code', monospace;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step-description {
+            color: var(--color-comment);
+            font-size: 1rem;
+            padding-left: 1rem;
+        }
+
+        /* Limited Availability Box */
+        #limited-availability-box {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(92, 192, 64, 0.15);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        #limited-availability-text {
+            color: #8a8a8a;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .limited-availability-label {
+            color: var(--color-success);
+            font-weight: 600;
+        }
+
+        /* Get Started Button */
+        #get-started-btn {
+            background: linear-gradient(135deg, var(--color-success) 0%, #4a9930 100%);
+            color: #ffffff;
+            font-family: 'Fira Code', monospace;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 16px 48px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(92, 192, 64, 0.2);
+        }
+
+        #get-started-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(92, 192, 64, 0.3);
+            background: linear-gradient(135deg, #6cd050 0%, #5aa940 100%);
+        }
+
+        #get-started-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(92, 192, 64, 0.2);
+        }
+
+        /* Terminal Section - Hidden Initially */
+        #terminal-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #terminal-section.visible {
+            display: block;
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -216,24 +313,52 @@
             </svg>
         </a>
 
-        <!-- Badge - 25/25/25 Call to Action -->
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[rgba(0,0,0,0.2)] border border-[rgba(92,192,64,0.25)] backdrop-blur-sm mt-12">
-            <span class="relative flex h-2 w-2">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5cc040] opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-[#5cc040]"></span>
-            </span>
-            <span class="text-[#8a8a8a] text-sm font-normal">First 10 to respond get 10 days of access to prove it.</span>
-        </div>
-
         <!-- Title -->
-        <div class="max-w-4xl mr-auto">
-            <h1 class="gradient-text font-[Fira_Sans,sans-serif] text-[clamp(2rem,4.2rem,4.2rem)] font-medium leading-[1.2] mt-2">
+        <div class="max-w-4xl mr-auto mt-12">
+            <h1 class="gradient-text font-[Fira_Sans,sans-serif] text-[clamp(2rem,4.2rem,4.2rem)] font-medium leading-[1.2]">
                 Most institutions waste 80% of their compute. We fix that.
             </h1>
         </div>
 
+        <!-- Intro Section -->
+        <section id="intro-section" class="max-w-[80ch] mb-8 mt-8">
+            <p class="text-[color:var(--color-text-muted)] text-[1.2rem] leading-relaxed mb-8">
+                We will baseline the current performance of your workflows, demonstrate Amalgamy.AI topology-informed optimization, and deliver a plan to accelerate your research.
+            </p>
+
+            <div id="process-steps">
+                <div class="process-step">
+                    <h3 class="process-step-title">Assess Elements</h3>
+                    <p class="process-step-description">Intake and Scope Establishment</p>
+                </div>
+
+                <div class="process-step">
+                    <h3 class="process-step-title">Forging Pathways</h3>
+                    <p class="process-step-description">Data & Workflow Opportunity Discovery</p>
+                </div>
+
+                <div class="process-step">
+                    <h3 class="process-step-title">Tempered Output</h3>
+                    <p class="process-step-description">Deliver refined results that Fuse Data & Metal into measurable acceleration</p>
+                </div>
+            </div>
+
+            <div id="limited-availability-box">
+                <p id="limited-availability-text">
+                    <span class="limited-availability-label">Limited Availability:</span> Spots are limited to the first 10 qualified applicants, valid until Friday, Nov 21, 6 pm CT. Does not include access to GPUs.
+                </p>
+            </div>
+
+            <button
+                id="get-started-btn"
+                onclick="startTerminalWorkflow()"
+            >
+                Get Started
+            </button>
+        </section>
+
         <!-- Terminal Workflow -->
-        <section class="font-code text-[1.4rem] max-w-[80ch] mb-8">
+        <section id="terminal-section" class="font-code text-[1.4rem] max-w-[80ch] mb-8">
             <div id="terminal-output" class="mb-2">
                 <!-- Terminal output will be appended here -->
             </div>

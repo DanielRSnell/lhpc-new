@@ -535,7 +535,29 @@ const terminal = {
     }
 };
 
-// Initialize terminal when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    terminal.init();
-});
+// Manual workflow starter - called by Get Started button
+function startTerminalWorkflow() {
+    // Hide intro section
+    const introSection = document.getElementById('intro-section');
+    const terminalSection = document.getElementById('terminal-section');
+
+    if (introSection) {
+        introSection.classList.add('hidden');
+    }
+
+    // Show and initialize terminal
+    if (terminalSection) {
+        terminalSection.classList.add('visible');
+
+        // Small delay to allow CSS transition
+        setTimeout(() => {
+            terminal.init();
+
+            // Scroll terminal into view smoothly
+            terminalSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
+}
+
+// Make function globally accessible
+window.startTerminalWorkflow = startTerminalWorkflow;
