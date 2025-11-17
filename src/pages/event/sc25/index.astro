@@ -252,6 +252,11 @@
             cursor: pointer;
             transition: all 0.2s ease;
             box-shadow: 0 4px 12px rgba(92, 192, 64, 0.2);
+            min-height: 44px;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
         }
 
         #get-started-btn:hover {
@@ -351,7 +356,7 @@
 
             <button
                 id="get-started-btn"
-                onclick="startTerminalWorkflow()"
+                type="button"
             >
                 Get Started
             </button>
@@ -486,6 +491,36 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             if (window.lucide) window.lucide.createIcons();
+
+            // Get Started button event listener with iOS-compatible event handling
+            const getStartedBtn = document.getElementById('get-started-btn');
+            if (getStartedBtn) {
+                let touchHandled = false;
+
+                const handleGetStarted = (e) => {
+                    // Prevent double-firing on devices that support both touch and click
+                    if (e.type === 'click' && touchHandled) {
+                        touchHandled = false;
+                        return;
+                    }
+
+                    if (e.type === 'touchend') {
+                        touchHandled = true;
+                        e.preventDefault();
+                    }
+
+                    // Call the terminal workflow function
+                    if (typeof window.startTerminalWorkflow === 'function') {
+                        window.startTerminalWorkflow();
+                    } else {
+                        console.error('startTerminalWorkflow function not found');
+                    }
+                };
+
+                // Add both click and touch listeners for maximum compatibility
+                getStartedBtn.addEventListener('click', handleGetStarted);
+                getStartedBtn.addEventListener('touchend', handleGetStarted, { passive: false });
+            }
 
             // Fade in Spline iframe when loaded
             const splineIframe = document.getElementById('aura-spline');
