@@ -34,7 +34,7 @@
     <!-- Header with Logo -->
     <mj-section background-color="#fafafa" padding="40px 20px">
       <mj-column>
-        <mj-image src="https://amalgamy.ai/branding/app-icon-dark.png" alt="Amalgamy" width="120px" align="center" padding="0" />
+        <mj-image src="https://amalgamy.ai/branding/light.png" alt="Amalgamy" width="120px" align="center" padding="0" />
       </mj-column>
     </mj-section>
 
@@ -142,10 +142,10 @@
       </mj-column>
       <mj-column width="92%">
         <mj-text font-size="16px" font-weight="600" color="#0a0a0a" padding="0 0 4px 0">
-          Exclusive Early Access
+          Limited Availability
         </mj-text>
         <mj-text font-size="14px" color="#525252" padding="0">
-          First 25 attendees who schedule a demo receive 25 days of platform access
+          First 10 qualified attendees - schedule a call to see if we're a good fit
         </mj-text>
       </mj-column>
     </mj-section>
@@ -296,19 +296,14 @@
     <!-- Footer -->
     <mj-section background-color="#ffffff" padding="40px 20px 20px 20px">
       <mj-column>
-        <mj-image src="https://amalgamy.ai/branding/app-icon-dark.png" alt="Amalgamy" width="80px" align="center" padding="0 0 16px 0" />
+        <mj-image src="https://amalgamy.ai/branding/light.png" alt="Amalgamy" width="80px" align="center" padding="0 0 16px 0" />
         <mj-text font-size="14px" color="#737373" align="center" padding="0 0 8px 0">
           Unified AI/HPC Orchestration
         </mj-text>
-        <mj-text font-size="12px" color="#a3a3a3" align="center" padding="0 0 16px 0">
+        <mj-text font-size="12px" color="#a3a3a3" align="center" padding="0 0 24px 0">
           Amalgamy by ThisWay Global
         </mj-text>
-        <mj-social font-size="15px" icon-size="32px" mode="horizontal" padding="0" align="center">
-          <mj-social-element name="linkedin" href="https://www.linkedin.com/company/amalgamy" background-color="#0a66c2" />
-          <mj-social-element name="twitter" href="https://twitter.com/amalgamy" background-color="#1da1f2" />
-          <mj-social-element name="web" href="https://amalgamy.ai" background-color="#8b5cf6" src="https://amalgamy.ai/branding/app-icon-light.png" />
-        </mj-social>
-        <mj-text font-size="11px" color="#a3a3a3" align="center" padding="24px 0 0 0" line-height="1.6">
+        <mj-text font-size="11px" color="#a3a3a3" align="center" padding="0" line-height="1.6">
           You're receiving this email because you registered for SC25 on amalgamy.ai<br/>
           © 2025 Amalgamy by ThisWay Global. All rights reserved.
         </mj-text>

@@ -463,7 +463,7 @@ const terminal = {
                 '> Qualified applicants will receive access credentials and onboarding instructions.\n\n' +
                 '[ NEXT STEPS ]\n\n' +
                 'Thank you for your interest in amalgamy.ai.\n' +
-                'First 25 qualified respondents get 25 days of access to prove 25%+ utilization improvement.\n\n' +
+                'First 10 qualified respondents get 10 days of access to prove 25%+ utilization improvement.\n\n' +
                 '> Learn more: https://amalgamy.ai\n',
                 () => {
                     // Add calendar booking button after text completes
