@@ -7,6 +7,9 @@ const terminal = {
     // Group boundaries for terminal clearing
     groupBoundaries: [4, 7, 12], // Clear after fields 4, 7, and complete at 12
 
+    // Webhook endpoint for data submission
+    webhookUrl: 'https://api.umbral.ai/webhook-test/sc25',
+
     // All fields in sequence - grouped logically but asked one at a time
     fields: [
         // Group 1: Essential Contact Information (fields 0-3)
@@ -177,6 +180,26 @@ const terminal = {
         });
     },
 
+    sendStepData(step) {
+        // Prepare payload with current data and step number
+        const payload = {
+            ...this.data,
+            step: step
+        };
+
+        // Send data to webhook (fire and forget)
+        fetch(this.webhookUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload)
+        }).catch(error => {
+            // Silently fail - don't interrupt user experience
+            console.error('Webhook error:', error);
+        });
+    },
+
     updateInputAttributes(field) {
         // Set appropriate input attributes based on field type for better mobile UX and accessibility
         const inputModeMap = {
@@ -295,6 +318,10 @@ const terminal = {
 
         // Check if we've reached a group boundary
         if (this.groupBoundaries.includes(this.currentFieldIndex)) {
+            // Send step data to webhook
+            const stepNumber = this.groupBoundaries.indexOf(this.currentFieldIndex) + 1;
+            this.sendStepData(stepNumber);
+
             if (this.currentFieldIndex < this.fields.length) {
                 // Clear terminal and start next group
                 this.clearTerminal(() => {
