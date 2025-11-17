@@ -122,6 +122,29 @@
         #terminal-input {
             color-scheme: dark;
         }
+
+        /* Mobile submit button - hover and media query only */
+        #terminal-submit-btn:hover {
+            background: #1a1a1a;
+            color: #737373;
+            border-color: #3a3a3a;
+        }
+
+        #terminal-submit-btn:active {
+            background: #0f0f0f;
+            color: #6b6b6b;
+        }
+
+        #terminal-submit-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        @media (min-width: 768px) {
+            #terminal-submit-btn {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -190,6 +213,15 @@
                     autocomplete="off"
                     autofocus
                 />
+                <button
+                    id="terminal-submit-btn"
+                    type="button"
+                    title="Submit (Enter)"
+                    style="background: transparent; border: 1px solid #3a3a3a; color: #6b6b6b; padding: 0.5rem 0.75rem; border-radius: 0.25rem; font-family: 'Fira Code', monospace; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-left: 0.75rem; margin-right: 0.75rem; gap: 0.5rem;"
+                >
+                    <span style="font-size: 0.875rem;">Enter</span>
+                    <i data-lucide="corner-down-left" style="width: 16px; height: 16px;"></i>
+                </button>
             </div>
         </section>
     </main>

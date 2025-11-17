@@ -161,12 +161,21 @@ const terminal = {
         this.outputEl = document.getElementById('terminal-output');
         this.inputEl = document.getElementById('terminal-input');
         this.inputWrapperEl = document.getElementById('terminal-input-wrapper');
+        this.submitBtn = document.getElementById('terminal-submit-btn');
 
         this.inputEl.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
+                e.preventDefault();
                 this.handleInput(this.inputEl.value.trim());
             }
         });
+
+        // Add click handler for mobile submit button
+        if (this.submitBtn) {
+            this.submitBtn.addEventListener('click', () => {
+                this.handleInput(this.inputEl.value.trim());
+            });
+        }
 
         // Start the workflow
         this.showPrompt();
@@ -268,6 +277,7 @@ const terminal = {
         this.updateInputAttributes(field);
         this.typeText(field.prompt + '\n', () => {
             this.inputEl.disabled = false;
+            if (this.submitBtn) this.submitBtn.disabled = false;
             this.inputEl.focus();
             this.inputEl.select();
             this.scrollToInput();
@@ -279,6 +289,7 @@ const terminal = {
 
         // Disable input while processing
         this.inputEl.disabled = true;
+        if (this.submitBtn) this.submitBtn.disabled = true;
 
         // Echo the input
         const inputLine = document.createElement('div');
@@ -298,6 +309,7 @@ const terminal = {
                 this.outputEl.appendChild(errorLine);
             }
             this.inputEl.disabled = false;
+            if (this.submitBtn) this.submitBtn.disabled = false;
             this.inputEl.focus();
             this.inputEl.select();
             this.scrollToInput();
