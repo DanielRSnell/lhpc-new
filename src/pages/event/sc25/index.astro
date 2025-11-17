@@ -123,18 +123,61 @@
             color-scheme: dark;
         }
 
-        /* Mobile submit button - show on mobile only */
-        @media (max-width: 767px) {
-            #terminal-submit-btn {
-                display: inline-flex !important;
-                align-items: center;
-                justify-content: center;
-            }
+        /* Mobile submit button */
+        #terminal-submit-btn {
+            display: none;
+            background: transparent;
+            border: 1px solid #3a3a3a;
+            color: #6b6b6b;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 8px;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+            pointer-events: auto;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 44px;
+            min-width: 44px;
+            transition: all 0.2s ease;
+        }
+
+        #terminal-submit-btn span {
+            font-size: 14px;
+        }
+
+        #terminal-submit-btn i {
+            width: 16px;
+            height: 16px;
+        }
+
+        #terminal-submit-btn:hover {
+            background: #1a1a1a;
+            color: #737373;
+            border-color: #3a3a3a;
+        }
+
+        #terminal-submit-btn:active {
+            background: #0f0f0f;
+            color: #6b6b6b;
         }
 
         #terminal-submit-btn:disabled {
             opacity: 0.3;
             cursor: not-allowed;
+        }
+
+        /* Show on mobile only */
+        @media (max-width: 767px) {
+            #terminal-submit-btn {
+                display: inline-flex;
+            }
         }
     </style>
 </head>
@@ -206,14 +249,9 @@
                         autofocus
                     />
                 </div>
-                <button
-                    id="terminal-submit-btn"
-                    type="button"
-                    class="hidden md:hidden bg-transparent border border-[#3a3a3a] text-[#6b6b6b] px-3 py-2 rounded font-code cursor-pointer mt-2 gap-2 relative z-10 pointer-events-auto active:bg-[#0f0f0f] hover:bg-[#1a1a1a] hover:text-[#737373] hover:border-[#3a3a3a]"
-                    style="touch-action: manipulation; -webkit-tap-highlight-color: transparent; min-height: 44px; min-width: 44px;"
-                >
-                    <span class="text-sm">Enter</span>
-                    <i data-lucide="corner-down-left" style="width: 16px; height: 16px;"></i>
+                <button id="terminal-submit-btn" type="button">
+                    <span>Enter</span>
+                    <i data-lucide="corner-down-left"></i>
                 </button>
             </div>
         </section>
