@@ -172,12 +172,27 @@ const terminal = {
 
         // Add click handler for mobile submit button
         if (this.submitBtn) {
+            let touchHandled = false;
+
             const handleSubmit = (e) => {
-                console.log('Button clicked/touched', e.type);
+                console.log('Button event:', e.type);
+
+                // Prevent double firing on mobile
+                if (e.type === 'click' && touchHandled) {
+                    touchHandled = false;
+                    return;
+                }
+
+                if (e.type === 'touchstart') {
+                    touchHandled = true;
+                }
+
                 e.preventDefault();
                 e.stopPropagation();
+
                 const value = this.inputEl.value.trim();
                 console.log('Input value:', value, 'Disabled:', this.inputEl.disabled);
+
                 if (value && !this.inputEl.disabled) {
                     console.log('Submitting input');
                     this.handleInput(value);
@@ -186,8 +201,9 @@ const terminal = {
                 }
             };
 
+            // Try multiple event types for better mobile compatibility
+            this.submitBtn.addEventListener('touchstart', handleSubmit, { passive: false });
             this.submitBtn.addEventListener('click', handleSubmit);
-            this.submitBtn.addEventListener('touchend', handleSubmit);
             console.log('Submit button handlers attached');
         } else {
             console.log('Submit button not found');
