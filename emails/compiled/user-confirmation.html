@@ -596,6 +596,21 @@
                   <tbody>
                     <tr>
                       <td align="left" style="font-size:0px;padding:0 0 4px 0;word-break:break-word;">
+                        <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.5px;line-height:1.6;text-align:left;text-transform:uppercase;color:#737373;">Contact Information</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:0 0 4px 0;word-break:break-word;">
+                        <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#0a0a0a;">{{ $json.email }}</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:0 0 16px 0;word-break:break-word;">
+                        <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#0a0a0a;">{{ $json.phone }}</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:0 0 4px 0;word-break:break-word;">
                         <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.5px;line-height:1.6;text-align:left;text-transform:uppercase;color:#737373;">Organization</div>
                       </td>
                     </tr>
@@ -606,12 +621,52 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:0 0 4px 0;word-break:break-word;">
+                        <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.5px;line-height:1.6;text-align:left;text-transform:uppercase;color:#737373;">Location</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:0 0 16px 0;word-break:break-word;">
+                        <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#0a0a0a;">{{ $json.location }}</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:0 0 4px 0;word-break:break-word;">
+                        <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.5px;line-height:1.6;text-align:left;text-transform:uppercase;color:#737373;">Primary Challenge</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:0 0 16px 0;word-break:break-word;">
+                        <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#0a0a0a;">{{ $json.problem }}</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:0 0 4px 0;word-break:break-word;">
+                        <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.5px;line-height:1.6;text-align:left;text-transform:uppercase;color:#737373;">Current Solution</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:0 0 16px 0;word-break:break-word;">
+                        <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#0a0a0a;">{{ $json.current_solution }}</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:0 0 4px 0;word-break:break-word;">
                         <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.5px;line-height:1.6;text-align:left;text-transform:uppercase;color:#737373;">Current Infrastructure</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:0 0 16px 0;word-break:break-word;">
                         <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#0a0a0a;">{{ $json.compute_amount }} ({{ $json.compute_location }})</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:0 0 4px 0;word-break:break-word;">
+                        <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:12px;font-weight:600;letter-spacing:0.5px;line-height:1.6;text-align:left;text-transform:uppercase;color:#737373;">Budget Available</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:0 0 16px 0;word-break:break-word;">
+                        <div style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#0a0a0a;">{{ $json.budget }}</div>
                       </td>
                     </tr>
                     <tr>

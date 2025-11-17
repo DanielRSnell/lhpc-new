@@ -183,6 +183,16 @@
     <mj-section background-color="#fafafa" border-radius="12px" padding="24px">
       <mj-column>
         <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Contact Information
+        </mj-text>
+        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 4px 0">
+          {{ $json.email }}
+        </mj-text>
+        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+          {{ $json.phone }}
+        </mj-text>
+
+        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
           Organization
         </mj-text>
         <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
@@ -190,10 +200,38 @@
         </mj-text>
 
         <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Location
+        </mj-text>
+        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+          {{ $json.location }}
+        </mj-text>
+
+        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Primary Challenge
+        </mj-text>
+        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+          {{ $json.problem }}
+        </mj-text>
+
+        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Current Solution
+        </mj-text>
+        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+          {{ $json.current_solution }}
+        </mj-text>
+
+        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
           Current Infrastructure
         </mj-text>
         <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
           {{ $json.compute_amount }} ({{ $json.compute_location }})
+        </mj-text>
+
+        <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
+          Budget Available
+        </mj-text>
+        <mj-text font-size="16px" color="#0a0a0a" padding="0 0 16px 0">
+          {{ $json.budget }}
         </mj-text>
 
         <mj-text font-size="12px" font-weight="600" color="#737373" text-transform="uppercase" letter-spacing="0.5px" padding="0 0 4px 0">
