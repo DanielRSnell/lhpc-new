@@ -24,7 +24,7 @@ const terminal = {
         {
             key: 'phone',
             prompt: '> Email verified. Establishing secure communication channel...\n> Enter your mobile number (optional, press Enter to skip):',
-            type: 'tel',
+            type: 'text',
             validation: () => true,
             errorMsg: '',
             group: 0
@@ -204,7 +204,6 @@ const terminal = {
         // Set appropriate input attributes based on field type for better mobile UX and accessibility
         const inputModeMap = {
             'email': { type: 'email', inputmode: 'email', autocomplete: 'email' },
-            'tel': { type: 'tel', inputmode: 'tel', autocomplete: 'tel' },
             'text': { type: 'text', inputmode: 'text', autocomplete: 'off' }
         };
 
@@ -214,11 +213,9 @@ const terminal = {
         // Set attributes based on field key and type
         if (field.type === 'email') {
             attrs = inputModeMap.email;
-        } else if (field.type === 'tel') {
-            attrs = inputModeMap.tel;
         } else if (field.type === 'select') {
-            // Numeric keyboard for selection fields
-            attrs = { type: 'text', inputmode: 'numeric', autocomplete: 'off' };
+            // Text keyboard for selection fields (allows return key on mobile)
+            attrs = { type: 'text', inputmode: 'text', autocomplete: 'off' };
         } else {
             // Text fields with specific autocomplete hints
             switch (field.key) {
