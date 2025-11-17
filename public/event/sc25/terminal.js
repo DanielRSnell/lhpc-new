@@ -172,9 +172,17 @@ const terminal = {
 
         // Add click handler for mobile submit button
         if (this.submitBtn) {
-            this.submitBtn.addEventListener('click', () => {
-                this.handleInput(this.inputEl.value.trim());
-            });
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const value = this.inputEl.value.trim();
+                if (value && !this.inputEl.disabled) {
+                    this.handleInput(value);
+                }
+            };
+
+            this.submitBtn.addEventListener('click', handleSubmit);
+            this.submitBtn.addEventListener('touchend', handleSubmit);
         }
 
         // Start the workflow
