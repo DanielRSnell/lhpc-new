@@ -173,16 +173,24 @@ const terminal = {
         // Add click handler for mobile submit button
         if (this.submitBtn) {
             const handleSubmit = (e) => {
+                console.log('Button clicked/touched', e.type);
                 e.preventDefault();
                 e.stopPropagation();
                 const value = this.inputEl.value.trim();
+                console.log('Input value:', value, 'Disabled:', this.inputEl.disabled);
                 if (value && !this.inputEl.disabled) {
+                    console.log('Submitting input');
                     this.handleInput(value);
+                } else {
+                    console.log('Not submitting - no value or disabled');
                 }
             };
 
             this.submitBtn.addEventListener('click', handleSubmit);
             this.submitBtn.addEventListener('touchend', handleSubmit);
+            console.log('Submit button handlers attached');
+        } else {
+            console.log('Submit button not found');
         }
 
         // Start the workflow
