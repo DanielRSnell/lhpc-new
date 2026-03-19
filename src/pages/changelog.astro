@@ -46,7 +46,7 @@ const renderedEntries = await Promise.all(
         variant="secondary"
         size="sm"
         className="bg-muted/40 h-12 gap-2 !px-4 text-base font-normal"
-        client:load
+        client:interaction
       >
         Subscribe for updates
         <Bell className="h-4 w-4" />
@@ -98,7 +98,7 @@ const renderedEntries = await Promise.all(
         <Button
           variant="secondary"
           className="mt-25 h-12 w-full md:w-[calc(100%-var(--sidebar-width))]"
-          client:load
+          client:interaction
         >
           Load more
         </Button>

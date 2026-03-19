@@ -6,6 +6,7 @@ import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import netlify from '@astrojs/netlify';
+import clientInteraction from './src/integrations/client-interaction.js';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://amalgamy.ai',
@@ -26,6 +27,7 @@ export default defineConfig({
     mdx(),
     sitemap(),
     react(),
+    clientInteraction(),
   ],
 
   vite: {

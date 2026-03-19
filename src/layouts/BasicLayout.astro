@@ -23,7 +23,7 @@ const pageTitle = frontmatter?.title || title;
     <BaseHead title={title} description={description} />
   </head>
   <body class="antialiased">
-    <Navbar client:idle currentPage={currentPage} />
+    <Navbar client:interaction currentPage={currentPage} />
     <main>
       <section class="container">
         <div class="hidden border-x border-b-0 p-7.5 md:block"></div>
@@ -33,7 +33,7 @@ const pageTitle = frontmatter?.title || title;
         </div>
       </section>
     </main>
-    <Footer client:idle currentPage={currentPage} />
+    <Footer client:interaction currentPage={currentPage} />
     <style>
       /* Custom MDX component styles - scoped to mdx-content */
       :global(.mdx-content h1) {

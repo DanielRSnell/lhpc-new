@@ -43,8 +43,8 @@ const currentPath = Astro.url.pathname;
     >
     </div>
 
-    <Navbar client:idle currentPage={currentPath} />
+    <Navbar client:interaction currentPage={currentPath} />
     <main class="flex-1"><slot /></main>
-    <Footer client:idle currentPage={currentPath} />
+    <Footer client:interaction currentPage={currentPath} />
   </body>
 </html>

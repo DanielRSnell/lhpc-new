@@ -13,14 +13,14 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
   title="Amalgamy for Neoclouds - AI/HPC Infrastructure Solutions"
   description="Maximize neocloud infrastructure efficiency and revenue growth with Amalgamy's AI/HPC orchestration platform. Scale compute resources intelligently across hybrid environments."
 >
-  <NeocloudHero client:load />
-  <NeocloudDashboard client:load />
-  <NeocloudFeatures client:load />
+  <NeocloudHero client:interaction />
+  <NeocloudDashboard client:interaction />
+  <NeocloudFeatures client:interaction />
   <div class="relative">
     <div
       class="to-accent/50 bg-chart-1 absolute top-0 left-0 -z-3 hidden size-40 -translate-x-1/4 -translate-y-1/2 rounded-full will-change-transform lg:block"
     >
     </div>
-    <NeocloudLogs client:load />
+    <NeocloudLogs client:interaction />
   </div>
 </DefaultLayout>
