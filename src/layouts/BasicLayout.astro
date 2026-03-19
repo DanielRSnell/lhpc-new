@@ -23,7 +23,7 @@ const pageTitle = frontmatter?.title || title;
     <BaseHead title={title} description={description} />
   </head>
   <body class="antialiased">
-    <Navbar client:load currentPage={currentPage} />
+    <Navbar client:idle currentPage={currentPage} />
     <main>
       <section class="container">
         <div class="hidden border-x border-b-0 p-7.5 md:block"></div>

@@ -16,7 +16,7 @@ const currentPath = Astro.url.pathname;
   >
     {/* Background Blur */}
     <div
-      class="bg-background/10 absolute inset-0 z-[-2] backdrop-blur-[85px] will-change-transform md:backdrop-blur-[170px]"
+      class="bg-background/10 absolute inset-0 z-[-2] md:backdrop-blur-[85px] will-change-transform lg:backdrop-blur-[170px]"
     >
     </div>
     {/* Noise Background */}
@@ -28,7 +28,7 @@ const currentPath = Astro.url.pathname;
     >
     </div>
 
-    <Navbar client:load currentPage={currentPath} />
+    <Navbar client:idle currentPage={currentPath} />
     <main class="flex-1"><slot /></main>
     <Footer client:idle currentPage={currentPath} />
   </body>

@@ -2,6 +2,26 @@
 
 Source: Lighthouse audit of amalgamy.ai (2026-03-19)
 
+## Current Score (Post-Optimization)
+
+**Performance: 98/100** (mobile, simulated throttling)
+
+| Metric | Value | Score |
+|---|---|---|
+| First Contentful Paint | 1.1s | 99 |
+| Largest Contentful Paint | 2.3s | 94 |
+| Total Blocking Time | 10ms | 100 |
+| Cumulative Layout Shift | 0 | 100 |
+| Speed Index | 1.1s | 100 |
+
+### Remaining opportunities (low priority, diminishing returns)
+- Render blocking: 1 CSS file (`about.*.css`, 23 KiB, ~140ms) -- Astro bundles this; cannot easily defer without FOUC
+- Unused JS: GTM (62 KiB unused) + React runtime (21 KiB unused) -- third-party/framework overhead
+- Image delivery: logo.dev PNGs not in modern format (controlled by external service), features/3.webp and 4.webp could use slightly more compression
+- Cache lifetimes: logo.dev images set 1d cache by their CDN (not controllable)
+
+---
+
 ## Render Blocking (Est. 770ms savings)
 
 - [x] **1. Self-host Geist font** - Remove CDN dependency on cdn.jsdelivr.net (780ms blocking). Download font files, create @font-face with `font-display: swap`, serve from /fonts/.
