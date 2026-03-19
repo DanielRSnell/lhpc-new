@@ -4,20 +4,20 @@ Source: Lighthouse audit of amalgamy.ai (2026-03-19)
 
 ## Current Score (Post-Optimization)
 
-**Performance: 98/100** (mobile, simulated throttling)
+**Performance: 98/100** (PSI mobile, confirmed by user 2026-03-19)
 
 | Metric | Value | Score |
 |---|---|---|
-| First Contentful Paint | 1.1s | 99 |
-| Largest Contentful Paint | 2.3s | 94 |
+| First Contentful Paint | 1.0s | 99 |
+| Largest Contentful Paint | ~2.3s | 94 |
 | Total Blocking Time | 10ms | 100 |
 | Cumulative Layout Shift | 0 | 100 |
-| Speed Index | 1.1s | 100 |
+| Speed Index | 2.3s | 95 |
 
 ### Remaining opportunities (low priority, diminishing returns)
-- Render blocking: 1 CSS file (`about.*.css`, 23 KiB, ~140ms) -- Astro bundles this; cannot easily defer without FOUC
+- Render blocking: 1 CSS file (`about.*.css`, 23 KiB, ~310ms) -- Astro bundles this; cannot easily defer without FOUC
 - Unused JS: GTM (62 KiB unused) + React runtime (21 KiB unused) -- third-party/framework overhead
-- Image delivery: logo.dev PNGs not in modern format (controlled by external service), features/3.webp and 4.webp could use slightly more compression
+- Image delivery: logo.dev PNGs not in modern format (controlled by external service)
 - Cache lifetimes: logo.dev images set 1d cache by their CDN (not controllable)
 
 ---
@@ -50,3 +50,17 @@ Source: Lighthouse audit of amalgamy.ai (2026-03-19)
 ## Critical Path
 
 - [x] **14. Break dependency chain for navbar JS** - Navbar JS chain is 4 levels deep (1,710ms). Evaluate `client:visible` or `client:idle` instead of `client:load` for non-critical interactive components.
+- [x] **15. Inline hero as static Astro HTML** - Moved hero content from React component to Astro template so h1 (LCP element) renders without JS hydration. WorkflowDashboardMockup uses `client:visible`.
+- [x] **16. Inline critical CSS** - Added critical CSS variables and hero styles inline in layout head to reduce render-blocking delay.
+- [x] **17. Disable backdrop-blur on mobile** - Removed expensive `backdrop-blur-[85px]` on mobile, only apply at md+ breakpoints.
+
+## Accessibility (89 -> targeting 100)
+
+- [x] **A1. Theme toggle aria-label** - Button had no accessible name; added `aria-label="Toggle theme"`.
+- [x] **A2. Green button contrast** - `bg-green-600` + `text-white` failed WCAG AA (3.0:1). Changed to `bg-green-700` (4.8:1).
+- [x] **A3. Fix heading hierarchy** - h3 appeared before h1 (Radix Accordion header in navbar). Changed AccordionHeader to render as div. Changed workflow dashboard h1 to h2.
+
+## SEO (85 -> targeting 100)
+
+- [x] **S1. Descriptive link text** - "Learn More" is generic. Changed to "Explore the Product".
+- [x] **S2. Add robots.txt** - No robots.txt existed. Created with Allow: / and sitemap reference.
