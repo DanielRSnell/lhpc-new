@@ -43,7 +43,7 @@ const Footer = ({ currentPage }: FooterProps) => {
             variant="secondary"
             className="border-input bg-accent flex-1 border"
           >
-            <a href="/product">Learn More</a>
+            <a href="/product">Explore the Product</a>
           </Button>
         </div>
       </div>

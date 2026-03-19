@@ -41,9 +41,9 @@ export default function WorkflowDashboardMockup() {
             {/* Header */}
             <div className="mb-6 flex items-start justify-between">
               <div>
-                <h1 className="mb-2 text-xl font-semibold text-white md:text-2xl">
+                <h2 className="mb-2 text-xl font-semibold text-white md:text-2xl">
                   AI Model Training Pipeline
-                </h1>
+                </h2>
                 <div className="flex items-center gap-2 text-xs">
                   <span className="text-gray-500">ID: wf-2847</span>
                   <span className="rounded-full bg-green-500/10 px-2 py-1 text-green-400">
@@ -57,7 +57,7 @@ export default function WorkflowDashboardMockup() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="rounded bg-green-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-green-700"
+                className="rounded bg-green-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-green-800"
               >
                 Execute
               </motion.button>
