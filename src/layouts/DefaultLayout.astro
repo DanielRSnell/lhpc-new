@@ -10,6 +10,21 @@ const currentPath = Astro.url.pathname;
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
+    {/* Critical CSS inlined to avoid render-blocking stylesheet delay */}
+    <style is:inline>
+      :root{--font-geist-sans:'Geist',sans-serif;--font-inter:'Geist',sans-serif;--display-family:var(--font-geist-sans);--text-family:var(--font-geist-sans);--display-weight:400;--text-weight:400;--foreground:oklch(0.05 0.02 290);--background:oklch(0.87 0.02 320);--primary:oklch(0.05 0.02 290);--primary-foreground:oklch(1 0 0);--muted-foreground:oklch(0.35 0.03 50);--border:oklch(0.84 0.01 240);--chart-1:oklch(0.58 0.2 285);--chart-2:oklch(0.65 0.25 320);--chart-3:oklch(0.72 0.15 25)}
+      .dark{--background:oklch(0.05 0.02 290);--foreground:oklch(1 0 0);--primary:oklch(1 0 0);--primary-foreground:oklch(0.08 0.02 290);--muted-foreground:oklch(0.73 0.01 240);--border:oklch(0.15 0.01 240);--chart-1:oklch(0.58 0.2 285);--chart-2:oklch(0.65 0.25 320);--chart-3:oklch(0.72 0.15 25)}
+      body{background:var(--background);color:var(--foreground);font-family:var(--font-geist-sans);-webkit-font-smoothing:antialiased}
+      .section-padding{padding-top:3.75rem;padding-bottom:3.75rem}
+      .container{margin-inline:auto;padding-inline:1.5rem}
+      .text-gradient{background:linear-gradient(to right,var(--chart-1),var(--chart-2),var(--chart-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+      .text-muted-foreground{color:var(--muted-foreground)}
+      .bg-primary{background:var(--primary)}.text-primary-foreground{color:var(--primary-foreground)}
+      .border-input{border-color:var(--border)}.bg-background{background:var(--background)}
+      @media(min-width:768px){.section-padding{padding-top:5rem;padding-bottom:5rem}.md\:text-6xl{font-size:3.75rem}}
+      @media(min-width:1024px){.lg\:text-7xl{font-size:4.5rem}}
+      @media(min-width:1200px){.container{max-width:1456px}}
+    </style>
   </head>
   <body
     class={`min-h-screen relative antialiased flex flex-col [--header-height:calc(var(--spacing)*17)]`}
