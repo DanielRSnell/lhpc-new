@@ -23,13 +23,13 @@ const currentPath = Astro.url.pathname;
     <div
       class="absolute inset-0 z-[-1] size-full opacity-70 mix-blend-overlay dark:md:opacity-100"
       style={{
-        background: `url(/images/noise.webp) lightgray 0% 0% / 83.69069695472717px 83.69069695472717px repeat`,
+        background: `url(/images/noise.webp) lightgray 0% 0% / 84px 84px repeat`,
       }}
     >
     </div>
 
     <Navbar client:load currentPage={currentPath} />
     <main class="flex-1"><slot /></main>
-    <Footer client:load currentPage={currentPath} />
+    <Footer client:idle currentPage={currentPath} />
   </body>
 </html>

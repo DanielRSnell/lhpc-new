@@ -113,6 +113,7 @@ const Features = ({ className }: { className?: string }) => {
                       alt={card.title}
                       width={card.image.width}
                       height={card.image.height}
+                      loading="lazy"
                       className="object-contain invert dark:invert-0"
                     />
                   </CardContent>

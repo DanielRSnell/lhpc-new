@@ -101,6 +101,8 @@ export default function PartnersGrid() {
                 <img
                   src={partner.logoUrl}
                   alt={`${partner.name} Logo`}
+                  width={180}
+                  height={64}
                   className="h-full w-auto max-w-[180px] object-contain"
                   loading="lazy"
                 />

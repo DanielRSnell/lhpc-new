@@ -487,7 +487,7 @@ function Card4() {
               ease: 'easeOut',
             }}
           >
-            <img src={logo.url} alt={logo.name} className="h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
+            <img src={logo.url} alt={logo.name} width={128} height={32} loading="lazy" className="h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity" />
           </motion.div>
         ))}
       </div>

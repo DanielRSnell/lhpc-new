@@ -33,7 +33,7 @@ const pageTitle = frontmatter?.title || title;
         </div>
       </section>
     </main>
-    <Footer client:load currentPage={currentPage} />
+    <Footer client:idle currentPage={currentPage} />
     <style>
       /* Custom MDX component styles - scoped to mdx-content */
       :global(.mdx-content h1) {

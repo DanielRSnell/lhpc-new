@@ -46,6 +46,9 @@ export default function PartnerLogos() {
             key={index}
             src={partner.url}
             alt={partner.name}
+            width={128}
+            height={80}
+            loading="lazy"
             className="h-16 w-auto rounded-lg transition-opacity hover:opacity-80 md:h-20"
           />
         ))}

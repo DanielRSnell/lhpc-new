@@ -28,6 +28,8 @@ export default function Logo({
         <img
           src="/branding/logo.svg"
           alt="Amalgamy.ai"
+          width={894}
+          height={156}
           className="h-auto w-full"
           style={{
             filter: 'brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) contrast(100%)',
@@ -40,6 +42,8 @@ export default function Logo({
         <img
           src="/branding/logo.svg"
           alt="Amalgamy.ai"
+          width={894}
+          height={156}
           className="h-auto w-full"
           style={{
             filter: 'brightness(0) saturate(100%) invert(90%) sepia(0%) saturate(0%) hue-rotate(0deg) contrast(90%)',

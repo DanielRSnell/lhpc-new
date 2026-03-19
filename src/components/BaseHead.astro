@@ -18,13 +18,12 @@ const imageURL = new URL(finalImage, Astro.url);
 
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet" />
+<!-- Preload self-hosted fonts -->
+<link rel="preload" href="/fonts/GeistVariable.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/Comfortaa-latin.woff2" as="font" type="font/woff2" crossorigin />
 
-<!-- Geist Font -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/geist.css" />
+<!-- Preconnect to partner logo CDN -->
+<link rel="preconnect" href="https://img.logo.dev" crossorigin />
 <meta
   name="robots"
   content={`${SITE_METADATA.robots.index ? 'index' : 'noindex'}, ${SITE_METADATA.robots.follow ? 'follow' : 'nofollow'}`}
@@ -34,18 +33,23 @@ const imageURL = new URL(finalImage, Astro.url);
 <meta name="creator" content={SITE_METADATA.creator} />
 <meta name="publisher" content={SITE_METADATA.publisher} />
 
-<!-- Google tag (gtag.js) -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-58MKCCZFCJ"></script>
+<!-- Google tag (gtag.js) - deferred to avoid render blocking -->
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-58MKCCZFCJ');
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-58MKCCZFCJ';
+    s.async = true;
+    document.head.appendChild(s);
+    var l = document.createElement('script');
+    l.src = 'https://app.lemlist.com/api/visitors/tracking?k=QK9pi9bS%2Fy%2F%2B5cjWZYx1P%2B4HrTR1KqUyoFcZ1AAHEsI%3D&t=tea_7wBwdJFyRnNxMkhZ5';
+    l.async = true;
+    document.head.appendChild(l);
+  });
 </script>
-
-<!-- Lemlist Tracking -->
-<script is:inline async src="https://app.lemlist.com/api/visitors/tracking?k=QK9pi9bS%2Fy%2F%2B5cjWZYx1P%2B4HrTR1KqUyoFcZ1AAHEsI%3D&t=tea_7wBwdJFyRnNxMkhZ5"></script>
 
 <!-- Theme Script -->
 <script is:inline>
