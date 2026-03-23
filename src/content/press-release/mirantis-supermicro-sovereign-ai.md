@@ -3,7 +3,6 @@ title: 'Mirantis and Supermicro Accelerate Sovereign AI and Hybrid Cloud Deploym
 date: 'MAR 03 2026'
 id: '02'
 source: 'https://www.mirantis.com/company/press-center/company-news/mirantis-and-supermicro-accelerate-sovereign-ai-and-hybrid-cloud-deployments/'
-draft: true
 ---
 
 <!-- Supermicro content commented out

@@ -7,7 +7,9 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
 
 // Generate static paths for all press releases
 export async function getStaticPaths() {
-  const pressReleases = await getCollection('pressRelease');
+  const pressReleases = (await getCollection('pressRelease')).filter(
+    (entry) => entry.id !== 'mirantis-supermicro-sovereign-ai',
+  );
 
   return pressReleases.map((entry) => ({
     params: { slug: entry.data.slug || entry.id }, // Use custom slug or filename
