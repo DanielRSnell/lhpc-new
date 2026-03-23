@@ -69,7 +69,7 @@ const FEATURE_CARDS = [
   },
   {
     title: 'OEM-Agnostic Hardware Support',
-    description: 'Works seamlessly with NVIDIA, Supermicro, IBM, AWS, Microsoft, Oracle, and leading infrastructure platforms',
+    description: 'Works seamlessly with NVIDIA, IBM, AWS, Microsoft, Oracle, and leading infrastructure platforms',
     image: '/images/product/integrate.png',
   },
   {
@@ -462,7 +462,7 @@ function Card4() {
   const ref = useRef<HTMLDivElement>(null);
   const partnerLogos = [
     { name: 'NVIDIA', url: 'https://img.logo.dev/nvidia.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
-    { name: 'Supermicro', url: 'https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
+    // { name: 'Supermicro', url: 'https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
     { name: 'Mirantis', url: 'https://img.logo.dev/mirantis.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
     { name: 'IBM', url: 'https://img.logo.dev/ibm.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },
     { name: 'AWS', url: 'https://img.logo.dev/aws.amazon.com?token=pk_JuRpzKiHQniWr0CmqpMOBA' },

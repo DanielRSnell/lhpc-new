@@ -3,7 +3,10 @@ title: 'Mirantis and Supermicro Accelerate Sovereign AI and Hybrid Cloud Deploym
 date: 'MAR 03 2026'
 id: '02'
 source: 'https://www.mirantis.com/company/press-center/company-news/mirantis-and-supermicro-accelerate-sovereign-ai-and-hybrid-cloud-deployments/'
+draft: true
 ---
+
+<!-- Supermicro content commented out
 
 Mirantis has announced validation of Supermicro's modular server architecture with Mirantis k0rdent, creating an automated infrastructure solution for sovereign AI and hybrid GPU cloud environments. This partnership provides AI data center operators with a verified, Kubernetes-native stack for deploying and managing GPU-accelerated infrastructure at scale.
 
@@ -18,3 +21,5 @@ The combined solution automates the discovery and provisioning of Supermicro nod
 Angela Hood highlighted deployment at Texas Tech University System, noting that Mirantis k0rdent and managed services, combined with Amalgamy.ai's orchestration technologies, form a powerful technology stack for high-performance computing.
 
 [Read the full article on Mirantis.com](https://www.mirantis.com/company/press-center/company-news/mirantis-and-supermicro-accelerate-sovereign-ai-and-hybrid-cloud-deployments/)
+
+-->

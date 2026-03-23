@@ -52,7 +52,7 @@ export default function ProductHero({
   ctaPrimaryHref = '/contact',
   ctaSecondary = 'Explore The Product',
   ctaSecondaryHref = '/product',
-  trustLine = 'Partnered with NVIDIA, Supermicro, TD Synnex, IBM, OCI, and Mirantis · Government ready',
+  trustLine = 'Partnered with NVIDIA, TD Synnex, IBM, OCI, and Mirantis · Government ready',
   showTerminal = true,
 }: ProductHeroProps) {
   return (

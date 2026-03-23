@@ -34,7 +34,7 @@ const FEATURE_CARDS = [
   {
     title: 'OEM-Agnostic Architecture',
     description:
-      'Works seamlessly across Supermicro, NVIDIA, AMD, Intel, Oracle, and AWS—future-proof your infrastructure without vendor lock-in.',
+      'Works seamlessly across NVIDIA, AMD, Intel, Oracle, and AWS, future-proofing your infrastructure without vendor lock-in.',
     icon: Activity,
     cta: 'Our Partners',
     href: '/partners',

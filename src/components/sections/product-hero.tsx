@@ -34,7 +34,7 @@ export default function ProductHero() {
         </h1>
 
         <p className="text-muted-foreground max-w-2xl leading-snug md:text-lg lg:text-xl">
-          Workflow portability, multi-tenant infrastructure, and OEM-agnostic orchestration—achieve 57-85% utilization gains across Supermicro, NVIDIA, AMD, Intel, Oracle, and AWS hardware without vendor lock-in.
+          Workflow portability, multi-tenant infrastructure, and OEM-agnostic orchestration—achieve 57-85% utilization gains across NVIDIA, AMD, Intel, Oracle, and AWS hardware without vendor lock-in.
         </p>
       </div>
 
@@ -166,7 +166,7 @@ export default function ProductHero() {
           </Button>
         </div>
         <div className="text-center text-sm">
-          Partnered with NVIDIA, Supermicro, TD Synnex, IBM, OCI, and Mirantis · Government ready
+          Partnered with NVIDIA, TD Synnex, IBM, OCI, and Mirantis · Government ready
         </div>
       </div>
     </section>

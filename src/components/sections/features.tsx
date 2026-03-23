@@ -34,7 +34,7 @@ const ITEMS = [
       width: 154,
       height: 99,
     },
-    desc: 'Works across Supermicro, NVIDIA, AMD, Intel, Oracle, and AWS—future-proof your infrastructure without vendor lock-in.',
+    desc: 'Works across NVIDIA, AMD, Intel, Oracle, and AWS, future-proofing your infrastructure without vendor lock-in.',
   },
   {
     title: 'Hybrid Bursting',

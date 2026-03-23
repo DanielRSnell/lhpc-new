@@ -32,7 +32,7 @@ export default function Hero() {
               </Button>
             </div>
             <div className="text-center text-sm">
-              Partnered with NVIDIA, Supermicro, TD Synnex, IBM, OCI, and Mirantis · Government ready
+              Partnered with NVIDIA, TD Synnex, IBM, OCI, and Mirantis · Government ready
             </div>
           </div>
         </div>

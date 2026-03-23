@@ -3,10 +3,10 @@ const PARTNERS = [
     name: 'NVIDIA',
     url: 'https://img.logo.dev/nvidia.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
   },
-  {
-    name: 'Supermicro',
-    url: 'https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
-  },
+  // {
+  //   name: 'Supermicro',
+  //   url: 'https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
+  // },
   {
     name: 'Mirantis',
     url: 'https://img.logo.dev/mirantis.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',

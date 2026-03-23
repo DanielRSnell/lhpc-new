@@ -17,13 +17,13 @@ const PARTNERS: Partner[] = [
     type: 'Technology Partner',
     description: 'As an exclusive DGX Cloud Reseller, Amalgamy partners with NVIDIA to provide cutting-edge GPU technology and AI solutions. NVIDIA\'s industry-leading GPUs power our high-performance computing platforms and AI implementations.',
   },
-  {
-    name: 'Supermicro',
-    logoUrl: 'https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
-    website: 'https://supermicro.com',
-    type: 'OEM Partner',
-    description: 'Supermicro delivers high-performance server solutions optimized for HPC and AI workloads. Our partnership ensures access to enterprise-grade hardware infrastructure designed for maximum compute density and efficiency.',
-  },
+  // {
+  //   name: 'Supermicro',
+  //   logoUrl: 'https://img.logo.dev/supermicro.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',
+  //   website: 'https://supermicro.com',
+  //   type: 'OEM Partner',
+  //   description: 'Supermicro delivers high-performance server solutions optimized for HPC and AI workloads. Our partnership ensures access to enterprise-grade hardware infrastructure designed for maximum compute density and efficiency.',
+  // },
   {
     name: 'Mirantis',
     logoUrl: 'https://img.logo.dev/mirantis.com?token=pk_JuRpzKiHQniWr0CmqpMOBA',

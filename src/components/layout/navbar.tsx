@@ -71,7 +71,7 @@ export const NAV_LINKS = [
       {
         label: 'OEM Partners',
         href: '/industries/oem-partners',
-        description: 'Supermicro, IBM, Oracle, and hardware manufacturers',
+        description: 'IBM, Oracle, and hardware manufacturers',
         details:
           'Differentiate hardware with integrated orchestration software. Deliver turnkey AI/HPC solutions that accelerate customer time-to-value.',
         icon: Building2,
