@@ -10,8 +10,7 @@ export default function AboutTeam() {
     'Christian Kennedy',
     'Justin Hood',
     'Craig Peters',
-    'Joel Mjolsness',
-    'Chris Ramirez',
+'Chris Ramirez',
     'Lisa Rawls'
   ];
 
