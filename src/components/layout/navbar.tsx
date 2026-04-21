@@ -98,7 +98,7 @@ export const NAV_LINKS = [
     ],
   },
   { label: 'Partners', href: '/partners' },
-  { label: 'Company', href: '/about' },
+  { label: 'Company', href: 'https://thiswayglobal.com/about' },
   { label: 'Events', href: '/event' },
   { label: 'Recent News', href: '/recent-news' },
 ];
