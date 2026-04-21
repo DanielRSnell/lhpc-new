@@ -3,23 +3,8 @@
 import teamData from '@/config/team.json';
 
 export default function AboutTeam() {
-  // Specific leadership team members to display
-  const includedNames = [
-    'Angela Hood',
-    'Alex Shmelev', 
-    'Christian Kennedy',
-    'Justin Hood',
-    'Craig Peters',
-'Chris Ramirez',
-    'Lisa Rawls'
-  ];
-
-  // Filter for specific team members and sort by order
   const teamMembers = teamData
-    .filter((member) =>
-      member.Active === 'TRUE' &&
-      includedNames.includes(member.Name)
-    )
+    .filter((member) => member.Active === 'TRUE')
     .sort((a, b) => a.order - b.order)
     .map((member) => ({
       name: member.Name,
